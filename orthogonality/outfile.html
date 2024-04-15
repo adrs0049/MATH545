@@ -1,0 +1,334 @@
+<h1 id="orthogonal-projection">Orthogonal Projection</h1>
+<p><code>{div} bigidea The point in a subspace $U \subset \mathbb{R}^n$ nearest to $\boldsymbol{x} \in \mathbb{R}^n$ is the projection $\mathrm{proj}_U (\boldsymbol{x})$ of $\boldsymbol{x}$ onto $U$.</code></p>
+<p><code>{image} /img/02_03_01.png :width: 100% :align: center</code></p>
+<h2 id="projection-onto-a-vector">Projection onto a Vector</h2>
+<p>```{div} definition The <strong>projection</strong> of a vector <span
+class="math inline"><strong>x</strong></span> onto a vector <span
+class="math inline"><strong>u</strong></span> is</p>
+<p><span class="math display">$$
+\mathrm{proj}_{\boldsymbol{u}}(\boldsymbol{x}) = \frac{\langle
+\boldsymbol{x} , \boldsymbol{u} \rangle}{\langle \boldsymbol{u} ,
+\boldsymbol{u} \rangle} \boldsymbol{u}
+$$</span></p>
+<pre><code>
+```{div} note
+Projection onto $\boldsymbol{u}$ is given by matrix multiplication
+
+$$
+\mathrm{proj}_{\boldsymbol{u}}(\boldsymbol{x}) = P \boldsymbol{x}
+\ \ \text{where} \ \
+P = \frac{1}{\| \boldsymbol{u} \|^2} \boldsymbol{u} \boldsymbol{u}^T
+$$
+
+Note that $P^2 = P$, $P^T = P$ and $\mathrm{rank}(P) = 1$.</code></pre>
+<h2 id="orthogonal-bases">Orthogonal Bases</h2>
+<p><code>{div} definition Let $U \subseteq \mathbb{R}^n$ be a subspace. A set of vectors $\{ \boldsymbol{w}_1,\dots,\boldsymbol{w}_m \}$ is an **orthogonal basis** for $U$ if it is a basis for $U$ and the vectors are orthogonal, $\langle \boldsymbol{w}_i , \boldsymbol{w}_j \rangle = 0$ for all $i \not= j$. Furthermore, if each $\boldsymbol{w}_j$ is a unit vector, $\|\boldsymbol{w}_j\| = 1$, then $\{ \boldsymbol{w}_1,\dots,\boldsymbol{w}_m \}$ is an **orthonormal basis** for $U$.</code></p>
+<p>```{div} theorem Let <span
+class="math inline">{<strong>u</strong><sub>1</sub>, …, <strong>u</strong><sub><em>m</em></sub>}</span>
+be a basis of a subspace <span
+class="math inline"><em>U</em> ⊆ ℝ<sup><em>n</em></sup></span>. The
+<strong>Gram-Schmidt orthogonalization algorithm</strong> constructs an
+orthogonal basis of <span class="math inline"><em>U</em></span>:</p>
+<p><span class="math display">$$
+\begin{align*}
+\boldsymbol{v}_1 &amp;= \boldsymbol{u}_1 \\
+\boldsymbol{v}_2 &amp;= \boldsymbol{u}_2 -
+\mathrm{proj}_{\boldsymbol{v}_1}(\boldsymbol{u}_2) \\
+\boldsymbol{v}_3 &amp;= \boldsymbol{u}_3 -
+\mathrm{proj}_{\boldsymbol{v}_1}(\boldsymbol{u}_3) -
+\mathrm{proj}_{\boldsymbol{v}_2}(\boldsymbol{u}_3) \\
+&amp; \ \ \vdots \\
+\boldsymbol{v}_m &amp;= \boldsymbol{u}_m -
+\mathrm{proj}_{\boldsymbol{v}_1}(\boldsymbol{u}_m) -
+\mathrm{proj}_{\boldsymbol{v}_2}(\boldsymbol{u}_m) - \cdots -
+\mathrm{proj}_{\boldsymbol{v}_{m-1}}(\boldsymbol{u}_m)
+\end{align*}
+$$</span></p>
+<p>Then <span
+class="math inline">{<strong>v</strong><sub>1</sub>, …, <strong>v</strong><sub><em>m</em></sub>}</span>
+is an orthogonal basis of <span class="math inline"><em>U</em></span>.
+Furthermore, let</p>
+<p><span class="math display">$$
+\boldsymbol{w}_k = \frac{\boldsymbol{v}_k}{\| \boldsymbol{v}_k \|} \ \ ,
+\ k=1,\dots,m
+$$</span></p>
+<p>Then <span
+class="math inline">{<strong>w</strong><sub>1</sub>, …, <strong>w</strong><sub><em>m</em></sub>}</span>
+is an orthonormal basis of <span
+class="math inline"><em>U</em></span>.</p>
+<pre><code>
+```{div} example
+Construct an orthonormal basis of the subspace $U$ spanned by
+
+$$
+\boldsymbol{u}_1 = \begin{bmatrix} 1 \\ 0 \\ 1 \\ 0 \end{bmatrix}
+\hspace{5mm}
+\boldsymbol{u}_2 = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 0 \end{bmatrix}
+\hspace{5mm}
+\boldsymbol{u}_3 = \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix}
+$$
+
+Compute
+
+$$
+\begin{align*}
+\boldsymbol{v}_1 &amp;= \boldsymbol{u}_1 \\
+\boldsymbol{v}_2 &amp;= \boldsymbol{u}_2 - \mathrm{proj}_{\boldsymbol{v}_1}(\boldsymbol{u}_2) \\
+\boldsymbol{v}_3 &amp;= \boldsymbol{u}_3 - \mathrm{proj}_{\boldsymbol{v}_1}(\boldsymbol{u}_3) - \mathrm{proj}_{\boldsymbol{v}_2}(\boldsymbol{u}_3)
+\end{align*}
+$$
+
+and we find an orthogonal basis
+
+$$
+\boldsymbol{v}_1 = \begin{bmatrix} 1 \\ 0 \\ 1 \\ 0 \end{bmatrix}
+\hspace{5mm}
+\boldsymbol{v}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}
+\hspace{5mm}
+\boldsymbol{v}_3 = \frac{1}{2} \left[ \begin{array}{r} 1 \\ 0 \\ -1 \\ 0 \end{array} \right]
+$$
+
+and an orthonormal basis
+
+$$
+\boldsymbol{w}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 0 \\ 1 \\ 0 \end{bmatrix}
+\hspace{5mm}
+\boldsymbol{w}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}
+\hspace{5mm}
+\boldsymbol{w}_3 = \frac{1}{\sqrt{2}} \left[ \begin{array}{r} 1 \\ 0 \\ -1 \\ 0 \end{array} \right]
+$$</code></pre>
+<h2 id="projection-onto-a-subspace">Projection onto a Subspace</h2>
+<p>```{div} definition Let <span
+class="math inline"><em>U</em> ⊆ ℝ<sup><em>n</em></sup></span> be a
+subspace and let <span
+class="math inline">{<strong>u</strong><sub>1</sub>, …, <strong>u</strong><sub><em>m</em></sub>}</span>
+be an orthogonal basis of <span class="math inline"><em>U</em></span>.
+The <strong>projection</strong> of a vector <span
+class="math inline"><strong>x</strong></span> onto <span
+class="math inline"><em>U</em></span> is</p>
+<p><span class="math display">$$
+\mathrm{proj}_U(\boldsymbol{x}) = \frac{\langle \boldsymbol{x} ,
+\boldsymbol{u}_1 \rangle}{ \langle \boldsymbol{u}_1 , \boldsymbol{u}_1
+\rangle } \boldsymbol{u}_1 + \cdots + \frac{\langle \boldsymbol{x} ,
+\boldsymbol{u}_m \rangle}{ \langle \boldsymbol{u}_m , \boldsymbol{u}_m
+\rangle } \boldsymbol{u}_m
+$$</span></p>
+<pre><code>
+```{div} note
+Projection onto $U$ is given by matrix multiplication
+
+$$
+\mathrm{proj}_{\boldsymbol{U}}(\boldsymbol{x}) = P \boldsymbol{x}
+\ \ \text{where} \ \
+P = \frac{1}{\| \boldsymbol{u}_1 \|^2} \boldsymbol{u}_1 \boldsymbol{u}_1^T + \cdots + \frac{1}{\| \boldsymbol{u}_m \|^2} \boldsymbol{u}_m \boldsymbol{u}_m^T
+$$
+
+Note that $P^2 = P$, $P^T = P$ and $\mathrm{rank}(P) = m$.</code></pre>
+<p><code>{div} definition A matrix $P$ is an **orthogonal projector** (or **orthogonal projection matrix**) if $P^2 = P$ and $P^T = P$.</code></p>
+<p><code>{div} theorem Let $P$ be the orthogonal projection onto $U$. Then $I - P$ is the orthogonal projection matrix onto $U^{\perp}$.</code></p>
+<p>```{div} example Find the orthogonal projection matrix <span
+class="math inline"><em>P</em></span> which projects onto the subspace
+spanned by the vectors</p>
+<p><span class="math display">$$
+\boldsymbol{u}_1 = \left[ \begin{array}{r} 1 \\ 0 \\ -1 \end{array}
+\right]
+\hspace{5mm}
+\boldsymbol{u}_2 = \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array}
+\right]
+$$</span></p>
+<p>Compute <span
+class="math inline">⟨<strong>u</strong><sub>1</sub>, <strong>u</strong><sub>2</sub>⟩ = 0</span>
+therefore the vectors are orthogonal. Compute</p>
+<p><span class="math display">$$
+\begin{align*}
+P &amp;= \frac{1}{\| \boldsymbol{u}_1 \|^2} \boldsymbol{u}_1
+\boldsymbol{u}_1^T +  \frac{1}{\| \boldsymbol{u}_2 \|^2}
+\boldsymbol{u}_2 \boldsymbol{u}_2^T \\
+&amp;= \frac{1}{2} \left[ \begin{array}{r} 1 \\ 0 \\ -1 \end{array}
+\right]
+\left[ \begin{array}{rrr} 1 &amp; 0 &amp; -1 \end{array} \right]
++ \frac{1}{3} \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array} \right]
+\left[ \begin{array}{rrr} 1 &amp; 1 &amp; 1 \end{array} \right] \\
+&amp;= \frac{1}{2} \left[ \begin{array}{rrr} 1 &amp; \phantom{+}0 &amp;
+-1 \\ 0 &amp; 0 &amp; 0 \\ -1 &amp; 0 &amp; 1 \end{array} \right]
++ \frac{1}{3} \left[ \begin{array}{rrr} 1 &amp; 1 &amp; 1 \\ 1 &amp; 1
+&amp; 1 \\ 1 &amp; 1 &amp; 1 \end{array} \right]
+=
+\frac{1}{6} \left[ \begin{array}{rrr} 5 &amp; \phantom{+}2 &amp; -1 \\ 2
+&amp; 2 &amp; 2 \\ -1 &amp; 2 &amp; 5 \end{array} \right]
+\end{align*}
+$$</span></p>
+<pre><code>
+```{div} example
+Find the orthogonal projection matrix $P_{\perp}$ which projects onto $U^{\perp}$ where $U$ the subspace spanned by the vectors
+
+$$
+\boldsymbol{u}_1 = \left[ \begin{array}{r} 1 \\ 0 \\ -1 \end{array} \right]
+\hspace{5mm}
+\boldsymbol{u}_2 = \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array} \right]
+$$
+
+as in the previous example. Compute
+
+$$
+\begin{align*}
+P_{\perp} = I - P &amp;=
+\left[ \begin{array}{rrr} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{array} \right] -
+\frac{1}{6} \left[ \begin{array}{rrr} 5 &amp; \phantom{+}2 &amp; -1 \\ 2 &amp; 2 &amp; 2 \\ -1 &amp; 2 &amp; 5 \end{array} \right] \\
+&amp;= \frac{1}{6} \left[ \begin{array}{rrr} 1 &amp; -2 &amp; 1 \\ -2 &amp; 4 &amp; -2 \\ 1 &amp; -2 &amp; 1 \end{array} \right]
+\end{align*}
+$$
+
+Note that
+
+$$
+\boldsymbol{u}_3 = \left[ \begin{array}{r} 1 \\ -2 \\ 1 \end{array} \right]
+$$
+
+is orthogonal to both $\boldsymbol{u}_1$ and $\boldsymbol{u}_2$ and is a basis of the orthogonal complement $U^{\perp}$. Therefore we could also compute
+
+$$
+\begin{align*}
+P_{\perp} = \frac{1}{\| \boldsymbol{u}_3 \|^2} \boldsymbol{u}_3 \boldsymbol{u}_3^T
+&amp;= \frac{1}{6} \left[ \begin{array}{r} 1 \\ -2 \\ 1 \end{array} \right]
+\left[ \begin{array}{ccc} 1 &amp; -2 &amp; 1 \end{array} \right] \\
+&amp;= \frac{1}{6} \left[ \begin{array}{rrr} 1 &amp; -2 &amp; 1 \\ -2 &amp; 4 &amp; -2 \\ 1 &amp; -2 &amp; 1 \end{array} \right]
+\end{align*}
+$$</code></pre>
+<h2 id="my-stuff-lol">My stuff lol</h2>
+<p>```{div} example Let <span
+class="math inline"><em>U</em> ⊂ ℝ<sup>3</sup></span> be the subspace
+spanned by</p>
+<p><span class="math display">$$
+\boldsymbol{u}_1 = \left[ \begin{array}{r} 2 \\ 0 \\ 1 \end{array}
+\right]
+\hspace{5mm}
+\boldsymbol{u}_2 = \left[ \begin{array}{r} 0 \\ 1 \\ 1 \end{array}
+\right]
+$$</span></p>
+<p>Find the vector in <span class="math inline"><em>U</em></span> which
+is closest to the vector</p>
+<p><span class="math display">$$
+\boldsymbol{x} = \left[ \begin{array}{r} 1 \\ 1 \\ 2 \end{array} \right]
+$$</span></p>
+<p>To solve this problem, we need to find the orthogonal projection of
+<span class="math inline"><strong>x</strong></span> onto the subspace
+<span class="math inline"><em>U</em></span>.</p>
+<pre><code>
+## Projection Theorem
+
+```{div} theorem
+Let $U \subseteq \mathbb{R}^n$ be a subspace and let $\boldsymbol{x} \in \mathbb{R}^n$. Then
+
+$$
+\boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \in U^{\perp}
+$$
+
+and $\mathrm{proj}_U(\boldsymbol{x})$ is the closest vector in $U$ to $\boldsymbol{x}$ in the sense that
+
+$$
+\| \boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \| &lt; \| \boldsymbol{x} - \boldsymbol{y} \| \hspace{5mm} \text{ for all } \boldsymbol{y} \in U \ , \ \boldsymbol{y} \not= \mathrm{proj}_U(\boldsymbol{x})
+$$
+
+---
+
+*Proof.* The proof will be given by the QR decomposition later.</code></pre>
+<h2 id="exercises">Exercises</h2>
+<p>````{div} exercise Let <span
+class="math inline"><strong>u</strong></span> and <span
+class="math inline"><strong>v</strong></span> be nonzero column vectors
+in <span class="math inline">ℝ<sup><em>n</em></sup></span> such that
+<span
+class="math inline">⟨<strong>u</strong>, <strong>v</strong>⟩ = 0</span>
+and let</p>
+<p><span class="math display">$$
+P = \frac{1}{\| \boldsymbol{u} \| \| \boldsymbol{v} \|} \boldsymbol{v}
+\boldsymbol{u}^T
+$$</span></p>
+<p>Determine whether the statement is <strong>True</strong> or
+<strong>False</strong>.</p>
+<ul>
+<li><span class="math inline">rank(<em>P</em>) = 1</span></li>
+<li><span class="math inline"><em>P</em><sup>2</sup></span> is the
+identity matrix</li>
+<li><span class="math inline"><em>P</em><sup>2</sup></span> is the zero
+matrix</li>
+<li><span class="math inline"><em>P</em><strong>x</strong></span> is the
+projection <span class="math inline"><strong>x</strong></span> onto
+<span class="math inline"><strong>u</strong></span></li>
+<li><span class="math inline"><em>P</em><strong>x</strong></span> is the
+projection <span class="math inline"><strong>x</strong></span> onto
+<span class="math inline"><strong>v</strong></span></li>
+<li><span
+class="math inline"><em>P</em><strong>u</strong> = <em>c</em><strong>v</strong></span>
+for some nonzero number <span class="math inline"><em>c</em></span></li>
+</ul>
+<p><code>{dropdown} Solution * True * False * True * False * False * True</code></p>
+<pre><code>
+````{div} exercise
+Let $U \subset \mathbb{R}^n$ be a subspace. Let $P_1$ be the orthogonal projector onto $U$ and let $P_2$ be the orthogonal projector onto the orthogonal complement $U^{\perp}$. Determine whether the statement is **True** or **False**.
+
+* $I = P_1 + P_2$
+* $P_1P_2 = P_2P_1 = 0$
+
+```{dropdown} Solution
+* True
+* True
+```</code></pre>
+<p>````{div} exercise Let <span
+class="math inline"><em>U</em> ⊂ ℝ<sup>3</sup></span> be the subspace
+spanned by</p>
+<p><span class="math display">$$
+\boldsymbol{u}_1 = \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array}
+\right]
+\hspace{10mm}
+\boldsymbol{u}_2 = \left[ \begin{array}{r} -1 \\ 1 \\ 1 \end{array}
+\right]
+$$</span></p>
+<p>Find the vector in <span class="math inline"><em>U</em></span> which
+is closest to the vector</p>
+<p><span class="math display">$$
+\boldsymbol{x} = \left[ \begin{array}{r} 1 \\ 2 \\ 1 \end{array} \right]
+$$</span></p>
+<p><code>{dropdown} Solution $$ \mathrm{proj}_U(\boldsymbol{x}) = \begin{bmatrix} 1 \\ 3/2 \\ 3/2 \end{bmatrix} $$</code></p>
+<pre><code>
+````{div} exercise
+Let $U \subset \mathbb{R}^3$ be the subspace spanned by
+
+$$
+\boldsymbol{u}_1 = \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array} \right]
+\hspace{10mm}
+\boldsymbol{u}_2 = \left[ \begin{array}{r} 1 \\ 2 \\ 1 \end{array} \right]
+$$
+
+Find the shortest distance from $\boldsymbol{x}$ to $U$ where
+
+$$
+\boldsymbol{x} = \left[ \begin{array}{r} 1 \\ 1 \\ 2 \end{array} \right]
+$$
+
+```{dropdown} Solution
+$$
+\| \boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \| = \frac{1}{\sqrt{2}}
+$$
+```
+</code></pre>
+<p>````{div} exercise Let <span
+class="math inline"><strong>u</strong> ∈ ℝ<sup><em>n</em></sup></span>
+be a nonzero vector and let</p>
+<p><span class="math display">$$
+H = I - \frac{2}{\| \boldsymbol{u} \|^2}\boldsymbol{u} \boldsymbol{u}^T
+$$</span></p>
+<p>The matrix <span class="math inline"><em>H</em></span> is called an
+elementary reflector. Determine whether the statement is
+<strong>True</strong> or <strong>False</strong>.</p>
+<ul>
+<li>There is a unique unit vector <span
+class="math inline"><strong>v</strong></span> such that <span
+class="math inline"><em>H</em><strong>v</strong> = <strong>v</strong></span>.</li>
+<li><span
+class="math inline"><em>H</em><strong>v</strong> = <strong>v</strong></span>
+for all <span
+class="math inline"><strong>v</strong> ∈ span{<strong>u</strong>}<sup>⊥</sup></span>.</li>
+</ul>
+<p><code>{dropdown} Solution * False * True</code> ````</p>
