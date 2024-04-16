@@ -195,11 +195,8 @@ P_{\perp} = \frac{1}{\| \boldsymbol{u}_3 \|^2} \boldsymbol{u}_3 \boldsymbol{u}_3
 $$
 ```
 
-<!-- 
-Contribution from Julia Epshtein -- example where U is not an orthogonal basis
--->
+```{div}example
 
-```{div} example
 Let $U \subset \mathbb{R}^3$ be the subspace spanned by
 
 $$
@@ -234,7 +231,7 @@ and we find an orthogonal basis
 $$
 \boldsymbol{v}_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
 \hspace{5mm}
-\boldsymbol{v}_2 = \begin{bmatrix} 0 \\ \frac{1}{3} \\ \frac{1}{3} \end{bmatrix}
+\boldsymbol{v}_2 = \begin{bmatrix} -2/3 \\ 1/3 \\ 1/3 \end{bmatrix}
 $$
 
 Finally, we can find the projection of $\boldsymbol{x}$ onto $U$ where
@@ -246,10 +243,14 @@ $$
 Plugging in the values, we find
 
 $$
-\mathrm{proj}_U(\boldsymbol{x}) = \begin{bmatrix} 0 \\ \frac{6}{4} \\ \frac{6}{4} \end{bmatrix}
+\mathrm{proj}_U(\boldsymbol{x}) = \begin{bmatrix} 1 \\ 3/2 \\ 3/2 \end{bmatrix}
 $$
 
+$\mathrm{proj}_U(\boldsymbol{x})$ gives the vector in $U$ that is closest to $x$. To find the distance between $x$ and this vector, we calculate
+
+$$\| \boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \| = \frac{1}{\sqrt{2}}$$
 ```
+
 
 ## Projection Theorem
 
