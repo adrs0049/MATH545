@@ -266,12 +266,35 @@ implies that if $A$ has a large condition number then small changes in $\boldsym
 Show that the 1-norm satisfies the properties of a norm.
 ```
 
+```{dropdown} Solution
+We need to show that the 1-norm satisfies all four properties of a vector norm:
+1. $||x||_1 = |x_1| + |x_2| + ... + |x_n| \geq 0$ for any $x \in \mathbb{R}^n$
+2. $||x||_1 = |x_1| + |x_2| + ... + |x_n| = 0 \iff |x_1| = |x_2| = ... = |x_n| = 0 $
+3. $||cx||_1 = |cx_1| + |cx_2| + |cx_3| + ... + |cx_n| = |c|(|x_1| + |x_2| + ... + |x_n|) = |c|||x||_1$ for any $c \in \mathbb{R}$
+4. $||x + y||_1 = |x_1 + y_1| + |x_2 + y_2| + ... + |x_n + y_n| \leq |x_1| + |y_1| + |x_2| + |y_2| + ... + |x_n| + |y_n| = ||x||_1 + ||y||_1$ for any $x, y \in \mathbb{R}^n$
+```
+
 ```{div} exercise
 Show that the $\infty$-norm satisfies the properties of a norm.
 ```
 
+```{dropdown} Solution
+We need to show that the $\infty$-norm satisfies all four properties of a vector norm:
+1. $||x||_{\infty} = \max\{|x_1|, |x_2|, ..., |x_n|\} \geq 0$ for any $x \in \mathbb{R}^n$
+2. $||x||_{\infty} = \max\{|x_1|, |x_2|, ..., |x_n|\} = 0 \iff |x_1| = |x_2| = ... = |x_n| = 0 $
+3. $||cx||_{\infty} = \max\{|cx_1|, |cx_2|, ..., |cx_n|\} = |c|\max\{|x_1|, |x_2|, ..., |x_n|\} = |c|||x||_{\infty}$ for any $c \in \mathbb{R}$
+4. $||x + y||_{\infty} = \max\{|x_1 + y_1|, |x_2 + y_2|, ..., |x_n + y_n|\} \leq \max\{|x_1| + |y_1|, |x_2| + |y_2|, ..., |x_n| + |y_n|\} = ||x||_{\infty} + ||y||_{\infty}$ for any $x, y \in \mathbb{R}^n$
+```
+
 ```{div} exercise
 Is the function $\| \boldsymbol{x} \| = x_1 + \cdots + x_n$ a vector norm? Explain.
+```
+
+```{dropdown} Solution
+It is not. We can show that it violates the 2nd condition of a norm. 
+
+Choose the vector $x = (1,-1,0,...,0)$, we have the "norm":
+$||x|| = 1 + (-1) + 0 + ... + 0 = 0$ 
 ```
 
 ```{div} exercise
@@ -292,8 +315,43 @@ $$
 Is it true that $\| \boldsymbol{x} \|_1 \leq \| \boldsymbol{x} \|_2 \leq \| \boldsymbol{x} \|_{\infty}$ for all $\boldsymbol{x} \in \mathbb{R}^n$? Explain.
 ```
 
+```{dropdown} Solution
+This is not true. The correct inequalities are:
+
+$$
+\| \boldsymbol{x} \|_{\infty} \leq \| \boldsymbol{x} \|_2 \leq \| \boldsymbol{x} \|_1
+$$
+
+Proof:
+$$
+\| \boldsymbol{x} \|_{\infty} = \max \{ |x_1|, |x_2|, ..., |x_n| \} \leq \sqrt{x_1^2 + x_2^2 + ... + x_n^2} = \| \boldsymbol{x} \|_2
+$$ 
+
+by the Cauchy-Schwarz inequality.
+
+Additionally, 
+$$  
+\| \boldsymbol{x} \|_2 = \sqrt{x_1^2 + x_2^2 + ... + x_n^2} \leq |x_1| + |x_2| + ... + |x_n| = \| \boldsymbol{x} \|_1
+$$
+
+by the triangle inequality.
+
+Therefore, $\| \boldsymbol{x} \|_{\infty} \leq \| \boldsymbol{x} \|_2 \leq \| \boldsymbol{x} \|_1$.
+```
+
 ```{div} exercise
 Determine whether the statement is **True** or **False**: If $\| A \| = 1$ then $A = I$.
+```
+
+```{dropdown} Solution
+This is false, but the converse is true. 
+
+We can give a counterexample with the following diagonal matrix with the max diagonal entry of 1: 
+
+$$A = \begin{pmatrix} 0.5 & 0 \\ 0 & 1 \end{pmatrix} \Longrightarrow ||A|| = 1$$ but $$A \neq I_2$$ 
+    
+We can come up with similar diagonal matrices for the $n \times n$ case.
+
 ```
 
 ```{div} exercise
@@ -301,5 +359,53 @@ Suppose $A$ is a 2 by 2 matrix such that the image of the unit circle under the 
 
 ![/img/01_02_02.png](/img/01_02_03.png)
 
-Determine $\mathrm{cond}(A)$.
+Determine $\mathrm{cond}(A)$ with respect to the 1, 2, and $\infty$ norm.
+```
+
+```{dropdown} Solution
+We begin by computing the operator norm with respect to the 2 -norm. From the definition of the operator norm we have
+
+$$
+\|A\|=\max _{\|x\|_{2}=1}\|A x\|_{2}
+$$
+
+Since the values in the left plot are exactly those on the unit sphere we must only identify the vector $A x$ that has been stretched the most i.e. $A x=(5,5)$ Thus
+
+$$
+\|A\|_{2}=5 \sqrt{2}
+$$
+
+Similarly for $\left\|A^{-1}\right\|$ the vector least stretched is $A x=(-2,2)$ thus
+
+$$
+\left\|A^{-1}\right\|_{2}=\frac{1}{2 \sqrt{2}}
+$$
+
+So that we find that
+
+$$
+\operatorname{cond}(A)_2=\frac{5}{2}
+$$
+
+For the 1 and $\infty$ norm, we realize that the vectors $v_{1}=\frac{1}{\sqrt{2}}(1,1)$ and $v_{2}=\frac{1}{\sqrt{2}}(-1,1)$ are eigenvectors i.e.
+
+$$
+A v_{1}=(5,5)=5 \sqrt{2} \frac{1}{\sqrt{2}}(1,1), \quad A v_{2}=(-2,2)=2 \sqrt{2} \frac{1}{\sqrt{2}}(-1,1)
+$$
+
+
+Thus we have the diagonalization: 
+
+$$
+A = PD P^{-1} = \begin{pmatrix}5 & 2 \\5 & -2 \end{pmatrix}\begin{pmatrix}5\sqrt{2} & 0 \\0 & 2\sqrt{2} \end{pmatrix}\begin{pmatrix}\frac{1}{10} & \frac{1}{10} \\\frac{1}{4} & -\frac{1}{4} \end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}7 & 3 \\ 3 & 7 \end{pmatrix}
+$$
+
+and the inverse
+$$
+A^{-1} = \frac{1}{20\sqrt{2}}\begin{pmatrix}7 & -3 \\ -3 & 7 \end{pmatrix}
+$$
+Then, we compute the condition number:
+$$
+cond(A)_1 = cond(A)_{\infty} = \|A\|_{\infty} \|A^{-1}\|_{\infty} = \left(\frac{10}{\sqrt{2}} \right)\left(\frac{10}{20\sqrt{2}} \right) = \frac{5}{2}
+$$
 ```
