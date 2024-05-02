@@ -262,9 +262,8 @@ implies that if $A$ has a large condition number then small changes in $\boldsym
 
 ## Exercises
 
-```{div} exercise
+````{div} exercise
 Show that the 1-norm satisfies the properties of a norm.
-```
 
 ```{dropdown} Solution
 We need to show that the 1-norm satisfies all four properties of a vector norm:
@@ -274,9 +273,11 @@ We need to show that the 1-norm satisfies all four properties of a vector norm:
 4. $||x + y||_1 = |x_1 + y_1| + |x_2 + y_2| + ... + |x_n + y_n| \leq |x_1| + |y_1| + |x_2| + |y_2| + ... + |x_n| + |y_n| = ||x||_1 + ||y||_1$ for any $x, y \in \mathbb{R}^n$
 ```
 
-```{div} exercise
+````
+
+
+````{div} exercise
 Show that the $\infty$-norm satisfies the properties of a norm.
-```
 
 ```{dropdown} Solution
 We need to show that the $\infty$-norm satisfies all four properties of a vector norm:
@@ -286,16 +287,21 @@ We need to show that the $\infty$-norm satisfies all four properties of a vector
 4. $||x + y||_{\infty} = \max\{|x_1 + y_1|, |x_2 + y_2|, ..., |x_n + y_n|\} \leq \max\{|x_1| + |y_1|, |x_2| + |y_2|, ..., |x_n| + |y_n|\} = ||x||_{\infty} + ||y||_{\infty}$ for any $x, y \in \mathbb{R}^n$
 ```
 
-```{div} exercise
+````
+
+````{div} exercise
 Is the function $\| \boldsymbol{x} \| = x_1 + \cdots + x_n$ a vector norm? Explain.
-```
 
 ```{dropdown} Solution
 It is not. We can show that it violates the 2nd condition of a norm. 
 
-Choose the vector $x = (1,-1,0,...,0)$, we have the "norm":
-$||x|| = 1 + (-1) + 0 + ... + 0 = 0$ 
+Choose the vector $x = (1,-1,0,\cdots,0)$, we have the "norm":
+
+$$||x|| = 1 + (-1) + 0 + \cdots + 0 = 0$$ 
 ```
+
+````
+
 
 ```{div} exercise
 The function
@@ -311,9 +317,8 @@ $$
 $$
 ```
 
-```{div} exercise
+````{div} exercise
 Is it true that $\| \boldsymbol{x} \|_1 \leq \| \boldsymbol{x} \|_2 \leq \| \boldsymbol{x} \|_{\infty}$ for all $\boldsymbol{x} \in \mathbb{R}^n$? Explain.
-```
 
 ```{dropdown} Solution
 This is not true. The correct inequalities are:
@@ -339,9 +344,10 @@ by the triangle inequality.
 Therefore, $\| \boldsymbol{x} \|_{\infty} \leq \| \boldsymbol{x} \|_2 \leq \| \boldsymbol{x} \|_1$.
 ```
 
-```{div} exercise
+````
+
+````{div} exercise
 Determine whether the statement is **True** or **False**: If $\| A \| = 1$ then $A = I$.
-```
 
 ```{dropdown} Solution
 This is false, but the converse is true. 
@@ -354,13 +360,14 @@ We can come up with similar diagonal matrices for the $n \times n$ case.
 
 ```
 
-```{div} exercise
+````
+
+````{div} exercise
 Suppose $A$ is a 2 by 2 matrix such that the image of the unit circle under the linear transformation $A$ is:
 
 ![/img/01_02_02.png](/img/01_02_03.png)
 
 Determine $\mathrm{cond}(A)$ with respect to the 1, 2, and $\infty$ norm.
-```
 
 ```{dropdown} Solution
 We begin by computing the operator norm with respect to the 2 -norm. From the definition of the operator norm we have
@@ -409,3 +416,5 @@ $$
 cond(A)_1 = cond(A)_{\infty} = \|A\|_{\infty} \|A^{-1}\|_{\infty} = \left(\frac{10}{\sqrt{2}} \right)\left(\frac{10}{20\sqrt{2}} \right) = \frac{5}{2}
 $$
 ```
+
+````
