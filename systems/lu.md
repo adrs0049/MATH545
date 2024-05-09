@@ -1,7 +1,7 @@
 # LU Decomposition
 
 ```{div} bigidea
-Record the row operations of the Gaussian elimination algorithm in the LU decomposition and use the decomposition $A = LU$ in backward/forward subsitution to efficiently solve a system of linear equations $A \boldsymbol{x} = \boldsymbol{b}$.
+Record the row operations of the Gaussian elimination algorithm in the LU decomposition and use the decomposition $A = LU$ in backward/forward substitution to efficiently solve a system of linear equations $A \boldsymbol{x} = \boldsymbol{b}$.
 ```
 
 ```{image} /img/01_01_01.png

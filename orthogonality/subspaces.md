@@ -231,6 +231,24 @@ $U$ is not a subspace because it is not closed under vector addition.
 ````
 
 ````{div} exercise
+Determine the nullity of the given matrix below by appealing to the rank-nullity theorem. Avoid computations.
+
+$$
+\begin{pmatrix}
+2 & -3 \\
+0 & 0 \\
+-4 & 6 \\
+22 & -33
+\end{pmatrix}
+$$
+
+```{dropdown} Solution
+Row 3 and 4 are multiples of Row 1. Then, the dimension of the column space is 1. By the rank-nullity theorem, $\dim (N(A)) = n - \dim (R(A)) = 2 - 1 = 1$
+```
+
+````
+
+````{div} exercise
 Determine whether $\mathrm{span} \{ \boldsymbol{u}_1 , \boldsymbol{u}_2 \} = \mathrm{span} \{ \boldsymbol{u}_3 , \boldsymbol{u}_4 \}$ where
 
 $$
