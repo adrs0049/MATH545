@@ -434,6 +434,7 @@ $$
 by applying finite difference formulas.
 
 ```{dropdown} Solution
+
 If we discretize the DE using the finite difference approach, we obtain N equations
 
 $$
