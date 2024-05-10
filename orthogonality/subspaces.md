@@ -115,6 +115,20 @@ Let $U \subseteq \mathbb{R}^n$ be a subspace. A set of vectors $\{ \boldsymbol{u
 The **dimension** of $U$ is the number $m$ of vectors in a basis.
 ```
 
+```{div} example
+<p>
+
+Show that
+
+$$
+  \mathcal{B} = \left\{ \begin{pmatrix} 2 \\ 1 \end{pmatrix}, \begin{pmatrix} 5 \\ 2 \end{pmatrix} \right\}
+$$
+
+is a basis for $\mathbb{R}^2$.
+
+</p>
+```
+
 ## Nullspace and Range
 
 ```{div} definition
