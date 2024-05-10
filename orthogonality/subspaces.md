@@ -293,9 +293,10 @@ Let $A = LU$ be the LU decomposition of $A$. Determine whether the statement is 
 
 ```{dropdown} Solution
 * True
-* True
+* True. Since from the previous question we have that $N(A) = N(U)$, this means that the
+two spaces have the same basis and in particular the same number of vectors in their basis and hence their dimensions agree.
 * False
-* True
+* True. By definition, we have that $\dim (R(A)) = \text{rank}(A) = \text{rank}(U) = $\dim (R(U))$.
 ```
 
 ````
