@@ -322,21 +322,20 @@ $$
 When solving \(A^T A\hat{x} = A^T b\), we isolate \hat{x} to get the transformed equation \( \hat{x} = (A^T A)^{$-1$} A^T b \). After computing, we get
 
 $$
-\hat{x} = \begin{pmatrix} $-1$ \\ 3 \end{pmatrix}
+\hat{x} = \begin{pmatrix} -1 \\ 3 \end{pmatrix}
 $$
 
-then we compute
+Then we compute
 
 $$
 p = \begin{pmatrix} 2 \\ 3 \\ 0 \end{pmatrix}
 $$
 
-Then the error, \( e = b - p \), is
+The error, \( e = b - p \), is
 
 $$
 e = \begin{pmatrix} 0 \\ 0 \\ 4 \end{pmatrix}
 $$
-
 
 ```
 
