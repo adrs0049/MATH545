@@ -310,6 +310,38 @@ $$
 ````
 
 ````{div} exercise
+Project b onto the column space of A by solving \(A^T A\hat{x} = A^T b\) and \(p = A\hat{x}\), and solve for \( e = b - p \). It should be perpendicular to the columns of A.
+
+$$
+\boldsymbol{A} = \begin{pmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{pmatrix},
+\boldsymbol{b} = \begin{pmatrix} 2 \\ 3 \\ 4 \end{pmatrix}
+$$
+
+```{dropdown} Solution
+When solving \(A^T A\hat{x} = A^T b\), we isolate \hat{x} to get the transformed equation \( \hat{x} = (A^T A)^{$-1$} A^T b \). After computing, we get
+
+$$
+\hat{x} = \begin{pmatrix} $-1$ \\ 3 \end{pmatrix}
+$$
+
+then we compute
+
+$$
+p = \begin{pmatrix} 2 \\ 3 \\ 0 \end{pmatrix}
+$$
+
+Then the error, \( e = b - p \), is
+
+$$
+e = \begin{pmatrix} 0 \\ 0 \\ 4 \end{pmatrix}
+$$
+
+
+```
+
+````
+
+````{div} exercise
 Let $\boldsymbol{u} \in \mathbb{R}^n$ be a nonzero vector and let
 
 $$
