@@ -230,6 +230,32 @@ $U$ is not a subspace because it is not closed under vector addition.
 
 ````
 
+
+
+````{div} exercise
+Are the vectors below linearly independent?
+
+$$
+A = \begin{bmatrix} 
+5 & 2 & 4 \\
+-2 & -3 & 5 \\ 
+4 & 5 & -7
+\end{bmatrix}
+$$
+
+```{dropdown} Solution
+The RREF of A is 
+$$
+\begin{bmatrix}
+1 & 0 & 2 \\
+0 & 1 & -3 \\
+0 & 0 & 0
+$$ 
+This means we have two pivots, thus the vectors are not linearly independent. Equivalently, $Ax = 0$ has a non-trivial solution and hence the vectors are not linearly independent.
+```
+
+````
+
 ````{div} exercise
 Determine the nullity of the given matrix below by appealing to the rank-nullity theorem. Avoid computations.
 
@@ -278,7 +304,16 @@ $$
 * Is $\{ \boldsymbol{u}_1 , \boldsymbol{u}_3 , \boldsymbol{u}_4 \}$ a basis of $U$? Explain.
 
 ```{dropdown} Solution
-$\dim(U) = 3$ and $\{ \boldsymbol{u}_1 , \boldsymbol{u}_3 , \boldsymbol{u}_4 \}$ also forms a basis of $U$.
+Putting the vectors that span U into a matrix A and row reducing that gets us: \\
+$$
+\begin{bmatrix}
+1 & 0 & 0 & 7.5 \\
+0 & 1 & 0 & -6 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0
+$$ \\
+We see that this 4x4 matrix only has 3 columns as pivot columns, so we can omit $u_{4}$ from the basis.
+$\dim(U) = 3$ and $\{ \boldsymbol{u}_1 , \boldsymbol{u}_2 , \boldsymbol{u}_3 \}$ form a basis of $U$.
 ```
 
 ````
