@@ -127,8 +127,9 @@ $$
 is a basis for $\mathbb{R}^2$.
 
 We have
+
 $$
-  \mathcal{B} = \begin{pmatrix} 2 & 5 \\ 1 & 2 \end{pmatrix} $\sim$ \begin{pmatrix} 2 & 5 \\ 0 & 1 \end{pmatrix}
+  \mathcal{B} = \begin{pmatrix} 2 & 5 \\ 1 & 2 \end{pmatrix} \sim \begin{pmatrix} 2 & 5 \\ 0 & 1 \end{pmatrix}
 $$
 
 Thus we have two pivots and the vectors are linearly independent. Equivalently, we could have simply computed the determinant.
