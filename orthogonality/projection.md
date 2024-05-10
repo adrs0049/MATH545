@@ -251,8 +251,16 @@ Let $U \subset \mathbb{R}^n$ be a subspace. Let $P_1$ be the orthogonal projecto
 * $P_1P_2 = P_2P_1 = 0$
 
 ```{dropdown} Solution
-* True
-* True
+* True, since
+
+$$
+R^n = U + U^{\perp}
+$$
+
+the matrix \(P_1 + P_2\) is the projection onto the whole space and thus must be the identity.
+
+* True. If we project onto \begin{equation*} U \end{equation*} and then onto \begin{equation*} U^{\perp} \end{equation*}, we will expect zero since the two spaces are orthogonal to each other.
+
 ```
 ````
 
