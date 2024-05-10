@@ -161,12 +161,13 @@ Let $A$ be a $m \times n$ matrix and let $A = LU$ be the LU decomposition (if it
 Determine the null space of A and verify using the rank-nullity theorem.
 
 $$
-  \mathcal{A} = \begin{pmatrix} 2 & -1 \\ $-4$ & 2 \end{pmatrix} $\sim$ \begin{pmatrix} 2 & 5 \\ 0 & 1 \end{pmatrix}
+  \mathcal{A} = \begin{pmatrix} 2 & -1 \\ -4 & 2 \end{pmatrix} \sim \begin{pmatrix} 2 & 5 \\ 0 & 1 \end{pmatrix}
 $$
 
 Solution
+
 $$
-  \mathcal{A} = \begin{pmatrix} 2 & $-1$ \\ $-4$ & 2 \end{pmatrix} $\sim$ \begin{pmatrix} 1 & $-\frac{1}{2}$ \\ 0 & 0 \end{pmatrix}
+  \mathcal{A} = \begin{pmatrix} 2 & -1 \\ -4 & 2 \end{pmatrix} \sim \begin{pmatrix} 1 & -\frac{1}{2} \\ 0 & 0 \end{pmatrix}
 $$
 
 Let \( x_2 = 1 \), which means \( x_1 = \frac{1}{2} \). \( N[A] = \text{span}\left\{ \begin{pmatrix} \frac{1}{2} \\ 1 \end{pmatrix} \right\} \)
