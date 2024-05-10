@@ -251,8 +251,23 @@ Let $U \subset \mathbb{R}^n$ be a subspace. Let $P_1$ be the orthogonal projecto
 * $P_1P_2 = P_2P_1 = 0$
 
 ```{dropdown} Solution
-* True
-* True
+* True. Since $U + U^{\perp} = \mathbb{R}$, the matrix $U_{1} + U_{2}$ is the projection onto the whole space and thus must be the identity.
+* True. If you first project onto $U$ and then onto $U^{\perp}$ you expect zero since the two spaces are orthogonal to each other.
+```
+````
+
+````{div} exercise
+Prove $R(A) = \text{span} \{l_{1} ... l_{r} \}$ where $l_{i}$ are the columns of L.
+
+* $I = P_1 + P_2$
+* $P_1P_2 = P_2P_1 = 0$
+
+```{dropdown} Solution
+Let $y \in R(A)$. Using the LU decomposition we have that \\
+$$
+y = LUx = L \begin{bmatrix} * // \vdots // * // 0 // \vdots // 0 \end{bmatrix}
+$$ \\
+Then $y$ is a linear combination of the first $r$ columns of the matrix $L$, where $r$ = $\rank(A)$
 ```
 ````
 
