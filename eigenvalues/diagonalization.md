@@ -134,6 +134,26 @@ and so $\lambda = 3$ has geometric multiplicity 1. Therefore $A$ does not have e
 A matrix $A$ is diagonalizable if and only if, for all eiganvalues $\lambda$, the algebraic multiplicity of $\lambda$ equals the geometric multiplicity of $\lambda$.
 ```
 
+```div{Example}
+Let's compute the diagonalization of the matrix $A = \begin{pmatrix} 1 & 0 & -1 \\ 1 & 2 & 1 \\ 2 & 2 & 3 \end{pmatrix}$.
+
+First, find the eigenvalues and eigenvectors.
+
+Eigenvalue 3, eigenvector: $\begin{pmatrix} \frac{-1}{2} \\ \frac{1}{2} \\ 1 \end{pmatrix}$
+
+Eigenvalue 2, eigenvector: $\begin{pmatrix} -1 \\ \frac{1}{2} \\ 1 \end{pmatrix}$
+
+Eigenvalue 1, eigenvector: $\begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}$
+
+Form the matrix *P*, whose column *i* is eigenvector number *i*
+
+*P* = $\begin{pmatrix} \frac{-1}{2} & -1 & -1 \\ \frac{1}{2} & \frac{1}{2} & 1 \\ 1 & 1 & 0 \end{pmatrix}$
+
+Form the diagonal matrix *D* whose element at row *i*, column *i* is eigenvalue number *i*
+
+*D* = $\begin{pmatrix} 3 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}$
+```
+
 ## Spectral Theorem
 
 ````{div} theorem
