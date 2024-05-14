@@ -483,6 +483,65 @@ $$
 does not have an LU decomposition (*why not?*). However, if we allow partial pivoting (ie. interchanging rows during Gaussian elimination), then Gaussian elimination with partial pivoting computes for *any* matrix $A$ a decomposition $A = PLU$ where $P$ is a permutation matrix, $L$ is unit lower triangular and $U$ is upper triangular. This is called the **LU decomposition with partial pivoting** and has similar computational advantages as the LU decomposition. See [Wikipedia:LU decomposition](https://en.wikipedia.org/wiki/LU_decomposition).
 ```
 
+```div{Example: Partial Pivoting}
+
+Compute $A = PLU$, where P is the permutation matrix on the following example:
+
+$$
+A = \begin{bmatrix} 0 & 1 & 0 \\ -8 & 8 & 1 \\ 2 & -2 & 0 \end{bmatrix}
+$$
+
+Start from the identity matrix $$
+L = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+$$
+
+and the identity matrix 
+$$
+P = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+$$
+
+**Step 1:** Swap the rows at $1$ and $2$
+
+
+$$
+\begin{bmatrix} -8 & 8 & 1 \\ 0 & 1 & 0 \\ 2 & -2 & 0 \end{bmatrix}
+$$
+
+Swap the rows $1$ and $2$ in the permutation matrix:
+
+$$
+P = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+$$
+
+**Step 2:** Add row $1$ multiplied by $\frac{1}{4}$ to row $3$: $R_3 = R_3 + \frac{R_1}{4}$
+
+$$
+\begin{bmatrix} -8 & 8 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & \frac{1}{4}\end{bmatrix}
+$$
+
+Write the coefficient $-\frac{1}{4}$ in the matrix $L$ at row $3$, column $1$:
+
+$$
+\begin{bmatrix} 1 & 0 & 0 \\
+0 & 1 & 0 \\ -\frac{1}{4} & 0 & 1 \end{bmatrix}
+$$
+
+**Final Answer**
+
+$$
+P = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+$$
+
+$$
+L = \begin{bmatrix} 1 & 0 & 0 \\
+0 & 1 & 0 \\ -\frac{1}{4} & 0 & 1 \end{bmatrix}
+$$
+
+$$
+U = \begin{bmatrix} -8 & 8 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & \frac{1}{4}\end{bmatrix}
+$$
+```
+
 ## Forward and Backward Substitution
 
 ```{div} definition
