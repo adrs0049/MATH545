@@ -230,6 +230,50 @@ $U$ is not a subspace because it is not closed under vector addition.
 
 ````
 
+
+
+````{div} exercise
+Are the vectors below linearly independent?
+
+$$
+A = \begin{bmatrix} 
+5 & 2 & 4 \\
+-2 & -3 & 5 \\ 
+4 & 5 & -7
+\end{bmatrix}
+$$
+
+```{dropdown} Solution
+The RREF of A is 
+$$
+\begin{bmatrix}
+1 & 0 & 2 \\
+0 & 1 & -3 \\
+0 & 0 & 0
+$$ 
+This means we have two pivots, thus the vectors are not linearly independent. Equivalently, $Ax = 0$ has a non-trivial solution and hence the vectors are not linearly independent.
+```
+
+````
+
+````{div} exercise
+Determine the nullity of the given matrix below by appealing to the rank-nullity theorem. Avoid computations.
+
+$$
+\begin{pmatrix}
+2 & -3 \\
+0 & 0 \\
+-4 & 6 \\
+22 & -33
+\end{pmatrix}
+$$
+
+```{dropdown} Solution
+Row 3 and 4 are multiples of Row 1. Then, the dimension of the column space is 1. By the rank-nullity theorem, $\dim (N(A)) = n - \dim (R(A)) = 2 - 1 = 1$
+```
+
+````
+
 ````{div} exercise
 Determine whether $\mathrm{span} \{ \boldsymbol{u}_1 , \boldsymbol{u}_2 \} = \mathrm{span} \{ \boldsymbol{u}_3 , \boldsymbol{u}_4 \}$ where
 
@@ -260,7 +304,16 @@ $$
 * Is $\{ \boldsymbol{u}_1 , \boldsymbol{u}_3 , \boldsymbol{u}_4 \}$ a basis of $U$? Explain.
 
 ```{dropdown} Solution
-$\dim(U) = 3$ and $\{ \boldsymbol{u}_1 , \boldsymbol{u}_3 , \boldsymbol{u}_4 \}$ also forms a basis of $U$.
+Putting the vectors that span U into a matrix A and row reducing that gets us: \\
+$$
+\begin{bmatrix}
+1 & 0 & 0 & 7.5 \\
+0 & 1 & 0 & -6 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0
+$$ \\
+We see that this 4x4 matrix only has 3 columns as pivot columns, so we can omit $u_{4}$ from the basis.
+$\dim(U) = 3$ and $\{ \boldsymbol{u}_1 , \boldsymbol{u}_2 , \boldsymbol{u}_3 \}$ form a basis of $U$.
 ```
 
 ````
@@ -275,9 +328,10 @@ Let $A = LU$ be the LU decomposition of $A$. Determine whether the statement is 
 
 ```{dropdown} Solution
 * True
-* True
+* True. Since from the previous question we have that $N(A) = N(U)$, this means that the
+two spaces have the same basis and in particular the same number of vectors in their basis and hence their dimensions agree.
 * False
-* True
+* True. By definition, we have that $\dim (R(A)) = \text{rank}(A) = \text{rank}(U) = $\dim (R(U))$.
 ```
 
 ````

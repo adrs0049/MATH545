@@ -1,7 +1,7 @@
 # LU Decomposition
 
 ```{div} bigidea
-Record the row operations of the Gaussian elimination algorithm in the LU decomposition and use the decomposition $A = LU$ in backward/forward subsitution to efficiently solve a system of linear equations $A \boldsymbol{x} = \boldsymbol{b}$.
+Record the row operations of the Gaussian elimination algorithm in the LU decomposition and use the decomposition $A = LU$ in backward/forward substitution to efficiently solve a system of linear equations $A \boldsymbol{x} = \boldsymbol{b}$.
 ```
 
 ```{image} /img/01_01_01.png
@@ -567,9 +567,9 @@ Let $A$ be a $m$ by $n$ matrix. Determine whether the statement is **True** or *
 ```{dropdown} Solution
 * False
 * True
-* True
-* True
-* True
+* True. Since we know $Ax = b$ has one solution that means that $\text{rank}(A|b) = \text{rank}(A) = n < m$ and thus we have a unique solution. 
+* True. Since $Ax = b$ has one solution, this means that $\text{rank}(A|b) = \text{rank}(A) < n < m$. Thus there are infinitely many solutions.
+* True. Since $L^{-1}$ is the matrix product of all matrices $E_{i}$ where each matrix $E_{i}$ represents a row operation, each row operation can be "undone", hence all $E_{i}$ are invertible. This means that $L^{-1}$ is invertible, thus L must be invertible, thus det(L) ≠ 0.
 ```
 
 ````
