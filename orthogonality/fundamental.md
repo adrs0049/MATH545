@@ -114,6 +114,13 @@ $$
 $$
 ```
 
+## Fundamental Subspaces Big Picture
+**Figure 1:** Dimensions and orthogonality for any m by n matrix A of rank r
+```{image} MATH545/img/fundamental_subspace.png
+:width: 100%
+:align: center
+```
+
 ## Exercises
 
 ````{div} exercise
