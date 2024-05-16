@@ -13,6 +13,8 @@ $$
 y'' + p(t)y' + q(t)y = r(t)
 $$
 
+where \( p(t) \), \( q(t) \), and \( r(t) \) are all known functions of \( t \)
+
 **Boundary conditions** are equations imposed on the solution at the boundary points $t_0$ and $t_f$. For example, specify values of the solution $y(t)$ at the endpoints
 
 $$
