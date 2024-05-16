@@ -639,6 +639,117 @@ A = \left[ \begin{array}{rrr} 1 & \phantom{+}1 & 1 \\ -1 & 2 & -1 \\ 1 & 0 & -1 
 $$
 
 ```{dropdown} Solution
+
+**Step 1: Compute \( A^T A \) and its eigenvalues and eigenvectors**
+
+Compute \( A^T A \):
+
+$$
+A^T A = \left[ \begin{array}{rrr} 1 & -1 & 1 \\ 1 & 2 & 0 \\ 1 & -1 & -1 \end{array} \right] \left[ \begin{array}{rrr} 1 & 1 & 1 \\ -1 & 2 & -1 \\ 1 & 0 & -1 \end{array} \right] = \left[ \begin{array}{rrr} 3 & -3 & -1 \\ -3 & 5 & 1 \\ -1 & 1 & 3 \end{array} \right]
+$$
+
+Find the eigenvalues of \( A^T A \):
+
+Solving the characteristic polynomial \(\det(A^T A - \lambda I) = 0\):
+
+$$
+\left| \begin{array}{ccc}
+3-\lambda & -3 & -1 \\
+-3 & 5-\lambda & 1 \\
+-1 & 1 & 3-\lambda
+\end{array} \right| = 0
+$$
+
+The eigenvalues are \( \lambda_1 = 6, \lambda_2 = 3, \lambda_3 = 2 \).
+
+**Step 2: Compute the singular values**
+
+The singular values \( \sigma_i \) are the square roots of the eigenvalues \( \lambda_i \):
+
+$$
+\sigma_1 = \sqrt{6}, \sigma_2 = \sqrt{3}, \sigma_3 = \sqrt{2}
+$$
+
+**Step 3: Compute the right singular vectors \( Q \)**
+
+Solve for the eigenvectors of \( A^T A \) corresponding to each \( \lambda \):
+
+For \( \lambda = 6 \):
+
+$$
+\left( A^T A - 6I \right) \boldsymbol{q}_1 = 0 \Rightarrow \boldsymbol{q}_1 = \frac{1}{\sqrt{6}} \left[ \begin{array}{c} -1 \\ 2 \\ -1 \end{array} \right]
+$$
+
+For \( \lambda = 3 \):
+
+$$
+\left( A^T A - 3I \right) \boldsymbol{q}_2 = 0 \Rightarrow \boldsymbol{q}_2 = \frac{1}{\sqrt{3}} \left[ \begin{array}{c} 1 \\ 1 \\ 1 \end{array} \right]
+$$
+
+For \( \lambda = 2 \):
+
+$$
+\left( A^T A - 2I \right) \boldsymbol{q}_3 = 0 \Rightarrow \boldsymbol{q}_3 = \frac{1}{\sqrt{2}} \left[ \begin{array}{c} -1 \\ 0 \\ 1 \end{array} \right]
+$$
+
+Form the matrix \( Q \) from these eigenvectors:
+
+$$
+Q = \left[ \begin{array}{rrr}
+-\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{2}} \\
+\frac{2}{\sqrt{6}} & \frac{1}{\sqrt{3}} & 0 \\
+-\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{2}}
+\end{array} \right]
+$$
+
+**Step 4: Compute the left singular vectors \( P \)**
+
+Using \( A \boldsymbol{q}_i = \sigma_i \boldsymbol{p}_i \), find the columns of \( P \):
+
+For \( \sigma_1 = \sqrt{6} \):
+
+$$
+A \boldsymbol{q}_1 = \sqrt{6} \boldsymbol{p}_1 \Rightarrow \boldsymbol{p}_1 = \left[ \begin{array}{c} 0 \\ 1 \\ 0 \end{array} \right]
+$$
+
+For \( \sigma_2 = \sqrt{3} \):
+
+$$
+A \boldsymbol{q}_2 = \sqrt{3} \boldsymbol{p}_2 \Rightarrow \boldsymbol{p}_2 = \left[ \begin{array}{c} 1 \\ 0 \\ 0 \end{array} \right]
+$$
+
+For \( \sigma_3 = \sqrt{2} \):
+
+$$
+A \boldsymbol{q}_3 = \sqrt{2} \boldsymbol{p}_3 \Rightarrow \boldsymbol{p}_3 = \left[ \begin{array}{c} 0 \\ 0 \\ -1 \end{array} \right]
+$$
+
+Form the matrix \( P \):
+
+$$
+P = \left[ \begin{array}{rrr}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & -1
+\end{array} \right]
+$$
+
+**Step 5: Form the diagonal matrix \( \Sigma \)**
+
+$$
+\Sigma = \begin{bmatrix}
+\sqrt{6} & 0 & 0 \\
+0 & \sqrt{3} & 0 \\
+0 & 0 & \sqrt{2}
+\end{bmatrix}
+$$
+
+**Final SVD decomposition:**
+
+$$
+A = P \Sigma Q^T
+$$
+
 $$
 P = \left[ \begin{array}{rrr} 0 & \phantom{+}1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & -1 \end{array} \right]
 \hspace{10mm}
