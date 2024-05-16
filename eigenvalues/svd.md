@@ -619,6 +619,109 @@ A = \left[ \begin{array}{rrr} 1 & \ \, 2 & -1 \\ 2 & 1 & 4 \end{array} \right]
 $$
 
 ```{dropdown} Solution
+
+**Step 1: Compute \( A^T A \) and its eigenvalues and eigenvectors**
+
+Compute \( A^T A \):
+
+$$
+A^T A = \left[ \begin{array}{rr} 1 & 2 \\ 2 & 1 \\ -1 & 4 \end{array} \right] \left[ \begin{array}{rrr} 1 & 2 & -1 \\ 2 & 1 & 4 \end{array} \right] = \left[ \begin{array}{rrr} 5 & 4 & 7 \\ 4 & 5 & 2 \\ 7 & 2 & 17 \end{array} \right]
+$$
+
+Find the eigenvalues of \( A^T A \):
+
+Solving the characteristic polynomial \( \det(A^T A - \lambda I) = 0 \):
+
+$$
+\left| \begin{array}{ccc}
+5-\lambda & 4 & 7 \\
+4 & 5-\lambda & 2 \\
+7 & 2 & 17-\lambda
+\end{array} \right| = 0
+$$
+
+The eigenvalues are \( \lambda_1 = 21, \lambda_2 = 6, \lambda_3 = 0 \).
+
+**Step 2: Compute the singular values**
+
+The singular values \( \sigma_i \) are the square roots of the eigenvalues \( \lambda_i \):
+
+$$
+\sigma_1 = \sqrt{21}, \sigma_2 = \sqrt{6}, \sigma_3 = 0
+$$
+
+**Step 3: Compute the right singular vectors \( Q \)**
+
+Solve for the eigenvectors of \( A^T A \) corresponding to each \( \lambda \):
+
+For \( \lambda = 21 \):
+
+$$
+\left( A^T A - 21I \right) \boldsymbol{q}_1 = 0 \Rightarrow \boldsymbol{q}_1 = \frac{1}{\sqrt{21}} \left[ \begin{array}{c} 2 \\ 1 \\ 4 \end{array} \right]
+$$
+
+For \( \lambda = 6 \):
+
+$$
+\left( A^T A - 6I \right) \boldsymbol{q}_2 = 0 \Rightarrow \boldsymbol{q}_2 = \frac{1}{\sqrt{6}} \left[ \begin{array}{c} 1 \\ 2 \\ -1 \end{array} \right]
+$$
+
+For \( \lambda = 0 \):
+
+$$
+\left( A^T A - 0I \right) \boldsymbol{q}_3 = 0 \Rightarrow \boldsymbol{q}_3 = \frac{1}{\sqrt{14}} \left[ \begin{array}{c} -3 \\ 2 \\ 1 \end{array} \right]
+$$
+
+Form the matrix \( Q \) from these eigenvectors:
+
+$$
+Q = \left[ \begin{array}{rrr}
+\frac{2}{\sqrt{21}} & \frac{1}{\sqrt{6}} & \frac{-3}{\sqrt{14}} \\
+\frac{1}{\sqrt{21}} & \frac{2}{\sqrt{6}} & \frac{2}{\sqrt{14}} \\
+\frac{4}{\sqrt{21}} & \frac{-1}{\sqrt{6}} & \frac{1}{\sqrt{14}}
+\end{array} \right]
+$$
+
+**Step 4: Compute the left singular vectors \( P \)**
+
+Using \( A \boldsymbol{q}_i = \sigma_i \boldsymbol{p}_i \), find the columns of \( P \):
+
+For \( \sigma_1 = \sqrt{21} \):
+
+$$
+A \boldsymbol{q}_1 = \sqrt{21} \boldsymbol{p}_1 \Rightarrow \boldsymbol{p}_1 = \left[ \begin{array}{c} 0 \\ 1 \end{array} \right]
+$$
+
+For \( \sigma_2 = \sqrt{6} \):
+
+$$
+A \boldsymbol{q}_2 = \sqrt{6} \boldsymbol{p}_2 \Rightarrow \boldsymbol{p}_2 = \left[ \begin{array}{c} 1 \\ 0 \end{array} \right]
+$$
+
+Form the matrix \( P \):
+
+$$
+P = \left[ \begin{array}{rr}
+0 & 1 \\
+1 & 0
+\end{array} \right]
+$$
+
+**Step 5: Form the diagonal matrix \( \Sigma \)**
+
+$$
+\Sigma = \begin{bmatrix}
+\sqrt{21} & 0 & 0 \\
+0 & \sqrt{6} & 0
+\end{bmatrix}
+$$
+
+**Final SVD decomposition:**
+
+$$
+A = P \Sigma Q^T
+$$
+
 $$
 P = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}
 \hspace{10mm}
@@ -628,6 +731,7 @@ $$
 $$
 Q = \left[ \begin{array}{rrr} 2/\sqrt{21} & 1/\sqrt{6} & -3/\sqrt{14} \\ 1/\sqrt{21} & 2/\sqrt{6} & 2/\sqrt{14} \\ 4/\sqrt{21} & -1/\sqrt{6} & 1/\sqrt{14} \end{array} \right]
 $$
+
 ```
 ````
 
