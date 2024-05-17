@@ -424,13 +424,27 @@ $$
 
 using the forward difference formula to approximate $y'$. Use the notation as in the examples: choose $N$, let  $h = (t_f - t_0)/(N+1)$ and $t_k = t_0 + kh$, let $y_k$ denote an approximation of $y(t_k)$ and note $y_0 = \alpha$ and $y_{N+1} = \beta$.
 
-**Exercise 5.** Explain why it is not possible to derive a linear system $A \boldsymbol{y} = \boldsymbol{b}$ for the equation
+````{div} **Exercise 5.**
+Explain why it is not possible to derive a linear system $A \boldsymbol{y} = \boldsymbol{b}$ for the equation
 
 $$
 y'' = \cos(y) \ \ , \ \ y(0) = 0 \ \ , \ \ y(1) = \frac{\pi}{4}
 $$
 
 by applying finite difference formulas.
+
+```{dropdown} Solution
+
+If we discretize the DE using the finite difference approach, we obtain N equations
+
+$$
+\frac{y_{k+1} - 2y_k + y_{k-1}}{h^2} = \cos(y_k), 1 \leq k \leq N
+$$
+
+Note that since the \( y_k \) is inside the cosine, this is a system of nonlinear equations and hence cannot be expressed as a linear system of equations or equivalently as a matrix.
+```
+
+````
 
 **Exercise 6.** Suppose we compute the finite difference approximation of the equation
 
