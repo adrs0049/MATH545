@@ -684,6 +684,28 @@ A = LU =
 $$
 
 ```{dropdown} Solution
+Solve $L \boldsymbol{y} = \boldsymbol{b}$
+
+$$
+\begin{align*}
+y_1 &= 2 \\
+y_2 &= -1 + 1(2) = 1 \\
+y_3 &= 2 -2 -1 = -1
+\end{align*}
+$$
+
+and then solve $U \boldsymbol{x} = \boldsymbol{y}$
+
+$$
+\begin{align*}
+x_3 &= -1 \\
+x_2 &= -(1 - (-1)) = -2 \\
+x_1 &= (1/3)(2 - 1 (-1)) = 1
+\end{align*}
+$$
+
+Therefore
+
 $$
 \boldsymbol{x} = \left[ \begin{array}{r} 1 \\ -2 \\ -1 \end{array} \right]
 $$
