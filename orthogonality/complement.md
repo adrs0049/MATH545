@@ -194,7 +194,12 @@ Determine whether the statement is **True** or **False**.
 Let $\boldsymbol{u}_1,\boldsymbol{u}_2,\boldsymbol{u}_3 \in \mathbb{R}^3$ be nonzero vectors. If $\boldsymbol{u}_1$ is orthogonal to $\boldsymbol{u}_2$, and $\boldsymbol{u}_2$ is orthogonal to $\boldsymbol{u}_3$ then $\boldsymbol{u}_1$ is orthogonal to $\boldsymbol{u}_3$.
 
 ```{dropdown} Solution
-False
+False\\
+
+counter example:
+\boldsymbol{u}_1 = \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array} \right]
+\boldsymbol{u}_2 = \left[ \begin{array}{r} 1 \\ -1 \\ 0 \end{array} \right]
+\boldsymbol{u}_3 = \left[ \begin{array}{r} 0 \\ 0 \\ 1 \end{array} \right]
 ```
 ````
 
