@@ -218,6 +218,14 @@ $$
 
 ```{dropdown} Solution
 $$
+
+R_1\boldsymbol{x} = Q_1^T \boldsymbol{b}\\
+
+Q_1^T = \left[ \begin{array}{rrrrr} 0 & 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 & 0 \end{array} \right]
+\ \
+R_1 = \left[ \begin{array}{rrrr} 1 & 1 & 1 & 1 \\ 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1\end{array} \right]
+\\
+
 \boldsymbol{x} = \left[ \begin{array}{r} 2 \\ -1 \\ 2 \\ -2 \end{array} \right]
 $$
 ```
