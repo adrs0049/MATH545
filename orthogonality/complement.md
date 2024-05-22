@@ -181,10 +181,10 @@ Determine whether the statement is **True** or **False**.
 * If $AA^T$ is a diagonal matrix, then the rows of $A$ are orthogonal.
 
 ```{dropdown} Solution
-* True
-* False
-* False
-* True
+* True, because if A^TA is diagonal, the inner product of difference columns with themselves are nonzero because A^TA represents the inner product of the columns of A with themselves.
+* False, AA^T being diagonal does not necessarily mean that the columns of A are orthogonal.
+* False, A^TA being diagonal does not necessarily mean that the rows of A are orthogonal.
+* True, by the same reasoning as the first question.
 ```
 ````
 
