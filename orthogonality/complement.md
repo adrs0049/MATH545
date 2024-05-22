@@ -164,10 +164,10 @@ Determine whether the statement is **True** or **False**.
 * Let $U_1 \subset \mathbb{R}^4$ be a 2-dimensional subspace. There is a unique 2-dimensional subspace $U_2 \subset \mathbb{R}^4$ through the origin such that $U_1 \perp U_2$.
 
 ```{dropdown} Solution
-* False
-* True
-* False
-* True
+* False, counterexample: let U=span$\left\{\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right\}$ is a subspace of $\mathbb{R}^2$, then ${U}^{\perp}$=span$\left\{\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right\}$. But the vector u = $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ $\in \mathbb{R}^2$ is $u \notin U$ and $u \notin {U}^{\perp}$. However since $\mathbb{R}^2 = U \oplus {U}^{\perp}$, we can decompose every vector in $\mathbb{R}^2$ into a component that lies in $U$ and a component that lies in ${U}^{\perp}$.
+* True, $\mathbb{R}^2$ is a plane, so you can draw a line perpendicular to any line in $\mathbb{R}^2$ but only one.
+* False, consider the intersection of the xyz axis.
+* True, the dimension of the orthogonal complement is also 2 which implies it is uniquely determined by finding two vectors perpendicular to every vector in the original subspace.
 ```
 
 ````
