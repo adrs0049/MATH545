@@ -205,21 +205,26 @@ Let $A$ be a symmetric matrix. Then there exists an orthogonal matrix $P$ and di
 ```{div} example
 Let's compute the diagonalization of the matrix $A = \begin{pmatrix} 1 & 0 & -1 \\ 1 & 2 & 1 \\ 2 & 2 & 3 \end{pmatrix}$.
 
-First, find the eigenvalues and eigenvectors.
+**Step 1:** Compute the eigenvalues of $A$ which are $\sigma(A) = \left\{ 3, 2, 1 \right\}$.
 
-Eigenvalue 3, eigenvector: $\begin{pmatrix} \frac{-1}{2} \\ \frac{1}{2} \\ 1 \end{pmatrix}$
+**Step 2:** Compute the eigenvectors by determining the nullspaces $N[A - \lambda I]$.
 
-Eigenvalue 2, eigenvector: $\begin{pmatrix} -1 \\ \frac{1}{2} \\ 1 \end{pmatrix}$
+1. Eigenvalue 3: $v_{3} = \begin{pmatrix} \frac{-1}{2} & \frac{1}{2} & 1 \end{pmatrix}^T$.
+2. Eigenvalue 2: $v_{2} = \begin{pmatrix} -1 & \frac{1}{2} & 1 \end{pmatrix}^T$.
+3. Eigenvalue 1: $v_{1} = \begin{pmatrix} -1 & 1 & 0 \end{pmatrix}^T$.
 
-Eigenvalue 1, eigenvector: $\begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}$
+Form the matrix $P$, whose column $i$ is eigenvector number $i$
 
-Form the matrix *P*, whose column *i* is eigenvector number *i*
+$$
+P = \begin{pmatrix} \frac{-1}{2} & -1 & -1 \\ \frac{1}{2} & \frac{1}{2} & 1 \\ 1 & 1 & 0 \end{pmatrix}.
+$$
 
-*P* = $\begin{pmatrix} \frac{-1}{2} & -1 & -1 \\ \frac{1}{2} & \frac{1}{2} & 1 \\ 1 & 1 & 0 \end{pmatrix}$
+Form the diagonal matrix $D$ whose element at row $i$, column $i$ is eigenvalue number $i$
 
-Form the diagonal matrix *D* whose element at row *i*, column *i* is eigenvalue number *i*
+$$
+D = \begin{pmatrix} 3 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}.
+$$
 
-*D* = $\begin{pmatrix} 3 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}$
 ```
 
 ## Exercises
