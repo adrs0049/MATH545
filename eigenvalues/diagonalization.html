@@ -374,7 +374,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Diagonalization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spectral-theorem">Spectral Theorem</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -581,66 +580,60 @@ Proof<div class="sd-summary-down docutils">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a symmetric matrix. Then there exists an orthogonal matrix <span class="math notranslate nohighlight">\(P\)</span> and diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> such that <span class="math notranslate nohighlight">\(A = PDP^T\)</span>. In other words, <span class="math notranslate nohighlight">\(A\)</span> is orthogonally diagonalizable.</p>
 </div>
 <div class="example docutils">
-<p>Let’s compute the diagonalization of the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 1 &amp; 2 &amp; 1 \\ 2 &amp; 2 &amp; 3 \end{pmatrix}\)</span>.</p>
-<p><strong>Step 1:</strong> Compute the eigenvalues of <span class="math notranslate nohighlight">\(A\)</span> which are <span class="math notranslate nohighlight">\(\sigma(A) = \left\{ 3, 2, 1 \right\}\)</span>.</p>
-<p><strong>Step 2:</strong> Compute the eigenvectors by determining the nullspaces <span class="math notranslate nohighlight">\(N[A - \lambda I]\)</span>.</p>
+<p>Compute the diagonalization of the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 1 &amp; 2 &amp; 1 \\ 2 &amp; 2 &amp; 3 \end{pmatrix}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1:</strong> Compute the eigenvalues of <span class="math notranslate nohighlight">\(A\)</span> which are <span class="math notranslate nohighlight">\(\sigma(A) = \left\{ 3, 2, 1 \right\}\)</span>.</p>
+<p class="sd-card-text"><strong>Step 2:</strong> Compute the eigenvectors by determining the nullspaces <span class="math notranslate nohighlight">\(N[A - \lambda I]\)</span>.</p>
 <ol class="arabic simple">
-<li><p>Eigenvalue 3: <span class="math notranslate nohighlight">\(v_{3} = \begin{pmatrix} \frac{-1}{2} &amp; \frac{1}{2} &amp; 1 \end{pmatrix}^T\)</span>.</p></li>
-<li><p>Eigenvalue 2: <span class="math notranslate nohighlight">\(v_{2} = \begin{pmatrix} -1 &amp; \frac{1}{2} &amp; 1 \end{pmatrix}^T\)</span>.</p></li>
-<li><p>Eigenvalue 1: <span class="math notranslate nohighlight">\(v_{1} = \begin{pmatrix} -1 &amp; 1 &amp; 0 \end{pmatrix}^T\)</span>.</p></li>
+<li><p class="sd-card-text">Eigenvalue 3: <span class="math notranslate nohighlight">\(v_{3} = \begin{pmatrix} \frac{-1}{2} &amp; \frac{1}{2} &amp; 1 \end{pmatrix}^T\)</span>.</p></li>
+<li><p class="sd-card-text">Eigenvalue 2: <span class="math notranslate nohighlight">\(v_{2} = \begin{pmatrix} -1 &amp; \frac{1}{2} &amp; 1 \end{pmatrix}^T\)</span>.</p></li>
+<li><p class="sd-card-text">Eigenvalue 1: <span class="math notranslate nohighlight">\(v_{1} = \begin{pmatrix} -1 &amp; 1 &amp; 0 \end{pmatrix}^T\)</span>.</p></li>
 </ol>
-<p>Form the matrix <span class="math notranslate nohighlight">\(P\)</span>, whose column <span class="math notranslate nohighlight">\(i\)</span> is eigenvector number <span class="math notranslate nohighlight">\(i\)</span></p>
+<p class="sd-card-text">Form the matrix <span class="math notranslate nohighlight">\(P\)</span>, whose column <span class="math notranslate nohighlight">\(i\)</span> is eigenvector number <span class="math notranslate nohighlight">\(i\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 P = \begin{pmatrix} \frac{-1}{2} &amp; -1 &amp; -1 \\ \frac{1}{2} &amp; \frac{1}{2} &amp; 1 \\ 1 &amp; 1 &amp; 0 \end{pmatrix}.
 \end{split}\]</div>
-<p>Form the diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> whose element at row <span class="math notranslate nohighlight">\(i\)</span>, column <span class="math notranslate nohighlight">\(i\)</span> is eigenvalue number <span class="math notranslate nohighlight">\(i\)</span></p>
+<p class="sd-card-text">Form the diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> whose element at row <span class="math notranslate nohighlight">\(i\)</span>, column <span class="math notranslate nohighlight">\(i\)</span> is eigenvalue number <span class="math notranslate nohighlight">\(i\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 D = \begin{pmatrix} 3 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}.
 \end{split}\]</div>
 </div>
-</section>
-<section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<div class="exercise docutils">
-<p>Determine whether the statement is <strong>True</strong> or <strong>False</strong>.</p>
-<ul class="simple">
-<li><p>Let <span class="math notranslate nohighlight">\(\boldsymbol{v}_1 , \boldsymbol{v}_2 \in \mathbb{R}^2\)</span> be linearly independent vectors. Let <span class="math notranslate nohighlight">\(\lambda_1 , \lambda_2\)</span> be real numbers. There exists a unique <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> with eigenvalues <span class="math notranslate nohighlight">\(\lambda_1 , \lambda_2\)</span> and corresponding eigenvectors <span class="math notranslate nohighlight">\(\boldsymbol{v}_1 , \boldsymbol{v}_2\)</span>.</p></li>
-<li><p>Suppose <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are symmetric <span class="math notranslate nohighlight">\(n \times n\)</span> matrices. The eigenvectors of <span class="math notranslate nohighlight">\(AB\)</span> corresponding to distinct eigenvalues are orthogonal.</p></li>
-</ul>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<ul class="simple">
-<li><p class="sd-card-text">True</p></li>
-<li><p class="sd-card-text">False</p></li>
-</ul>
-</div>
 </details></div>
-<div class="exercise docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. Determine whether the statement is <strong>True</strong> or <strong>False</strong>.</p>
-<ul class="simple">
-<li><p>If <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue of <span class="math notranslate nohighlight">\(AA^T\)</span> then <span class="math notranslate nohighlight">\(\lambda\)</span> is a real number.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(\boldsymbol{v}_1 , \boldsymbol{v}_2\)</span> are eigenvectors of <span class="math notranslate nohighlight">\(AA^T\)</span> for distinct eigenvalues <span class="math notranslate nohighlight">\(\lambda_1 , \lambda_2\)</span> then <span class="math notranslate nohighlight">\(\langle \boldsymbol{v}_1 , \boldsymbol{v}_1 \rangle = 0\)</span>.</p></li>
-</ul>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<ul class="simple">
-<li><p class="sd-card-text">True</p></li>
-<li><p class="sd-card-text">True</p></li>
-</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+## Exercises
+
+````{div} exercise
+Determine whether the statement is **True** or **False**.
+
+* Let $\boldsymbol{v}_1 , \boldsymbol{v}_2 \in \mathbb{R}^2$ be linearly independent vectors. Let $\lambda_1 , \lambda_2$ be real numbers. There exists a unique $2 \times 2$ matrix $A$ with eigenvalues $\lambda_1 , \lambda_2$ and corresponding eigenvectors $\boldsymbol{v}_1 , \boldsymbol{v}_2$.
+* Suppose $A$ and $B$ are symmetric $n \times n$ matrices. The eigenvectors of $AB$ corresponding to distinct eigenvalues are orthogonal.
+
+```{dropdown} Solution
+* True
+* False
+</pre></div>
 </div>
-</details></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+````{div} exercise
+Let $A$ be a $m \times n$ matrix. Determine whether the statement is **True** or **False**.
+
+* If $\lambda$ is an eigenvalue of $AA^T$ then $\lambda$ is a real number.
+* If $\boldsymbol{v}_1 , \boldsymbol{v}_2$ are eigenvectors of $AA^T$ for distinct eigenvalues $\lambda_1 , \lambda_2$ then $\langle \boldsymbol{v}_1 , \boldsymbol{v}_1 \rangle = 0$.
+
+```{dropdown} Solution
+* True
+* True
+```
+</pre></div>
+</div>
 <div class="exercise docutils">
 <p>Let <span class="math notranslate nohighlight">\(U \subset \mathbb{R}^n\)</span> be a subspace with <span class="math notranslate nohighlight">\(\mathrm{dim}(U) = m\)</span> such that <span class="math notranslate nohighlight">\(0 &lt; m &lt; n\)</span>, and let <span class="math notranslate nohighlight">\(P\)</span> be the orthogonal projection matrix onto <span class="math notranslate nohighlight">\(U\)</span>. Determine the characteristic polynomial of <span class="math notranslate nohighlight">\(P\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -794,7 +787,6 @@ Solution<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Diagonalization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spectral-theorem">Spectral Theorem</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 
