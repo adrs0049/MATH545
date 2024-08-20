@@ -374,6 +374,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-onto-a-vector">Projection onto a Vector</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orthogonal-bases">Orthogonal Bases</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-onto-a-subspace">Projection onto a Subspace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-theorem">Projection Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
@@ -611,26 +612,22 @@ Solution<div class="sd-summary-down docutils">
 \[\| \boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \| = \frac{1}{\sqrt{2}}\]</div>
 </div>
 </details></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-## Projection Theorem
-
-```{div} theorem
-Let $U \subseteq \mathbb{R}^n$ be a subspace and let $\boldsymbol{x} \in \mathbb{R}^n$. Then
-
-$$
+</section>
+<section id="projection-theorem">
+<h2>Projection Theorem<a class="headerlink" href="#projection-theorem" title="Permalink to this heading">#</a></h2>
+<div class="theorem docutils">
+<p>Let <span class="math notranslate nohighlight">\(U \subseteq \mathbb{R}^n\)</span> be a subspace and let <span class="math notranslate nohighlight">\(\boldsymbol{x} \in \mathbb{R}^n\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
 \boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \in U^{\perp}
-$$
-
-and $\mathrm{proj}_U(\boldsymbol{x})$ is the closest vector in $U$ to $\boldsymbol{x}$ in the sense that
-
-$$
+\]</div>
+<p>and <span class="math notranslate nohighlight">\(\mathrm{proj}_U(\boldsymbol{x})\)</span> is the closest vector in <span class="math notranslate nohighlight">\(U\)</span> to <span class="math notranslate nohighlight">\(\boldsymbol{x}\)</span> in the sense that</p>
+<div class="math notranslate nohighlight">
+\[
 \| \boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \| &lt; \| \boldsymbol{x} - \boldsymbol{y} \| \hspace{5mm} \text{ for all } \boldsymbol{y} \in U \ , \ \boldsymbol{y} \not= \mathrm{proj}_U(\boldsymbol{x})
-$$
-
----
-
-*Proof.* The proof will be given by the QR decomposition later.
-</pre></div>
+\]</div>
+<hr class="docutils" />
+<p><em>Proof.</em> The proof will be given by the QR decomposition later.</p>
 </div>
 </section>
 <section id="exercises">
@@ -835,6 +832,7 @@ Solution<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-onto-a-vector">Projection onto a Vector</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orthogonal-bases">Orthogonal Bases</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-onto-a-subspace">Projection onto a Subspace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-theorem">Projection Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>

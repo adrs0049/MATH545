@@ -202,7 +202,7 @@ since $\lambda_1 - \lambda_2 \not = 0$ because the eigenvalues are distinct.
 Let $A$ be a symmetric matrix. Then there exists an orthogonal matrix $P$ and diagonal matrix $D$ such that $A = PDP^T$. In other words, $A$ is orthogonally diagonalizable.
 ```
 
-```{div} example
+````{div} example
 Compute the diagonalization of the matrix $A = \begin{pmatrix} 1 & 0 & -1 \\ 1 & 2 & 1 \\ 2 & 2 & 3 \end{pmatrix}$.
 
 ```{dropdown} Solution
@@ -226,8 +226,7 @@ $$
 D = \begin{pmatrix} 3 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}.
 $$
 ```
-
-```
+````
 
 ## Exercises
 
