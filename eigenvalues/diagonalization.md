@@ -203,8 +203,9 @@ Let $A$ be a symmetric matrix. Then there exists an orthogonal matrix $P$ and di
 ```
 
 ```{div} example
-Let's compute the diagonalization of the matrix $A = \begin{pmatrix} 1 & 0 & -1 \\ 1 & 2 & 1 \\ 2 & 2 & 3 \end{pmatrix}$.
+Compute the diagonalization of the matrix $A = \begin{pmatrix} 1 & 0 & -1 \\ 1 & 2 & 1 \\ 2 & 2 & 3 \end{pmatrix}$.
 
+```{dropdown} Solution
 **Step 1:** Compute the eigenvalues of $A$ which are $\sigma(A) = \left\{ 3, 2, 1 \right\}$.
 
 **Step 2:** Compute the eigenvectors by determining the nullspaces $N[A - \lambda I]$.
@@ -224,6 +225,7 @@ Form the diagonal matrix $D$ whose element at row $i$, column $i$ is eigenvalue 
 $$
 D = \begin{pmatrix} 3 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}.
 $$
+```
 
 ```
 
