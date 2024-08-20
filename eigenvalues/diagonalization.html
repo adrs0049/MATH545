@@ -582,14 +582,23 @@ Proof<div class="sd-summary-down docutils">
 </div>
 <div class="example docutils">
 <p>Let’s compute the diagonalization of the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 1 &amp; 2 &amp; 1 \\ 2 &amp; 2 &amp; 3 \end{pmatrix}\)</span>.</p>
-<p>First, find the eigenvalues and eigenvectors.</p>
-<p>Eigenvalue 3, eigenvector: <span class="math notranslate nohighlight">\(\begin{pmatrix} \frac{-1}{2} \\ \frac{1}{2} \\ 1 \end{pmatrix}\)</span></p>
-<p>Eigenvalue 2, eigenvector: <span class="math notranslate nohighlight">\(\begin{pmatrix} -1 \\ \frac{1}{2} \\ 1 \end{pmatrix}\)</span></p>
-<p>Eigenvalue 1, eigenvector: <span class="math notranslate nohighlight">\(\begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}\)</span></p>
-<p>Form the matrix <em>P</em>, whose column <em>i</em> is eigenvector number <em>i</em></p>
-<p><em>P</em> = <span class="math notranslate nohighlight">\(\begin{pmatrix} \frac{-1}{2} &amp; -1 &amp; -1 \\ \frac{1}{2} &amp; \frac{1}{2} &amp; 1 \\ 1 &amp; 1 &amp; 0 \end{pmatrix}\)</span></p>
-<p>Form the diagonal matrix <em>D</em> whose element at row <em>i</em>, column <em>i</em> is eigenvalue number <em>i</em></p>
-<p><em>D</em> = <span class="math notranslate nohighlight">\(\begin{pmatrix} 3 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span></p>
+<p><strong>Step 1:</strong> Compute the eigenvalues of <span class="math notranslate nohighlight">\(A\)</span> which are <span class="math notranslate nohighlight">\(\sigma(A) = \left\{ 3, 2, 1 \right\}\)</span>.</p>
+<p><strong>Step 2:</strong> Compute the eigenvectors by determining the nullspaces <span class="math notranslate nohighlight">\(N[A - \lambda I]\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Eigenvalue 3: <span class="math notranslate nohighlight">\(v_{3} = \begin{pmatrix} \frac{-1}{2} &amp; \frac{1}{2} &amp; 1 \end{pmatrix}^T\)</span>.</p></li>
+<li><p>Eigenvalue 2: <span class="math notranslate nohighlight">\(v_{2} = \begin{pmatrix} -1 &amp; \frac{1}{2} &amp; 1 \end{pmatrix}^T\)</span>.</p></li>
+<li><p>Eigenvalue 1: <span class="math notranslate nohighlight">\(v_{1} = \begin{pmatrix} -1 &amp; 1 &amp; 0 \end{pmatrix}^T\)</span>.</p></li>
+</ol>
+<p>Form the matrix <span class="math notranslate nohighlight">\(P\)</span>, whose column <span class="math notranslate nohighlight">\(i\)</span> is eigenvector number <span class="math notranslate nohighlight">\(i\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P = \begin{pmatrix} \frac{-1}{2} &amp; -1 &amp; -1 \\ \frac{1}{2} &amp; \frac{1}{2} &amp; 1 \\ 1 &amp; 1 &amp; 0 \end{pmatrix}.
+\end{split}\]</div>
+<p>Form the diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> whose element at row <span class="math notranslate nohighlight">\(i\)</span>, column <span class="math notranslate nohighlight">\(i\)</span> is eigenvalue number <span class="math notranslate nohighlight">\(i\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+D = \begin{pmatrix} 3 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}.
+\end{split}\]</div>
 </div>
 </section>
 <section id="exercises">

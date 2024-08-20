@@ -118,7 +118,7 @@ $$
 
 **Figure 1:** Dimensions and orthogonality for any m by n matrix A of rank r
 
-```{image} img/fundamental_subspace.png
+```{image} /img/fundamental_subspace.png
 :width: 100%
 :align: center
 ```
