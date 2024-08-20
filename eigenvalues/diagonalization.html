@@ -580,6 +580,25 @@ Proof<div class="sd-summary-down docutils">
 <div class="theorem docutils">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a symmetric matrix. Then there exists an orthogonal matrix <span class="math notranslate nohighlight">\(P\)</span> and diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> such that <span class="math notranslate nohighlight">\(A = PDP^T\)</span>. In other words, <span class="math notranslate nohighlight">\(A\)</span> is orthogonally diagonalizable.</p>
 </div>
+<div class="highlight-div{Example} notranslate"><div class="highlight"><pre><span></span>Let&#39;s compute the diagonalization of the matrix $A = \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 1 &amp; 2 &amp; 1 \\ 2 &amp; 2 &amp; 3 \end{pmatrix}$.
+
+First, find the eigenvalues and eigenvectors.
+
+Eigenvalue 3, eigenvector: $\begin{pmatrix} \frac{-1}{2} \\ \frac{1}{2} \\ 1 \end{pmatrix}$
+
+Eigenvalue 2, eigenvector: $\begin{pmatrix} -1 \\ \frac{1}{2} \\ 1 \end{pmatrix}$
+
+Eigenvalue 1, eigenvector: $\begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}$
+
+Form the matrix *P*, whose column *i* is eigenvector number *i*
+
+*P* = $\begin{pmatrix} \frac{-1}{2} &amp; -1 &amp; -1 \\ \frac{1}{2} &amp; \frac{1}{2} &amp; 1 \\ 1 &amp; 1 &amp; 0 \end{pmatrix}$
+
+Form the diagonal matrix *D* whose element at row *i*, column *i* is eigenvalue number *i*
+
+*D* = $\begin{pmatrix} 3 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}$
+</pre></div>
+</div>
 </section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
