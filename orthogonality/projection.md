@@ -195,7 +195,7 @@ P_{\perp} = \frac{1}{\| \boldsymbol{u}_3 \|^2} \boldsymbol{u}_3 \boldsymbol{u}_3
 $$
 ```
 
-```{div} example
+````{div} example
 
 Let $U \subset \mathbb{R}^3$ be the subspace spanned by
 
@@ -252,7 +252,7 @@ $\mathrm{proj}_U(\boldsymbol{x})$ gives the vector in $U$ that is closest to $x$
 $$\| \boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \| = \frac{1}{\sqrt{2}}$$
 ```
 
-```
+````
 
 ## Projection Theorem
 
