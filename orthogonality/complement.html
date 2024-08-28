@@ -506,6 +506,28 @@ U^{\perp} = \{ \boldsymbol{x} \in \mathbb{R}^n : \langle \boldsymbol{x} , \bolds
 <p>for all <span class="math notranslate nohighlight">\(\boldsymbol{y} \in U\)</span> therefore <span class="math notranslate nohighlight">\(c \boldsymbol{x} \in U^{\perp}\)</span>.</p>
 <p>Therefore <span class="math notranslate nohighlight">\(U^{\perp}\)</span> is a subspace.</p>
 </div>
+<div class="example docutils">
+<p>Compute <span class="math notranslate nohighlight">\({W}^{\perp}\)</span> complement where U = span<span class="math notranslate nohighlight">\(\left\{ \begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}, \begin{bmatrix} 1 \\ 4 \\ 1\end{bmatrix}\right\}\)</span></p>
+<p>First compute the nullspace of W
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix} 1 &amp; 2 &amp; 5 \\ 1 &amp; 4 &amp; 1 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix} 1 &amp; 2 &amp; 5 \\ 0 &amp; 2 &amp; -4 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix} 1 &amp; 2 &amp; 5 \\ 0 &amp; 1 &amp; -2 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix} 1 &amp; 0 &amp; 9 \\ 0 &amp; 1 &amp; -2 \end{bmatrix}
+\)</span>$</p>
+<p>N[W] = span<span class="math notranslate nohighlight">\(\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\)</span>,
+<span class="math notranslate nohighlight">\({W}^{\perp}\)</span> = span<span class="math notranslate nohighlight">\(\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\)</span>
+\newline
+\newline</p>
+<p>verify orthogonality:
+\newline
+<span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}\)</span><span class="math notranslate nohighlight">\(\begin{bmatrix} -9 \ 2 \ 1 \end{bmatrix}\)</span>=0
+\newline\newline\newline
+<span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 4 \\ 1 \end{bmatrix}\)</span><span class="math notranslate nohighlight">\(\begin{bmatrix} -9 \ 2 \ 1 \end{bmatrix}\)</span>=0</p>
+</div>
 </section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
