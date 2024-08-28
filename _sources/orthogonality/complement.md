@@ -194,7 +194,7 @@ Determine whether the statement is **True** or **False**.
 Let $\boldsymbol{u}_1,\boldsymbol{u}_2,\boldsymbol{u}_3 \in \mathbb{R}^3$ be nonzero vectors. If $\boldsymbol{u}_1$ is orthogonal to $\boldsymbol{u}_2$, and $\boldsymbol{u}_2$ is orthogonal to $\boldsymbol{u}_3$ then $\boldsymbol{u}_1$ is orthogonal to $\boldsymbol{u}_3$.
 
 ```{dropdown} Solution
-False
+False, consider a vector pointing in -x, another in +x, and a third in +y.
 ```
 ````
 
