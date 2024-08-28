@@ -50,34 +50,51 @@ a linear combination of the rows of $A$ is zero.
 
 ```
 
-'''{div} example
-Find the null space, column space, row space, and left null space of a matrix A = $\begin{bmatrix} 2 & 4 & 12 \\ 2 & 1 & 3 \end{bmatrix}$
-\newline
-\textbf{nullspace:}
+````{div} example
+Find the null space, column space, row space, and left null space of a matrix
+
 $$
-\begin{bmatrix} 2 & 4 & 12 & 0 \\ 2 & 1 & 3 & 0\end{bmatrix} 
+    A = \begin{bmatrix} 2 & 4 & 12 \\ 2 & 1 & 3 \end{bmatrix}
+$$
+
+```{dropdown} Solution
+
+*Nullspace:*
+
+$$
+\begin{bmatrix} 2 & 4 & 12 & 0 \\ 2 & 1 & 3 & 0\end{bmatrix}
 \longrightarrow
 \begin{bmatrix} 1 & 2 & 6 & 0 \\ 2 & 1 & 3 & 0\end{bmatrix}
 \longrightarrow
-\begin{bmatrix} 1 & 2 & 6 & 0 \\ 0 & -3 & -9 & 0\end{bmatrix} 
+\begin{bmatrix} 1 & 2 & 6 & 0 \\ 0 & -3 & -9 & 0\end{bmatrix}
 \longrightarrow
-\begin{bmatrix} 1 & 2 & 6 & 0 \\ 0 & 1 & 3 & 0\end{bmatrix} 
+\begin{bmatrix} 1 & 2 & 6 & 0 \\ 0 & 1 & 3 & 0\end{bmatrix}
 \longrightarrow
-\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 3 & 0\end{bmatrix} 
+\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 3 & 0\end{bmatrix}
 $$
-N[A] = span$\left\{\begin{bmatrix} 0 \\ -3 \\ 1\end{bmatrix} \right\}$
-\newline
-\textbf{rowspace:}
-\newline
+
+This means that
+
 $$
-\begin{bmatrix} 2 & 4 & 12 \\ 2 & 1 & 3\end{bmatrix} 
+N[A] = \text{span}\left\{\begin{bmatrix} 0 \\ -3 \\ 1\end{bmatrix} \right\}
+$$
+
+*rowspace:*
+
+$$
+\begin{bmatrix} 2 & 4 & 12 \\ 2 & 1 & 3\end{bmatrix}
 \longrightarrow
-\begin{bmatrix} 1 & 0 & 0\\ 0 & 1 & 3\end{bmatrix} 
+\begin{bmatrix} 1 & 0 & 0\\ 0 & 1 & 3\end{bmatrix}
 $$
-R[A] = span$\left\{\begin{bmatrix} 2 \\ 2\end{bmatrix}, \begin{bmatrix} 4 \\ 1\end{bmatrix} \right\}$
-\newline
-\textbf{columnspace:}
-\newline
+
+This means that
+
+$$
+R[A] = \text{span}\left\{\begin{bmatrix} 2 \\ 2\end{bmatrix}, \begin{bmatrix} 4 \\ 1\end{bmatrix} \right\}
+$$
+
+*Columnspace:*
+
 $$
 A^T = \begin{bmatrix} 2 & 2 \\ 1 & 4 \\ 3 & 12\end{bmatrix}
 \longrightarrow
@@ -95,18 +112,29 @@ A^T = \begin{bmatrix} 2 & 2 \\ 1 & 4 \\ 3 & 12\end{bmatrix}
 \longrightarrow
 \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0\end{bmatrix}
 $$
-$R[A^T]$ = span$\left\{\begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}, \begin{bmatrix} 2 \\ 4 \\ 12\end{bmatrix}\right\}$
 
-\newline
-\textbf{left nullspace:}
-\newline
+This means that
+
+$$
+R[A^T] = \text{span}\left\{\begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}, \begin{bmatrix} 2 \\ 4 \\ 12\end{bmatrix}\right\}
+$$
+
+*Left Nullspace:*
+
 $$
 A^T = \begin{bmatrix} 2 & 2 \\ 1 & 4 \\ 3 & 12\end{bmatrix}
 \longrightarrow
 \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0\end{bmatrix}
 $$
-$N[A^T]$ = span$\left\{\begin{bmatrix} 0 \\ 0 \end{bmatrix}\right\}$
-'''
+
+This means that
+
+$$
+N[A^T] = \text{span}\left\{\begin{bmatrix} 0 \\ 0 \end{bmatrix}\right\}
+$$
+```
+
+````
 
 ## Orthogonality of the fundamental subspaces
 
