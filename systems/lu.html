@@ -627,12 +627,19 @@ E^{-1} = \left[ \begin{array}{rrrrr} 1 &amp; &amp; &amp; &amp; \\ &amp; \ddots &
 \[\begin{split}
 A = \left[ \begin{array}{rrrr} 1 &amp; -1 &amp; \phantom{+}1 &amp; -2 \\ -1 &amp; 1 &amp; 1 &amp; 1 \\ -1 &amp; 2 &amp; 3 &amp; 1 \\ 1 &amp; -1 &amp; 2 &amp; 1 \end{array} \right]
 \end{split}\]</div>
-<p>The elementary matrix which adds -1 times row 1 to row 4 is</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The elementary matrix which adds -1 times row 1 to row 4 is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 E = \left[ \begin{array}{rrrr|r} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ -1 &amp; \phantom{+}0 &amp; \phantom{+}0 &amp; \phantom{+}1 \end{array} \right]
 \end{split}\]</div>
-<p>Perform matrix multiplication to verify</p>
+<p class="sd-card-text">Perform matrix multiplication to verify</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 EA =
@@ -642,6 +649,7 @@ EA =
 \left[ \begin{array}{rrrr} 1 &amp; -1 &amp; \phantom{+}1 &amp; -2 \\ -1 &amp; 1 &amp; 1 &amp; 1 \\ -1 &amp; 2 &amp; 3 &amp; 1 \\ 0 &amp; 0 &amp; 1 &amp; 3 \end{array} \right]
 \end{split}\]</div>
 </div>
+</details></div>
 <div class="theorem docutils">
 <p>If <span class="math notranslate nohighlight">\(A\)</span> can be reduced by Gaussian elimination to row echelon form <em>only</em> with operations “add <span class="math notranslate nohighlight">\(c\)</span> times row <span class="math notranslate nohighlight">\(j\)</span> to row <span class="math notranslate nohighlight">\(i\)</span>” (in other words, without scaling rows and without interchanging rows), then <span class="math notranslate nohighlight">\(A\)</span> has an <strong>LU decomposition</strong> of the form</p>
 <div class="math notranslate nohighlight">
@@ -724,21 +732,28 @@ E_{2,1}^{-1} \cdots E_{m,1}^{-1} E_{3,2}^{-1} \cdots E_{m,2}^{-1} \cdots E_{m-1,
 \[\begin{split}
 A = \begin{bmatrix} 2 &amp; 1 &amp; 1 \\ 2 &amp; 0 &amp; 2 \\ 4 &amp; 3 &amp; 4 \end{bmatrix}
 \end{split}\]</div>
-<p>Add -1 times row 1 to row 2 and add -2 times row 1 to row 3</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Add -1 times row 1 to row 2 and add -2 times row 1 to row 3</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix} 2 &amp; 1 &amp; 1 \\ 2 &amp; 0 &amp; 2 \\ 4 &amp; 3 &amp; 4 \end{bmatrix}
 \longrightarrow
 \left[ \begin{array}{rrr} 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; \phantom{+}1 \\ 0 &amp; 1 &amp; 2 \end{array} \right]
 \end{split}\]</div>
-<p>Add row 2 to row 3</p>
+<p class="sd-card-text">Add row 2 to row 3</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrr} 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; \phantom{+}1 \\ 0 &amp; 1 &amp; 2 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrr} 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; \phantom{+}1 \\ 0 &amp; 0 &amp; 3 \end{array} \right]
 \end{split}\]</div>
-<p>In terms of elementary matrices, we have just shown that</p>
+<p class="sd-card-text">In terms of elementary matrices, we have just shown that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -752,7 +767,7 @@ E_{3,2} E_{3,1} E_{2,1} A &amp;= U \\
 \left[ \begin{array}{rrr} 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; \phantom{+}1 \\ 0 &amp; 0 &amp; 3 \end{array} \right]
 \end{align*}
 \end{split}\]</div>
-<p>Rearrange the equation to get</p>
+<p class="sd-card-text">Rearrange the equation to get</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -766,7 +781,7 @@ A &amp;= E_{2,1}^{-1} E_{3,1}^{-1} E_{3,2}^{-1} U \\
 \left[ \begin{array}{rrr} 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; \phantom{+}1 \\ 0 &amp; 0 &amp; 3 \end{array} \right]
 \end{align*}
 \end{split}\]</div>
-<p>Combine the matrices as in the proof of the LU decomposition to find</p>
+<p class="sd-card-text">Combine the matrices as in the proof of the LU decomposition to find</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix} 2 &amp; 1 &amp; 1 \\ 2 &amp; 0 &amp; 2 \\ 4 &amp; 3 &amp; 4 \end{bmatrix}
@@ -774,7 +789,7 @@ A &amp;= E_{2,1}^{-1} E_{3,1}^{-1} E_{3,2}^{-1} U \\
 \left[ \begin{array}{rrr} 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 0 \\ 2 &amp; -1 &amp; \phantom{+}1 \end{array} \right]
 \left[ \begin{array}{rrr} 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; \phantom{+}1 \\ 0 &amp; 0 &amp; 3 \end{array} \right]
 \end{split}\]</div>
-<p>Therefore <span class="math notranslate nohighlight">\(A = LU\)</span> where</p>
+<p class="sd-card-text">Therefore <span class="math notranslate nohighlight">\(A = LU\)</span> where</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 L =
@@ -782,41 +797,49 @@ L =
 \hspace{10mm}
 U = \left[ \begin{array}{rrr} 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; \phantom{+}1 \\ 0 &amp; 0 &amp; 3 \end{array} \right] \\
 \end{split}\]</div>
-<p>Note that we can construct the matrix <span class="math notranslate nohighlight">\(L\)</span> directly from the list of operations:</p>
+<p class="sd-card-text">Note that we can construct the matrix <span class="math notranslate nohighlight">\(L\)</span> directly from the list of operations:</p>
 <ol class="arabic simple">
-<li><p>Add -1 times row 1 to row 2.</p></li>
-<li><p>Add -2 times row 1 to row 3.</p></li>
-<li><p>Add 1 times row 2 to row 3.</p></li>
+<li><p class="sd-card-text">Add -1 times row 1 to row 2.</p></li>
+<li><p class="sd-card-text">Add -2 times row 1 to row 3.</p></li>
+<li><p class="sd-card-text">Add 1 times row 2 to row 3.</p></li>
 </ol>
 </div>
+</details></div>
 <div class="example docutils">
 <p>Compute the LU decomposition of</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 A = \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 2 &amp; 1 \\ 2 &amp; 1 &amp; 5 &amp; 3 \\ 1 &amp; 0 &amp; 0 &amp; 2 \\ 0 &amp; -1 &amp; \phantom{+}1 &amp; \phantom{+}1 \end{array} \right]
 \end{split}\]</div>
-<p>Add -2 times row 1 to row 2 and add -1 times row 1 to row 3:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Add -2 times row 1 to row 2 and add -1 times row 1 to row 3:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 2 &amp; 1 \\ 2 &amp; 1 &amp; 5 &amp; 3 \\ 1 &amp; 0 &amp; 0 &amp; 2 \\ 0 &amp; -1 &amp; \phantom{+}1 &amp; \phantom{+}1 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; -2 &amp; 1 \\ 0 &amp; -1 &amp; 1 &amp; \phantom{+}1 \end{array} \right]
 \end{split}\]</div>
-<p>Add row 2 to row 4:</p>
+<p class="sd-card-text">Add row 2 to row 4:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; -2 &amp; 1 \\ 0 &amp; -1 &amp; 1 &amp; \phantom{+}1 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; -2 &amp; 1 \\ 0 &amp; \phantom{+}0 &amp; 2 &amp; \phantom{+}2 \end{array} \right]
 \end{split}\]</div>
-<p>Add row 3 to row 4:</p>
+<p class="sd-card-text">Add row 3 to row 4:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; -2 &amp; 1 \\ 0 &amp; \phantom{+}0 &amp; 2 &amp; \phantom{+}2 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; -2 &amp; 1 \\ 0 &amp; \phantom{+}0 &amp; 0 &amp; \phantom{+}3 \end{array} \right]
 \end{split}\]</div>
-<p>Therefore <span class="math notranslate nohighlight">\(A = LU\)</span> where</p>
+<p class="sd-card-text">Therefore <span class="math notranslate nohighlight">\(A = LU\)</span> where</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 L = \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 0 &amp; 0 \\ 2 &amp; 1 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; -1 &amp; -1 &amp; \phantom{+}1 \end{array} \right]
@@ -824,6 +847,7 @@ L = \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 0 &amp; 0 \\ 2 &amp; 1 &amp; 0 &a
 U = \left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; -2 &amp; 1 \\ 0 &amp; \phantom{+}0 &amp; 0 &amp; \phantom{+}3 \end{array} \right]
 \end{split}\]</div>
 </div>
+</details></div>
 <div class="theorem docutils">
 <p>Suppose <span class="math notranslate nohighlight">\(A\)</span> has an LU decomposition <span class="math notranslate nohighlight">\(A = LU\)</span>.</p>
 <ol class="arabic simple">
@@ -875,6 +899,7 @@ A = LU =
 \hspace{10mm}
 \boldsymbol{b} = \left[ \begin{array}{r} -1 \\ 1 \\ 2 \end{array} \right]
 \end{split}\]</div>
+<div class="dropdown docutils">
 <p>Solve <span class="math notranslate nohighlight">\(L \boldsymbol{y} = \boldsymbol{b}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -898,6 +923,7 @@ x_1 &amp;= (-1 - 4(3) - 0) / 2 = -13/2
 \[\begin{split}
 \boldsymbol{x} = \begin{bmatrix} -13/2 \\ 3 \\ 0 \end{bmatrix}
 \end{split}\]</div>
+</div>
 </div>
 <div class="note docutils">
 <p>The LU decomposition is especially useful when solving many different systems with the <em>same</em> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. For example, to compute the inverse <span class="math notranslate nohighlight">\(A^{-1}\)</span> of a square matrix of size <span class="math notranslate nohighlight">\(n\)</span> we need to solve <span class="math notranslate nohighlight">\(n\)</span> different systems <span class="math notranslate nohighlight">\(A \boldsymbol{x}_k = \boldsymbol{e}_k\)</span> for <span class="math notranslate nohighlight">\(k=1,\dots,n\)</span> where <span class="math notranslate nohighlight">\(\boldsymbol{e}_k\)</span> is the <span class="math notranslate nohighlight">\(k\)</span>th column of the identity matrix <span class="math notranslate nohighlight">\(I\)</span>. The result is <span class="math notranslate nohighlight">\(A^{-1} = [\boldsymbol{x}_1 \cdots \boldsymbol{x}_n]\)</span>. In other words, the columns of <span class="math notranslate nohighlight">\(A^{-1}\)</span> are given by <span class="math notranslate nohighlight">\(\boldsymbol{x}_1, \dots, \boldsymbol{x}_n\)</span>.</p>

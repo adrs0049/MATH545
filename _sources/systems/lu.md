@@ -264,12 +264,14 @@ $$
 where $-c$ is the entry at row $i$ and column $j$.
 ```
 
-```{div} example
+````{div} example
 Consider the matrix
 
 $$
 A = \left[ \begin{array}{rrrr} 1 & -1 & \phantom{+}1 & -2 \\ -1 & 1 & 1 & 1 \\ -1 & 2 & 3 & 1 \\ 1 & -1 & 2 & 1 \end{array} \right]
 $$
+
+```{dropdown} Solution
 
 The elementary matrix which adds -1 times row 1 to row 4 is
 
@@ -287,6 +289,7 @@ EA =
 \left[ \begin{array}{rrrr} 1 & -1 & \phantom{+}1 & -2 \\ -1 & 1 & 1 & 1 \\ -1 & 2 & 3 & 1 \\ 0 & 0 & 1 & 3 \end{array} \right]
 $$
 ```
+````
 
 ````{div} theorem
 If $A$ can be reduced by Gaussian elimination to row echelon form *only* with operations "add $c$ times row $j$ to row $i$" (in other words, without scaling rows and without interchanging rows), then $A$ has an **LU decomposition** of the form
@@ -366,12 +369,15 @@ $$
 ```
 ````
 
-```{div} example
+````{div} example
 Compute the LU decomposition of
 
 $$
 A = \begin{bmatrix} 2 & 1 & 1 \\ 2 & 0 & 2 \\ 4 & 3 & 4 \end{bmatrix}
 $$
+
+
+```{dropdown} Solution
 
 Add -1 times row 1 to row 2 and add -2 times row 1 to row 3
 
@@ -443,13 +449,16 @@ Note that we can construct the matrix $L$ directly from the list of operations:
 2. Add -2 times row 1 to row 3.
 3. Add 1 times row 2 to row 3.
 ```
+````
 
-```{div} example
+````{div} example
 Compute the LU decomposition of
 
 $$
 A = \left[ \begin{array}{rrrr} 1 & 0 & 2 & 1 \\ 2 & 1 & 5 & 3 \\ 1 & 0 & 0 & 2 \\ 0 & -1 & \phantom{+}1 & \phantom{+}1 \end{array} \right]
 $$
+
+```{dropdown} Solution
 
 Add -2 times row 1 to row 2 and add -1 times row 1 to row 3:
 
@@ -483,6 +492,7 @@ L = \left[ \begin{array}{rrrr} 1 & 0 & 0 & 0 \\ 2 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \
 U = \left[ \begin{array}{rrrr} 1 & 0 & 2 & 1 \\ 0 & 1 & 1 & 1 \\ 0 & 0 & -2 & 1 \\ 0 & \phantom{+}0 & 0 & \phantom{+}3 \end{array} \right]
 $$
 ```
+````
 
 ```{div} theorem
 Suppose $A$ has an LU decomposition $A = LU$.
@@ -529,7 +539,7 @@ x_1 &= (y_1 - u_{1,2} x_2 - \cdots - u_{1,n} x_n) / u_{1,1}
 $$
 ```
 
-```{div} example
+````{div} example
 Solve the system $A \boldsymbol{x} = \boldsymbol{b}$ where
 
 $$
@@ -539,6 +549,8 @@ A = LU =
 \hspace{10mm}
 \boldsymbol{b} = \left[ \begin{array}{r} -1 \\ 1 \\ 2 \end{array} \right]
 $$
+
+```{div} dropdown
 
 Solve $L \boldsymbol{y} = \boldsymbol{b}$
 
@@ -566,6 +578,7 @@ $$
 \boldsymbol{x} = \begin{bmatrix} -13/2 \\ 3 \\ 0 \end{bmatrix}
 $$
 ```
+````
 
 ```{div} note
 The LU decomposition is especially useful when solving many different systems with the *same* coefficient matrix $A$. For example, to compute the inverse $A^{-1}$ of a square matrix of size $n$ we need to solve $n$ different systems $A \boldsymbol{x}_k = \boldsymbol{e}_k$ for $k=1,\dots,n$ where $\boldsymbol{e}_k$ is the $k$th column of the identity matrix $I$. The result is $A^{-1} = [\boldsymbol{x}_1 \cdots \boldsymbol{x}_n]$. In other words, the columns of $A^{-1}$ are given by $\boldsymbol{x}_1, \dots, \boldsymbol{x}_n$.
