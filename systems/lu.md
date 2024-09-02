@@ -92,12 +92,15 @@ The system has a **unique solution** when $\mathrm{rank}(A) = \mathrm{rank}([ \,
 The system has **infinitely many solutions** when $\mathrm{rank}(A) = \mathrm{rank}([ \, A \ \boldsymbol{b} \, ])$ and $\mathrm{rank}(A) < n$.
 ```
 
-```{div} example
+````{div} example
 Find all solutions of $A \boldsymbol{x} = \boldsymbol{b}$ where
 
 $$
 A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 0 & 1 \\ 2 & 5 & 2 \end{bmatrix} \hspace{10mm} \boldsymbol{b} = \begin{bmatrix} 2 \\ 1 \\ 7 \end{bmatrix}
 $$
+
+
+```{dropdown} Solution
 
 Add -1 times row 1 to row 2, and add -2 times row 1 to row 3:
 
@@ -126,14 +129,21 @@ There are infinitely many solutions
 $$
 \begin{bmatrix} 1-t \\ 1 \\ t \end{bmatrix} \ , \ \ t \in \mathbb{R}
 $$
+
 ```
 
-```{div} example
+````
+
+
+````{div} example
 Find all solutions of $A \boldsymbol{x} = \boldsymbol{b}$ where
 
 $$
 A = \left[ \begin{array}{rrrr} 1 & -1 & \phantom{+}1 & -2 \\ -1 & 1 & 1 & 1 \\ -1 & 2 & 3 & 1 \\ 1 & -1 & 2 & 1 \end{array} \right] \hspace{10mm} \boldsymbol{b} = \left[ \begin{array}{r} 1 \\ -1 \\ 2 \\ 1 \end{array} \right]
 $$
+
+
+```{dropdown} Solution
 
 Add row 1 to row 2, add row 2 to row 3 and add -1 times row 1 to row 4:
 
@@ -164,14 +174,19 @@ There is a unique solution
 $$
 \boldsymbol{x} = \begin{bmatrix} 4 \\ 3 \\ 0 \\ 0 \end{bmatrix}
 $$
+
 ```
 
-```{div} example
+````
+
+````{div} example
 Find all solutions of $A \boldsymbol{x} = \boldsymbol{b}$ where
 
 $$
 A = \begin{bmatrix} 1 & 1 & 2 & 1 \\ 1 & 0 & 1 & 1 \\ 0 & 1 & 1 & 0 \end{bmatrix} \hspace{10mm} \boldsymbol{b} = \begin{bmatrix} 1 \\ 1 \\ 2 \end{bmatrix}
 $$
+
+```{dropdown} Solution
 
 Add -1 times row 1 to row 2:
 
@@ -190,7 +205,10 @@ $$
 $$
 
 The systems is inconsistent. In other words, there is no solution.
+
 ```
+
+````
 
 ## LU Decomposition
 
