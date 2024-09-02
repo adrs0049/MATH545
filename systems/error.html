@@ -635,13 +635,55 @@ Proof<div class="sd-summary-down docutils">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise docutils">
 <p>Show that the 1-norm satisfies the properties of a norm.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We need to show that the 1-norm satisfies all four properties of a vector norm:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(||x||_1 = |x_1| + |x_2| + ... + |x_n| \geq 0\)</span> for any <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(||x||_1 = |x_1| + |x_2| + ... + |x_n| = 0 \iff |x_1| = |x_2| = ... = |x_n| = 0 \)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(||cx||_1 = |cx_1| + |cx_2| + |cx_3| + ... + |cx_n| = |c|(|x_1| + |x_2| + ... + |x_n|) = |c|||x||_1\)</span> for any <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(||x + y||_1 = |x_1 + y_1| + |x_2 + y_2| + ... + |x_n + y_n| \leq |x_1| + |y_1| + |x_2| + |y_2| + ... + |x_n| + |y_n| = ||x||_1 + ||y||_1\)</span> for any <span class="math notranslate nohighlight">\(x, y \in \mathbb{R}^n\)</span></p></li>
+</ol>
 </div>
+</details></div>
 <div class="exercise docutils">
 <p>Show that the <span class="math notranslate nohighlight">\(\infty\)</span>-norm satisfies the properties of a norm.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We need to show that the <span class="math notranslate nohighlight">\(\infty\)</span>-norm satisfies all four properties of a vector norm:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(||x||_{\infty} = \max\{|x_1|, |x_2|, ..., |x_n|\} \geq 0\)</span> for any <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(||x||_{\infty} = \max\{|x_1|, |x_2|, ..., |x_n|\} = 0 \iff |x_1| = |x_2| = ... = |x_n| = 0 \)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(||cx||_{\infty} = \max\{|cx_1|, |cx_2|, ..., |cx_n|\} = |c|\max\{|x_1|, |x_2|, ..., |x_n|\} = |c|||x||_{\infty}\)</span> for any <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(||x + y||_{\infty} = \max\{|x_1 + y_1|, |x_2 + y_2|, ..., |x_n + y_n|\} \leq \max\{|x_1| + |y_1|, |x_2| + |y_2|, ..., |x_n| + |y_n|\} = ||x||_{\infty} + ||y||_{\infty}\)</span> for any <span class="math notranslate nohighlight">\(x, y \in \mathbb{R}^n\)</span></p></li>
+</ol>
 </div>
+</details></div>
 <div class="exercise docutils">
 <p>Is the function <span class="math notranslate nohighlight">\(\| \boldsymbol{x} \| = x_1 + \cdots + x_n\)</span> a vector norm? Explain.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">It is not. We can show that it violates the 2nd condition of a norm.</p>
+<p class="sd-card-text">Choose the vector <span class="math notranslate nohighlight">\(x = (1,-1,0,\cdots,0)\)</span>, we have the “norm”:</p>
+<div class="math notranslate nohighlight">
+\[||x|| = 1 + (-1) + 0 + \cdots + 0 = 0\]</div>
 </div>
+</details></div>
 <div class="exercise docutils">
 <p>The function</p>
 <div class="math notranslate nohighlight">
@@ -656,15 +698,98 @@ Proof<div class="sd-summary-down docutils">
 </div>
 <div class="exercise docutils">
 <p>Is it true that <span class="math notranslate nohighlight">\(\| \boldsymbol{x} \|_1 \leq \| \boldsymbol{x} \|_2 \leq \| \boldsymbol{x} \|_{\infty}\)</span> for all <span class="math notranslate nohighlight">\(\boldsymbol{x} \in \mathbb{R}^n\)</span>? Explain.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is not true. The correct inequalities are:</p>
+<div class="math notranslate nohighlight">
+\[
+\| \boldsymbol{x} \|_{\infty} \leq \| \boldsymbol{x} \|_2 \leq \| \boldsymbol{x} \|_1
+\]</div>
+<p class="sd-card-text">Proof:
+$<span class="math notranslate nohighlight">\(
+\| \boldsymbol{x} \|_{\infty} = \max \{ |x_1|, |x_2|, ..., |x_n| \} \leq \sqrt{x_1^2 + x_2^2 + ... + x_n^2} = \| \boldsymbol{x} \|_2
+\)</span>$</p>
+<p class="sd-card-text">by the Cauchy-Schwarz inequality.</p>
+<p class="sd-card-text">Additionally,
+$<span class="math notranslate nohighlight">\(  
+\| \boldsymbol{x} \|_2 = \sqrt{x_1^2 + x_2^2 + ... + x_n^2} \leq |x_1| + |x_2| + ... + |x_n| = \| \boldsymbol{x} \|_1
+\)</span>$</p>
+<p class="sd-card-text">by the triangle inequality.</p>
+<p class="sd-card-text">Therefore, <span class="math notranslate nohighlight">\(\| \boldsymbol{x} \|_{\infty} \leq \| \boldsymbol{x} \|_2 \leq \| \boldsymbol{x} \|_1\)</span>.</p>
 </div>
+</details></div>
 <div class="exercise docutils">
 <p>Determine whether the statement is <strong>True</strong> or <strong>False</strong>: If <span class="math notranslate nohighlight">\(\| A \| = 1\)</span> then <span class="math notranslate nohighlight">\(A = I\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is false, but the converse is true.</p>
+<p class="sd-card-text">We can give a counterexample with the following diagonal matrix with the max diagonal entry of 1:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix} 0.5 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \Longrightarrow ||A|| = 1$$ but $$A \neq I_2\end{split}\]</div>
+<p class="sd-card-text">We can come up with similar diagonal matrices for the <span class="math notranslate nohighlight">\(n \times n\)</span> case.</p>
 </div>
+</details></div>
 <div class="exercise docutils">
 <p>Suppose <span class="math notranslate nohighlight">\(A\)</span> is a 2 by 2 matrix such that the image of the unit circle under the linear transformation <span class="math notranslate nohighlight">\(A\)</span> is:</p>
 <p><img alt="/img/01_02_02.png" src="../_images/01_02_03.png" /></p>
-<p>Determine <span class="math notranslate nohighlight">\(\mathrm{cond}(A)\)</span>.</p>
+<p>Determine <span class="math notranslate nohighlight">\(\mathrm{cond}(A)\)</span> with respect to the 1, 2, and <span class="math notranslate nohighlight">\(\infty\)</span> norm.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We begin by computing the operator norm with respect to the 2 -norm. From the definition of the operator norm we have</p>
+<div class="math notranslate nohighlight">
+\[
+\|A\|=\max _{\|x\|_{2}=1}\|A x\|_{2}
+\]</div>
+<p class="sd-card-text">Since the values in the left plot are exactly those on the unit sphere we must only identify the vector <span class="math notranslate nohighlight">\(A x\)</span> that has been stretched the most i.e. <span class="math notranslate nohighlight">\(A x=(5,5)\)</span> Thus</p>
+<div class="math notranslate nohighlight">
+\[
+\|A\|_{2}=5 \sqrt{2}
+\]</div>
+<p class="sd-card-text">Similarly for <span class="math notranslate nohighlight">\(\left\|A^{-1}\right\|\)</span> the vector least stretched is <span class="math notranslate nohighlight">\(A x=(-2,2)\)</span> thus</p>
+<div class="math notranslate nohighlight">
+\[
+\left\|A^{-1}\right\|_{2}=\frac{1}{2 \sqrt{2}}
+\]</div>
+<p class="sd-card-text">So that we find that</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{cond}(A)_2=\frac{5}{2}
+\]</div>
+<p class="sd-card-text">For the 1 and <span class="math notranslate nohighlight">\(\infty\)</span> norm, we realize that the vectors <span class="math notranslate nohighlight">\(v_{1}=\frac{1}{\sqrt{2}}(1,1)\)</span> and <span class="math notranslate nohighlight">\(v_{2}=\frac{1}{\sqrt{2}}(-1,1)\)</span> are eigenvectors i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+A v_{1}=(5,5)=5 \sqrt{2} \frac{1}{\sqrt{2}}(1,1), \quad A v_{2}=(-2,2)=2 \sqrt{2} \frac{1}{\sqrt{2}}(-1,1)
+\]</div>
+<p class="sd-card-text">Thus we have the diagonalization:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = PD P^{-1} = \begin{pmatrix}5 &amp; 2 \\5 &amp; -2 \end{pmatrix}\begin{pmatrix}5\sqrt{2} &amp; 0 \\0 &amp; 2\sqrt{2} \end{pmatrix}\begin{pmatrix}\frac{1}{10} &amp; \frac{1}{10} \\\frac{1}{4} &amp; -\frac{1}{4} \end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}7 &amp; 3 \\ 3 &amp; 7 \end{pmatrix}
+\end{split}\]</div>
+<p class="sd-card-text">and the inverse
+$<span class="math notranslate nohighlight">\(
+A^{-1} = \frac{1}{20\sqrt{2}}\begin{pmatrix}7 &amp; -3 \\ -3 &amp; 7 \end{pmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Then, we compute the condition number:
+\)</span><span class="math notranslate nohighlight">\(
+cond(A)_1 = cond(A)_{\infty} = \|A\|_{\infty} \|A^{-1}\|_{\infty} = \left(\frac{10}{\sqrt{2}} \right)\left(\frac{10}{20\sqrt{2}} \right) = \frac{5}{2}
+\)</span>$</p>
 </div>
+</details></div>
 </section>
 </section>
 
