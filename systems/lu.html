@@ -470,86 +470,110 @@ a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,n}
 \[\begin{split}
 A = \begin{bmatrix} 1 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 \\ 2 &amp; 5 &amp; 2 \end{bmatrix} \hspace{10mm} \boldsymbol{b} = \begin{bmatrix} 2 \\ 1 \\ 7 \end{bmatrix}
 \end{split}\]</div>
-<p>Add -1 times row 1 to row 2, and add -2 times row 1 to row 3:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Add -1 times row 1 to row 2, and add -2 times row 1 to row 3:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrr|r} 1 &amp; 1 &amp; 1 &amp; 2 \\ 1 &amp; 0 &amp; 1 &amp; 1 \\ 2 &amp; 5 &amp; 2 &amp; 7 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrr|r} 1 &amp; 1 &amp; 1 &amp; 2 \\ 0 &amp; -1 &amp; \phantom{+}0 &amp; -1 \\ 0 &amp; 3 &amp; 0 &amp; 3 \end{array} \right]
 \end{split}\]</div>
-<p>Add 3 times row 2 to row 3:</p>
+<p class="sd-card-text">Add 3 times row 2 to row 3:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrr|r} 1 &amp; 1 &amp; 1 &amp; 2 \\ 0 &amp; -1 &amp; \phantom{+}0 &amp; -1 \\ 0 &amp; 3 &amp; 0 &amp; 3 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrr|r} 1 &amp; 1 &amp; 1 &amp; 2 \\ 0 &amp; -1 &amp; \phantom{+}0 &amp; -1 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array} \right]
 \end{split}\]</div>
-<p>Since there is no leading one in column 3, assign the free variable <span class="math notranslate nohighlight">\(t\)</span> to <span class="math notranslate nohighlight">\(x_3\)</span>. The second row implies <span class="math notranslate nohighlight">\(x_2 = 1\)</span> and the first row gives us</p>
+<p class="sd-card-text">Since there is no leading one in column 3, assign the free variable <span class="math notranslate nohighlight">\(t\)</span> to <span class="math notranslate nohighlight">\(x_3\)</span>. The second row implies <span class="math notranslate nohighlight">\(x_2 = 1\)</span> and the first row gives us</p>
 <div class="math notranslate nohighlight">
 \[
 x_1 = 2 - x_2 - x_3 = 1 - t
 \]</div>
-<p>There are infinitely many solutions</p>
+<p class="sd-card-text">There are infinitely many solutions</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix} 1-t \\ 1 \\ t \end{bmatrix} \ , \ \ t \in \mathbb{R}
 \end{split}\]</div>
 </div>
+</details></div>
 <div class="example docutils">
 <p>Find all solutions of <span class="math notranslate nohighlight">\(A \boldsymbol{x} = \boldsymbol{b}\)</span> where</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 A = \left[ \begin{array}{rrrr} 1 &amp; -1 &amp; \phantom{+}1 &amp; -2 \\ -1 &amp; 1 &amp; 1 &amp; 1 \\ -1 &amp; 2 &amp; 3 &amp; 1 \\ 1 &amp; -1 &amp; 2 &amp; 1 \end{array} \right] \hspace{10mm} \boldsymbol{b} = \left[ \begin{array}{r} 1 \\ -1 \\ 2 \\ 1 \end{array} \right]
 \end{split}\]</div>
-<p>Add row 1 to row 2, add row 2 to row 3 and add -1 times row 1 to row 4:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Add row 1 to row 2, add row 2 to row 3 and add -1 times row 1 to row 4:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrrr|r} 1 &amp; -1 &amp; \phantom{+}1 &amp; -2 &amp; 1 \\ -1 &amp; 1 &amp; 1 &amp; 1 &amp; -1 \\ -1 &amp; 2 &amp; 3 &amp; 1 &amp; 2 \\ 1 &amp; -1 &amp; 2 &amp; 1 &amp; 1 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrrr|r} 1 &amp; -1 &amp; \phantom{+}1 &amp; -2 &amp; \phantom{+}1 \\ 0 &amp; 0 &amp; 2 &amp; -1 &amp; 0 \\ 0 &amp; 1 &amp; 4 &amp; -1 &amp; 3 \\ 0 &amp; 0 &amp; 1 &amp; 3 &amp; 0 \end{array} \right]
 \end{split}\]</div>
-<p>Move row 2 to the bottom:</p>
+<p class="sd-card-text">Move row 2 to the bottom:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrrr|r} 1 &amp; -1 &amp; \phantom{+}1 &amp; -2 &amp; \phantom{+}1 \\ 0 &amp; 0 &amp; 2 &amp; -1 &amp; 0 \\ 0 &amp; 1 &amp; 4 &amp; -1 &amp; 3 \\ 0 &amp; 0 &amp; 1 &amp; 3 &amp; 0 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrrr|r} 1 &amp; -1 &amp; \phantom{+}1 &amp; -2 &amp; \phantom{+}1 \\ 0 &amp; 1 &amp; 4 &amp; -1 &amp; 3 \\ 0 &amp; 0 &amp; 1 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; 2 &amp; -1 &amp; 0 \end{array} \right]
 \end{split}\]</div>
-<p>Add -2 times row 3 to row 4:</p>
+<p class="sd-card-text">Add -2 times row 3 to row 4:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrrr|r} 1 &amp; -1 &amp; \phantom{+}1 &amp; -2 &amp; \phantom{+}1 \\ 0 &amp; 1 &amp; 4 &amp; -1 &amp; 3 \\ 0 &amp; 0 &amp; 1 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; 2 &amp; -1 &amp; 0 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrrr|r} 1 &amp; -1 &amp; \phantom{+}1 &amp; -2 &amp; \phantom{+}1 \\ 0 &amp; 1 &amp; 4 &amp; -1 &amp; 3 \\ 0 &amp; 0 &amp; 1 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; -7 &amp; 0 \end{array} \right]
 \end{split}\]</div>
-<p>There is a unique solution</p>
+<p class="sd-card-text">There is a unique solution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \boldsymbol{x} = \begin{bmatrix} 4 \\ 3 \\ 0 \\ 0 \end{bmatrix}
 \end{split}\]</div>
 </div>
+</details></div>
 <div class="example docutils">
 <p>Find all solutions of <span class="math notranslate nohighlight">\(A \boldsymbol{x} = \boldsymbol{b}\)</span> where</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 A = \begin{bmatrix} 1 &amp; 1 &amp; 2 &amp; 1 \\ 1 &amp; 0 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 0 \end{bmatrix} \hspace{10mm} \boldsymbol{b} = \begin{bmatrix} 1 \\ 1 \\ 2 \end{bmatrix}
 \end{split}\]</div>
-<p>Add -1 times row 1 to row 2:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Add -1 times row 1 to row 2:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrrr|r} 1 &amp; 1 &amp; 2 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 0 &amp; 2 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrrr|r} 1 &amp; 1 &amp; 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; -1 &amp; \phantom{+}0 &amp; 0 \\ 0 &amp; 1 &amp; 1 &amp; 0 &amp; 2 \end{array} \right]
 \end{split}\]</div>
-<p>Add row 2 to row 3:</p>
+<p class="sd-card-text">Add row 2 to row 3:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left[ \begin{array}{rrrr|r} 1 &amp; 1 &amp; 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; -1 &amp; \phantom{+}0 &amp; 0 \\ 0 &amp; 1 &amp; 1 &amp; 0 &amp; 2 \end{array} \right]
 \longrightarrow
 \left[ \begin{array}{rrrr|r} 1 &amp; 1 &amp; 2 &amp; 1 &amp; 1 \\ 0 &amp; -1 &amp; -1 &amp; \phantom{+}0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 2 \end{array} \right]
 \end{split}\]</div>
-<p>The systems is inconsistent. In other words, there is no solution.</p>
+<p class="sd-card-text">The systems is inconsistent. In other words, there is no solution.</p>
 </div>
+</details></div>
 </section>
 <section id="id1">
 <h2>LU Decomposition<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
