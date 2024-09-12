@@ -120,7 +120,7 @@ where $\| \cdot \|$ is the 2-norm.
 The operator norm satisies the property $\| A \boldsymbol{x} \| \leq \| A \| \| \boldsymbol{x} \|$ for all $\boldsymbol{x} \in \mathbb{R}^n$.
 ```
 
-```{div} lemma
+```{div} note
 An operator norm is a matrix norm.
 ```
 
@@ -293,11 +293,11 @@ We need to show that the $\infty$-norm satisfies all four properties of a vector
 Is the function $\| \boldsymbol{x} \| = x_1 + \cdots + x_n$ a vector norm? Explain.
 
 ```{dropdown} Solution
-It is not. We can show that it violates the 2nd condition of a norm. 
+It is not. We can show that it violates the 2nd condition of a norm.
 
 Choose the vector $x = (1,-1,0,\cdots,0)$, we have the "norm":
 
-$$||x|| = 1 + (-1) + 0 + \cdots + 0 = 0$$ 
+$$||x|| = 1 + (-1) + 0 + \cdots + 0 = 0$$
 ```
 
 ````
@@ -330,12 +330,12 @@ $$
 Proof:
 $$
 \| \boldsymbol{x} \|_{\infty} = \max \{ |x_1|, |x_2|, ..., |x_n| \} \leq \sqrt{x_1^2 + x_2^2 + ... + x_n^2} = \| \boldsymbol{x} \|_2
-$$ 
+$$
 
 by the Cauchy-Schwarz inequality.
 
-Additionally, 
-$$  
+Additionally,
+$$
 \| \boldsymbol{x} \|_2 = \sqrt{x_1^2 + x_2^2 + ... + x_n^2} \leq |x_1| + |x_2| + ... + |x_n| = \| \boldsymbol{x} \|_1
 $$
 
@@ -350,12 +350,12 @@ Therefore, $\| \boldsymbol{x} \|_{\infty} \leq \| \boldsymbol{x} \|_2 \leq \| \b
 Determine whether the statement is **True** or **False**: If $\| A \| = 1$ then $A = I$.
 
 ```{dropdown} Solution
-This is false, but the converse is true. 
+This is false, but the converse is true.
 
-We can give a counterexample with the following diagonal matrix with the max diagonal entry of 1: 
+We can give a counterexample with the following diagonal matrix with the max diagonal entry of 1:
 
-$$A = \begin{pmatrix} 0.5 & 0 \\ 0 & 1 \end{pmatrix} \Longrightarrow ||A|| = 1$$ but $$A \neq I_2$$ 
-    
+$$A = \begin{pmatrix} 0.5 & 0 \\ 0 & 1 \end{pmatrix} \Longrightarrow ||A|| = 1$$ but $$A \neq I_2$$
+
 We can come up with similar diagonal matrices for the $n \times n$ case.
 
 ```
@@ -401,7 +401,7 @@ A v_{1}=(5,5)=5 \sqrt{2} \frac{1}{\sqrt{2}}(1,1), \quad A v_{2}=(-2,2)=2 \sqrt{2
 $$
 
 
-Thus we have the diagonalization: 
+Thus we have the diagonalization:
 
 $$
 A = PD P^{-1} = \begin{pmatrix}5 & 2 \\5 & -2 \end{pmatrix}\begin{pmatrix}5\sqrt{2} & 0 \\0 & 2\sqrt{2} \end{pmatrix}\begin{pmatrix}\frac{1}{10} & \frac{1}{10} \\\frac{1}{4} & -\frac{1}{4} \end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}7 & 3 \\ 3 & 7 \end{pmatrix}
