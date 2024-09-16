@@ -310,8 +310,17 @@ Let $U \subset \mathbb{R}^n$ be a subspace. Let $P_1$ be the orthogonal projecto
 * $P_1P_2 = P_2P_1 = 0$
 
 ```{dropdown} Solution
-* True
-* True
+
+* True, since
+
+$$
+\mathbb{R}^n = U + U^{\perp}
+$$
+
+the matrix \(P_1 + P_2\) is the projection onto the whole space and thus must be the identity.
+
+* True. If we project onto $U$ and then onto $U^{\perp}$, we will expect zero since the two spaces are orthogonal to each other.
+
 ```
 ````
 
@@ -356,6 +365,37 @@ $$
 $$
 \| \boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \| = \frac{1}{\sqrt{2}}
 $$
+```
+
+````
+
+````{div} exercise
+Project b onto the column space of A by solving \(A^T A\hat{x} = A^T b\) and \(p = A\hat{x}\), and solve for \( e = b - p \). It should be perpendicular to the columns of A.
+
+$$
+\boldsymbol{A} = \begin{pmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{pmatrix},
+\boldsymbol{b} = \begin{pmatrix} 2 \\ 3 \\ 4 \end{pmatrix}
+$$
+
+```{dropdown} Solution
+When solving \(A^T A\hat{x} = A^T b\), we isolate \hat{x} to get the transformed equation \( \hat{x} = (A^T A)^{$-1$} A^T b \). After computing, we get
+
+$$
+\hat{x} = \begin{pmatrix} -1 \\ 3 \end{pmatrix}
+$$
+
+Then we compute
+
+$$
+p = \begin{pmatrix} 2 \\ 3 \\ 0 \end{pmatrix}
+$$
+
+The error, \( e = b - p \), is
+
+$$
+e = \begin{pmatrix} 0 \\ 0 \\ 4 \end{pmatrix}
+$$
+
 ```
 
 ````
