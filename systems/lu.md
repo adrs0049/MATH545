@@ -82,10 +82,10 @@ Let $A$ be a $m \times n$ matrix with $\mathrm{rank}(A) = r$.
 The system $A \boldsymbol{x} = \boldsymbol{b}$ is **inconsistent** (ie. no solution) if $\mathrm{rank}(A) < \mathrm{rank}([ \, A \ \boldsymbol{b} \, ])$. In other words, the row echelon form of the augmented matrix $[ \, A \ \boldsymbol{b} \, ]$ has a row of the form
 
 $$
-\begin{array}{rrrr|r} 0 & 0 & \cdots & 0 & 1 \end{array}
+\begin{array}{rrrr|r} 0 & 0 & \cdots & 0 & \times \end{array}
 $$
 
-which implies $0 = 1$.
+which implies $0 = \times$ for some nonzero $\times$.
 
 The system has a **unique solution** when $\mathrm{rank}(A) = \mathrm{rank}([ \, A \ \boldsymbol{b} \, ])$ and $\mathrm{rank}(A) = n$. In other words, the system is consistent and the rank of $A$ is equal to the number of variables in the system.
 
