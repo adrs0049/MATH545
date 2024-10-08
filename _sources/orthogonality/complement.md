@@ -174,7 +174,7 @@ This means that
 $$
 N[W] = \mathrm{span}\left\{\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\right\},
 \quad\mbox{and}\quad
-{W}^{\perp} = \mathrm{span}\left\{\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\right}.
+{W}^{\perp} = \mathrm{span}\left\{\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\right\}.
 $$
 
 Finally we verify orthogonality:
