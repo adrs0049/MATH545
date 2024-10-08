@@ -508,8 +508,16 @@ U^{\perp} = \{ \boldsymbol{x} \in \mathbb{R}^n : \langle \boldsymbol{x} , \bolds
 </div>
 <div class="example docutils">
 <p>Compute <span class="math notranslate nohighlight">\({W}^{\perp}\)</span> complement where U = span<span class="math notranslate nohighlight">\(\left\{ \begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}, \begin{bmatrix} 1 \\ 4 \\ 1\end{bmatrix}\right\}\)</span></p>
-<p>First compute the nullspace of W
-$<span class="math notranslate nohighlight">\(
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">First compute the nullspace of <span class="math notranslate nohighlight">\(W\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix} 1 &amp; 2 &amp; 5 \\ 1 &amp; 4 &amp; 1 \end{bmatrix}
 \longrightarrow
 \begin{bmatrix} 1 &amp; 2 &amp; 5 \\ 0 &amp; 2 &amp; -4 \end{bmatrix}
@@ -517,17 +525,23 @@ $<span class="math notranslate nohighlight">\(
 \begin{bmatrix} 1 &amp; 2 &amp; 5 \\ 0 &amp; 1 &amp; -2 \end{bmatrix}
 \longrightarrow
 \begin{bmatrix} 1 &amp; 0 &amp; 9 \\ 0 &amp; 1 &amp; -2 \end{bmatrix}
-\)</span>$</p>
-<p>N[W] = span<span class="math notranslate nohighlight">\(\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\)</span>,
-<span class="math notranslate nohighlight">\({W}^{\perp}\)</span> = span<span class="math notranslate nohighlight">\(\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\)</span>
-\newline
-\newline</p>
-<p>verify orthogonality:
-\newline
-<span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}\)</span><span class="math notranslate nohighlight">\(\begin{bmatrix} -9 \ 2 \ 1 \end{bmatrix}\)</span>=0
-\newline\newline\newline
-<span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 4 \\ 1 \end{bmatrix}\)</span><span class="math notranslate nohighlight">\(\begin{bmatrix} -9 \ 2 \ 1 \end{bmatrix}\)</span>=0</p>
+\end{split}\]</div>
+<p class="sd-card-text">This means that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+N[W] = \mathrm{span}\left\{\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\right\},
+\quad\mbox{and}\quad
+{W}^{\perp} = \mathrm{span}\left\{\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\right}.
+\end{split}\]</div>
+<p class="sd-card-text">Finally we verify orthogonality:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 1 &amp; 2 &amp; 5 \end{bmatrix}\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}=0,
+\quad\mbox{and}\quad
+\begin{bmatrix} 1 &amp; 4 &amp; 1 \end{bmatrix}\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}=0.
+\end{split}\]</div>
 </div>
+</details></div>
 </section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>

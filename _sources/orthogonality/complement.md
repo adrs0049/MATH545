@@ -152,10 +152,13 @@ for all $\boldsymbol{y} \in U$ therefore $c \boldsymbol{x} \in U^{\perp}$.
 
 Therefore $U^{\perp}$ is a subspace.
 ```
-```{div} example
+
+````{div} example
 Compute ${W}^{\perp}$ complement where U = span$\left\{ \begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}, \begin{bmatrix} 1 \\ 4 \\ 1\end{bmatrix}\right\}$
 
-First compute the nullspace of W
+```{dropdown} Solution
+First compute the nullspace of $W$
+
 $$
 \begin{bmatrix} 1 & 2 & 5 \\ 1 & 4 & 1 \end{bmatrix}
 \longrightarrow
@@ -166,17 +169,25 @@ $$
 \begin{bmatrix} 1 & 0 & 9 \\ 0 & 1 & -2 \end{bmatrix}
 $$
 
-N[W] = span$\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}$, 
-${W}^{\perp}$ = span$\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}$
-\newline
-\newline
+This means that
 
-verify orthogonality:
-\newline
-$\begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}$$\begin{bmatrix} -9 \ 2 \ 1 \end{bmatrix}$=0
-\newline\newline\newline
-$\begin{bmatrix} 1 \\ 4 \\ 1 \end{bmatrix}$$\begin{bmatrix} -9 \ 2 \ 1 \end{bmatrix}$=0
+$$
+N[W] = \mathrm{span}\left\{\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\right\},
+\quad\mbox{and}\quad
+{W}^{\perp} = \mathrm{span}\left\{\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\right}.
+$$
+
+Finally we verify orthogonality:
+
+$$
+\begin{bmatrix} 1 & 2 & 5 \end{bmatrix}\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}=0,
+\quad\mbox{and}\quad
+\begin{bmatrix} 1 & 4 & 1 \end{bmatrix}\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}=0.
+$$
+
 ```
+````
+
 ## Exercises
 
 ````{div} exercise
