@@ -125,20 +125,6 @@ The **dimension** of $U$ is the number $m$ of vectors in a basis.
 Note that the first condition in the preceding definition guarantees that basis are **minimal** i.e. contain the smallest number of vectors which span the vectorspace $U$.
 ```
 
-## Rank-Nullity Theorem
-
-```{div} theorem
-Let $A$ be an $m \times n$ matrix. Then
-
-$$
-\dim(R(A)) + \dim(N(A)) = n
-$$
-
----
-
-*Proof*. The dimension of $N(A)$ is equal to the number of columns of the row echelon form of $A$ *without* a leading nonzero entry, and $\mathrm{rank}(A) = \dim(R(A))$ is equal to the number of columns of the row echelon form of $A$ *with* a leading nonzero entry, and there are $n$ total columns.
-```
-
 ## Exercises
 
 ````{div} exercise
@@ -191,19 +177,4 @@ $\dim(U) = 3$ and $\{ \boldsymbol{u}_1 , \boldsymbol{u}_3 , \boldsymbol{u}_4 \}$
 
 ````
 
-````{div} exercise
-Let $A = LU$ be the LU decomposition of $A$. Determine whether the statement is **True** or **False**.
 
-* $N(A) = N(U)$
-* $\dim (N(A)) = \dim (N(U))$
-* $R(A) = R(U)$
-* $\dim (R(A)) = \dim (R(U))$
-
-```{dropdown} Solution
-* True
-* True
-* False
-* True
-```
-
-````

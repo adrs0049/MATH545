@@ -12,6 +12,7 @@ parts:
     - file: orthogonality/subspaces.md
     - file: orthogonality/complement.md
     - file: orthogonality/projection.md
+    - file: orthogonality/kernel.md
     - file: orthogonality/qr.md
     - file: orthogonality/fundamental.md
     - file: orthogonality/least_squares.md
