@@ -67,7 +67,7 @@ $$
 ```
 
 ```{div} theorem
-Let $A = LU$ be the LU decomposition of $A$ (if it exists) and let $r = \mathrm{rank}(A)$. Then
+Let $A = PLUQ$ be the LU decomposition of $A$ computed with row-swaps ($P$) and column-swaps ($Q$) and let $r = \mathrm{rank}(A)$. Then
 
 $$
 R(A) = \mathrm{span} \{ \boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r \}
@@ -83,7 +83,7 @@ $$
 U \boldsymbol{x} = \begin{bmatrix} * & * & \cdots & * \\ 0 & \ddots & \ddots & \vdots \\ \vdots & \ddots & * & * \\ 0 & \cdots & 0 & 0 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix}
 $$
 
-Therefore
+**Note**, that this particular form of the matrix $U$ is only guaranteed when you do **full pivoting** i.e. both row and column swaps. Therefore
 
 $$
 LU \boldsymbol{x} = \begin{bmatrix} & & \\ \boldsymbol{\ell}_1 & \cdots & \boldsymbol{\ell}_n \\ & & \end{bmatrix} \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix} = (*) \boldsymbol{\ell}_1 + \cdots + (*) \boldsymbol{\ell}_r

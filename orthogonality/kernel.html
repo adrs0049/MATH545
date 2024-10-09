@@ -444,7 +444,7 @@ R(A) = \mathrm{span} \{ \boldsymbol{a}_1 , \dots, \boldsymbol{a}_n \}
 <p><em>Proof</em>. The rank of <span class="math notranslate nohighlight">\(A\)</span> is the number of nonzero rows in the row echelon form of <span class="math notranslate nohighlight">\(A\)</span>. The dimension of <span class="math notranslate nohighlight">\(R(A)\)</span> is the number of linearly independent columns in <span class="math notranslate nohighlight">\(A\)</span> which is also equal to the number of nonzero rows in <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </div>
 <div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A = LU\)</span> be the LU decomposition of <span class="math notranslate nohighlight">\(A\)</span> (if it exists) and let <span class="math notranslate nohighlight">\(r = \mathrm{rank}(A)\)</span>. Then</p>
+<p>Let <span class="math notranslate nohighlight">\(A = PLUQ\)</span> be the LU decomposition of <span class="math notranslate nohighlight">\(A\)</span> computed with row-swaps (<span class="math notranslate nohighlight">\(P\)</span>) and column-swaps (<span class="math notranslate nohighlight">\(Q\)</span>) and let <span class="math notranslate nohighlight">\(r = \mathrm{rank}(A)\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[
 R(A) = \mathrm{span} \{ \boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r \}
@@ -456,7 +456,7 @@ R(A) = \mathrm{span} \{ \boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r \}
 \[\begin{split}
 U \boldsymbol{x} = \begin{bmatrix} * &amp; * &amp; \cdots &amp; * \\ 0 &amp; \ddots &amp; \ddots &amp; \vdots \\ \vdots &amp; \ddots &amp; * &amp; * \\ 0 &amp; \cdots &amp; 0 &amp; 0 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix}
 \end{split}\]</div>
-<p>Therefore</p>
+<p><strong>Note</strong>, that this particular form of the matrix <span class="math notranslate nohighlight">\(U\)</span> is only guaranteed when you do <strong>full pivoting</strong> i.e. both row and column swaps. Therefore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 LU \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{\ell}_1 &amp; \cdots &amp; \boldsymbol{\ell}_n \\ &amp; &amp; \end{bmatrix} \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix} = (*) \boldsymbol{\ell}_1 + \cdots + (*) \boldsymbol{\ell}_r
