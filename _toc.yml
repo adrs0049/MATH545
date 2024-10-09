@@ -11,9 +11,9 @@ parts:
     chapters:
     - file: orthogonality/subspaces.md
     - file: orthogonality/complement.md
-    - file: orthogonality/fundamental.md
     - file: orthogonality/projection.md
     - file: orthogonality/qr.md
+    - file: orthogonality/fundamental.md
     - file: orthogonality/least_squares.md
   - caption: Eigenvalues
     chapters:

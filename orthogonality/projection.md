@@ -195,65 +195,6 @@ P_{\perp} = \frac{1}{\| \boldsymbol{u}_3 \|^2} \boldsymbol{u}_3 \boldsymbol{u}_3
 $$
 ```
 
-````{div} example
-
-Let $U \subset \mathbb{R}^3$ be the subspace spanned by
-
-$$
-\boldsymbol{u}_1 = \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array} \right]
-\hspace{5mm}
-\boldsymbol{u}_2 = \left[ \begin{array}{r} 0 \\ 1 \\ 1 \end{array} \right]
-$$
-
-Find the vector in $U$ which is closest to the vector
-
-$$
-\boldsymbol{x} = \left[ \begin{array}{r} 1 \\ 1 \\ 2 \end{array} \right]
-$$
-
-```{dropdown} Solution
-In general if you want to project onto the subspace $\text{span}\{u_1,\ldots,u_d\}$ where $u_1,\ldots,u_d$ form an orthonormal basis, then the projection of $v$ onto this subspace is $(v^Tu_1)u_1+\cdots+(v^Tu_d)u_d$.
-
-To solve this problem, we need to find the orthogonal projection of $\boldsymbol{x}$ onto the subspace $U$.
-
-However, notice that $\langle \boldsymbol{u}_1 , \boldsymbol{u}_2 \rangle = 1$ which does not equal $0$. If we want to use the projection formula to find the closest vector, the basis needs to be orthogonal. To find the orthogonal basis, we can use the Gram-Schmidt process.
-
-Compute
-
-$$
-\begin{align*}
-\boldsymbol{v}_1 &= \boldsymbol{u}_1 \\
-\boldsymbol{v}_2 &= \boldsymbol{u}_2 - \mathrm{proj}_{\boldsymbol{v}_1}(\boldsymbol{u}_2) \\
-\end{align*}
-$$
-
-and we find an orthogonal basis
-
-$$
-\boldsymbol{v}_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
-\hspace{5mm}
-\boldsymbol{v}_2 = \begin{bmatrix} -2/3 \\ 1/3 \\ 1/3 \end{bmatrix}
-$$
-
-Finally, we can find the projection of $\boldsymbol{x}$ onto $U$ where
-
-$$
-\mathrm{proj}_U(\boldsymbol{x}) = \frac{\langle \boldsymbol{x} , \boldsymbol{u}_1 \rangle}{ \langle \boldsymbol{u}_1 , \boldsymbol{u}_1 \rangle } \boldsymbol{u}_1 + \frac{\langle \boldsymbol{x} , \boldsymbol{u}_2 \rangle}{ \langle \boldsymbol{u}_2 , \boldsymbol{u}_2 \rangle } \boldsymbol{u}_2
-$$
-
-Plugging in the values, we find
-
-$$
-\mathrm{proj}_U(\boldsymbol{x}) = \begin{bmatrix} 1 \\ 3/2 \\ 3/2 \end{bmatrix}
-$$
-
-$\mathrm{proj}_U(\boldsymbol{x})$ gives the vector in $U$ that is closest to $x$. To find the distance between $x$ and this vector, we calculate
-
-$$\| \boldsymbol{x} - \mathrm{proj}_U(\boldsymbol{x}) \| = \frac{1}{\sqrt{2}}$$
-```
-
-````
-
 ## Projection Theorem
 
 ```{div} theorem
