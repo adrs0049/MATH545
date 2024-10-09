@@ -89,6 +89,7 @@ $$
 \end{align*}
 $$
 
+**Note:** This collapse of a double sum to a single sum is one of the ways that orthogonality becomes a powerful tool in applied linear algebra.
 ```
 
 ## Orthogonal Subspaces
@@ -101,9 +102,15 @@ Let $U_1 \subseteq \mathbb{R}^n$ and $U_2 \subseteq \mathbb{R}^n$ be subspaces. 
 Let $\{ \boldsymbol{u}_1,\dots,\boldsymbol{u}_m \}$ be a basis of a subspace $U_1 \subseteq \mathbb{R}^n$ and let $\{ \boldsymbol{v}_1,\dots,\boldsymbol{v}_{\ell} \}$ be a basis of a subspace $U_2 \subseteq \mathbb{R}^n$. Then $U_1 \perp U_2$ if and only if $\langle \boldsymbol{u}_i , \boldsymbol{v}_j \rangle = 0$ for all $i,j$. In other words, every $\boldsymbol{u}_i$ in the basis of $U_1$ is orthogonal to each $\boldsymbol{v}_j$ in the basis of $U_2$.
 ```
 
-```{div} example
-Let $U_1 \subset \mathbb{R}^3$ and $U_2 \subset \mathbb{R}^3$ be 2-dimensional subspaces (planes). Is it possible that $U_1 \perp U_2$? No!
+````{div} example
+Let $U_1 \subset \mathbb{R}^3$ and $U_2 \subset \mathbb{R}^3$ be 2-dimensional subspaces (planes). Is it possible that $U_1 \perp U_2$?
+
+```{dropdown} Solution
+
+No.
+
 ```
+````
 
 ## Orthogonal Complement
 
@@ -154,9 +161,27 @@ Therefore $U^{\perp}$ is a subspace.
 ```
 
 ````{div} example
-Compute ${W}^{\perp}$ complement where U = span$\left\{ \begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}, \begin{bmatrix} 1 \\ 4 \\ 1\end{bmatrix}\right\}$
+Compute ${U}^{\perp}$ complement where $U = \mathrm{span}\left\{ \begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}, \begin{bmatrix} 1 \\ 4 \\ 1\end{bmatrix}\right\}$
 
 ```{dropdown} Solution
+
+The basis vectors for the subspace $U$ are the vector $u_1$ and $u_2$ (in the above definition).
+By the last theorem in the previous section, we must find the basis vector for $U^{\perp} = \mathrm{span}\left\{ w \right\}$,
+so that $u_1^T w = 0$ and $u_2^T w = 0$. These are two linear equations, which we can write as a linear system
+
+$$
+\begin{pmatrix} u_1^T \\ u_2^T \end{pmatrix} \begin{pmatrix} w_1 \\ w_2 \\ w_3 \end{pmatrix} = 0
+\quad\iff\quad
+\begin{pmatrix} 1 & 2 & 5 \\ 1 & 4 & 1 \end{pmatrix} \begin{pmatrix} w_1 \\ w_2 \\ w_3 \end{pmatrix} = 0
+$$
+
+Row reducing we find that
+
+$$
+    w = \begin{pmatrix} -9 \\ 2 \\ 1 \end{pmatrix}.
+$$
+
+<!---
 First compute the nullspace of $W$
 
 $$
@@ -184,6 +209,7 @@ $$
 \quad\mbox{and}\quad
 \begin{bmatrix} 1 & 4 & 1 \end{bmatrix}\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}=0.
 $$
+--->
 
 ```
 ````

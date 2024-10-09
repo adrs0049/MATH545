@@ -456,6 +456,7 @@ document.write(`
 &amp;= \| \boldsymbol{x}_1 \|^2 + \cdots + \| \boldsymbol{x}_m \|^2
 \end{align*}
 \end{split}\]</div>
+<p><strong>Note:</strong> This collapse of a double sum to a single sum is one of the ways that orthogonality becomes a powerful tool in applied linear algebra.</p>
 </div>
 </section>
 <section id="orthogonal-subspaces">
@@ -467,8 +468,17 @@ document.write(`
 <p>Let <span class="math notranslate nohighlight">\(\{ \boldsymbol{u}_1,\dots,\boldsymbol{u}_m \}\)</span> be a basis of a subspace <span class="math notranslate nohighlight">\(U_1 \subseteq \mathbb{R}^n\)</span> and let <span class="math notranslate nohighlight">\(\{ \boldsymbol{v}_1,\dots,\boldsymbol{v}_{\ell} \}\)</span> be a basis of a subspace <span class="math notranslate nohighlight">\(U_2 \subseteq \mathbb{R}^n\)</span>. Then <span class="math notranslate nohighlight">\(U_1 \perp U_2\)</span> if and only if <span class="math notranslate nohighlight">\(\langle \boldsymbol{u}_i , \boldsymbol{v}_j \rangle = 0\)</span> for all <span class="math notranslate nohighlight">\(i,j\)</span>. In other words, every <span class="math notranslate nohighlight">\(\boldsymbol{u}_i\)</span> in the basis of <span class="math notranslate nohighlight">\(U_1\)</span> is orthogonal to each <span class="math notranslate nohighlight">\(\boldsymbol{v}_j\)</span> in the basis of <span class="math notranslate nohighlight">\(U_2\)</span>.</p>
 </div>
 <div class="example docutils">
-<p>Let <span class="math notranslate nohighlight">\(U_1 \subset \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(U_2 \subset \mathbb{R}^3\)</span> be 2-dimensional subspaces (planes). Is it possible that <span class="math notranslate nohighlight">\(U_1 \perp U_2\)</span>? No!</p>
+<p>Let <span class="math notranslate nohighlight">\(U_1 \subset \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(U_2 \subset \mathbb{R}^3\)</span> be 2-dimensional subspaces (planes). Is it possible that <span class="math notranslate nohighlight">\(U_1 \perp U_2\)</span>?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">No.</p>
 </div>
+</details></div>
 </section>
 <section id="id1">
 <h2>Orthogonal Complement<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
@@ -507,7 +517,7 @@ U^{\perp} = \{ \boldsymbol{x} \in \mathbb{R}^n : \langle \boldsymbol{x} , \bolds
 <p>Therefore <span class="math notranslate nohighlight">\(U^{\perp}\)</span> is a subspace.</p>
 </div>
 <div class="example docutils">
-<p>Compute <span class="math notranslate nohighlight">\({W}^{\perp}\)</span> complement where U = span<span class="math notranslate nohighlight">\(\left\{ \begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}, \begin{bmatrix} 1 \\ 4 \\ 1\end{bmatrix}\right\}\)</span></p>
+<p>Compute <span class="math notranslate nohighlight">\({U}^{\perp}\)</span> complement where <span class="math notranslate nohighlight">\(U = \mathrm{span}\left\{ \begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix}, \begin{bmatrix} 1 \\ 4 \\ 1\end{bmatrix}\right\}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -515,31 +525,49 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">First compute the nullspace of <span class="math notranslate nohighlight">\(W\)</span></p>
+<p class="sd-card-text">The basis vectors for the subspace <span class="math notranslate nohighlight">\(U\)</span> are the vector <span class="math notranslate nohighlight">\(u_1\)</span> and <span class="math notranslate nohighlight">\(u_2\)</span> (in the above definition).
+By the last theorem in the previous section, we must find the basis vector for <span class="math notranslate nohighlight">\(U^{\perp} = \mathrm{span}\left\{ w \right\}\)</span>,
+so that <span class="math notranslate nohighlight">\(u_1^T w = 0\)</span> and <span class="math notranslate nohighlight">\(u_2^T w = 0\)</span>. These are two linear equations, which we can write as a linear system</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{bmatrix} 1 &amp; 2 &amp; 5 \\ 1 &amp; 4 &amp; 1 \end{bmatrix}
-\longrightarrow
-\begin{bmatrix} 1 &amp; 2 &amp; 5 \\ 0 &amp; 2 &amp; -4 \end{bmatrix}
-\longrightarrow
-\begin{bmatrix} 1 &amp; 2 &amp; 5 \\ 0 &amp; 1 &amp; -2 \end{bmatrix}
-\longrightarrow
-\begin{bmatrix} 1 &amp; 0 &amp; 9 \\ 0 &amp; 1 &amp; -2 \end{bmatrix}
+\begin{pmatrix} u_1^T \\ u_2^T \end{pmatrix} \begin{pmatrix} w_1 \\ w_2 \\ w_3 \end{pmatrix} = 0
+\quad\iff\quad
+\begin{pmatrix} 1 &amp; 2 &amp; 5 \\ 1 &amp; 4 &amp; 1 \end{pmatrix} \begin{pmatrix} w_1 \\ w_2 \\ w_3 \end{pmatrix} = 0
 \end{split}\]</div>
-<p class="sd-card-text">This means that</p>
+<p class="sd-card-text">Row reducing we find that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
+    w = \begin{pmatrix} -9 \\ 2 \\ 1 \end{pmatrix}.
+\end{split}\]</div>
+<!---
+First compute the nullspace of $W$
+
+$$
+\begin{bmatrix} 1 & 2 & 5 \\ 1 & 4 & 1 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix} 1 & 2 & 5 \\ 0 & 2 & -4 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix} 1 & 2 & 5 \\ 0 & 1 & -2 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix} 1 & 0 & 9 \\ 0 & 1 & -2 \end{bmatrix}
+$$
+
+This means that
+
+$$
 N[W] = \mathrm{span}\left\{\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\right\},
 \quad\mbox{and}\quad
 {W}^{\perp} = \mathrm{span}\left\{\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}\right\}.
-\end{split}\]</div>
-<p class="sd-card-text">Finally we verify orthogonality:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} 1 &amp; 2 &amp; 5 \end{bmatrix}\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}=0,
+$$
+
+Finally we verify orthogonality:
+
+$$
+\begin{bmatrix} 1 & 2 & 5 \end{bmatrix}\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}=0,
 \quad\mbox{and}\quad
-\begin{bmatrix} 1 &amp; 4 &amp; 1 \end{bmatrix}\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}=0.
-\end{split}\]</div>
+\begin{bmatrix} 1 & 4 & 1 \end{bmatrix}\begin{bmatrix} -9 \\ 2 \\ 1 \end{bmatrix}=0.
+$$
+--->
 </div>
 </details></div>
 </section>
