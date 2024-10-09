@@ -157,16 +157,18 @@ P &= \frac{1}{\| \boldsymbol{u}_1 \|^2} \boldsymbol{u}_1 \boldsymbol{u}_1^T +  \
 $$
 ```
 
-```{div} example
+````{div} example
 Find the orthogonal projection matrix $P_{\perp}$ which projects onto $U^{\perp}$ where $U$ the subspace spanned by the vectors
 
 $$
 \boldsymbol{u}_1 = \left[ \begin{array}{r} 1 \\ 0 \\ -1 \end{array} \right]
 \hspace{5mm}
-\boldsymbol{u}_2 = \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array} \right]
+\boldsymbol{u}_2 = \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array} \right].
 $$
 
-as in the previous example. Compute
+```{dropdown} Solution
+
+As in the previous example. Compute
 
 $$
 \begin{align*}
@@ -194,6 +196,8 @@ P_{\perp} = \frac{1}{\| \boldsymbol{u}_3 \|^2} \boldsymbol{u}_3 \boldsymbol{u}_3
 \end{align*}
 $$
 ```
+
+````
 
 ## Projection Theorem
 
