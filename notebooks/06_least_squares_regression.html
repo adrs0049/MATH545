@@ -172,6 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../orthogonality/subspaces.html">Subspaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../orthogonality/complement.html">Orthogonal Complement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../orthogonality/projection.html">Orthogonal Projection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orthogonality/kernel.html">The nullspace and range</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../orthogonality/qr.html">QR Decomposition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../orthogonality/fundamental.html">Fundamental Subspaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../orthogonality/least_squares.html">Least Squares Approximation</a></li>
@@ -520,7 +521,7 @@ y = c_0 + c_1 t + \epsilon
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3ce5a1da633534f1e297ccbe4763a3d22a6191526968adcc847a9cf41ef9410d.png" src="../_images/3ce5a1da633534f1e297ccbe4763a3d22a6191526968adcc847a9cf41ef9410d.png" />
+<img alt="../_images/24d2632f515862c04e54abe8ac64125878f075c8b65a84b1d6e2440790f0a7cc.png" src="../_images/24d2632f515862c04e54abe8ac64125878f075c8b65a84b1d6e2440790f0a7cc.png" />
 </div>
 </div>
 <p>Let’s use linear regression to retrieve the coefficients <span class="math notranslate nohighlight">\(c_0\)</span> and <span class="math notranslate nohighlight">\(c_1\)</span>. Construct the matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
@@ -545,11 +546,11 @@ y = c_0 + c_1 t + \epsilon
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.        , 0.82624498],
-       [1.        , 0.18932335],
-       [1.        , 0.87321197],
-       [1.        , 0.23829496],
-       [1.        , 0.2462593 ]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.        , 0.99976055],
+       [1.        , 0.79059481],
+       [1.        , 0.66408275],
+       [1.        , 0.03518993],
+       [1.        , 0.98511389]])
 </pre></div>
 </div>
 </div>
@@ -563,7 +564,7 @@ y = c_0 + c_1 t + \epsilon
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 7.02628403 -4.01225228]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 6.97442076 -3.94926557]
 </pre></div>
 </div>
 </div>
@@ -580,7 +581,7 @@ y = c_0 + c_1 t + \epsilon
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0d4746a6114de3e137094ff21988b3679f4c5e8aa000ce68d5c5464fc2eb07af.png" src="../_images/0d4746a6114de3e137094ff21988b3679f4c5e8aa000ce68d5c5464fc2eb07af.png" />
+<img alt="../_images/7fbc132908f0a6f16de55e8fd0d6d86e3ea06803ec0997dab19e3c8b302c33d8.png" src="../_images/7fbc132908f0a6f16de55e8fd0d6d86e3ea06803ec0997dab19e3c8b302c33d8.png" />
 </div>
 </div>
 </section>
@@ -648,7 +649,7 @@ cd_d
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a9cbddb2eaf9730846445ca39c60a55110e815ed8e9fc7626d65dff56a3a888e.png" src="../_images/a9cbddb2eaf9730846445ca39c60a55110e815ed8e9fc7626d65dff56a3a888e.png" />
+<img alt="../_images/b07f36de2aa558fd9a1c15eee969de901d6a3a61ea351c136e1c0f06048971ea.png" src="../_images/b07f36de2aa558fd9a1c15eee969de901d6a3a61ea351c136e1c0f06048971ea.png" />
 </div>
 </div>
 <p>Construct the matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
@@ -679,7 +680,7 @@ cd_d
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2ce454287c6c1ed8c6252f365976e89d0e5ca7bbbbe39c5bf027385a596aec2f.png" src="../_images/2ce454287c6c1ed8c6252f365976e89d0e5ca7bbbbe39c5bf027385a596aec2f.png" />
+<img alt="../_images/a52d928dd73accdcc242753e181c94a94ac0e66905a3c006b56d7c9bf24d9f0a.png" src="../_images/a52d928dd73accdcc242753e181c94a94ac0e66905a3c006b56d7c9bf24d9f0a.png" />
 </div>
 </div>
 <p>Let’s solve again but this time we use the QR decomposition:</p>
@@ -704,7 +705,7 @@ cd_d
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2ce454287c6c1ed8c6252f365976e89d0e5ca7bbbbe39c5bf027385a596aec2f.png" src="../_images/2ce454287c6c1ed8c6252f365976e89d0e5ca7bbbbe39c5bf027385a596aec2f.png" />
+<img alt="../_images/a52d928dd73accdcc242753e181c94a94ac0e66905a3c006b56d7c9bf24d9f0a.png" src="../_images/a52d928dd73accdcc242753e181c94a94ac0e66905a3c006b56d7c9bf24d9f0a.png" />
 </div>
 </div>
 </section>
