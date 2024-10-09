@@ -374,7 +374,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Subspaces</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-independence-and-span">Linear Independence and Span</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-and-dimension">Basis and Dimension</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nullspace-and-range">Nullspace and Range</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rank-nullity-theorem">Rank-Nullity Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
@@ -421,23 +420,32 @@ document.write(`
 \[\begin{split}
 U = \left\{ \begin{bmatrix} x \\ y \end{bmatrix} : y \geq 0 \right\}
 \end{split}\]</div>
-<p>Then <span class="math notranslate nohighlight">\(U\)</span> contains the zero vector</p>
+<p>Is <span class="math notranslate nohighlight">\(U \subset \mathbb{R}^2\)</span> a subspace?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Then <span class="math notranslate nohighlight">\(U\)</span> contains the zero vector</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \boldsymbol{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \in U
 \end{split}\]</div>
-<p>and <span class="math notranslate nohighlight">\(U\)</span> is closed under addition since</p>
+<p class="sd-card-text">and <span class="math notranslate nohighlight">\(U\)</span> is closed under addition since</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \boldsymbol{u}_1 + \boldsymbol{u}_2 = \begin{bmatrix} x_1 \\ y_1 \end{bmatrix} + \begin{bmatrix} x_2 \\ y_2 \end{bmatrix} = \begin{bmatrix} x_1 + x_2 \\ y_1 + y_2 \end{bmatrix} \in U
 \end{split}\]</div>
-<p>because <span class="math notranslate nohighlight">\(y_1 + y_2 \geq 0\)</span> since <span class="math notranslate nohighlight">\(y_1 \geq 0\)</span> and <span class="math notranslate nohighlight">\(y_2 \geq 0\)</span>. However <span class="math notranslate nohighlight">\(U\)</span> is not closed under scalar multiplication because</p>
+<p class="sd-card-text">because <span class="math notranslate nohighlight">\(y_1 + y_2 \geq 0\)</span> since <span class="math notranslate nohighlight">\(y_1 \geq 0\)</span> and <span class="math notranslate nohighlight">\(y_2 \geq 0\)</span>. However <span class="math notranslate nohighlight">\(U\)</span> is not closed under scalar multiplication because</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 (-1) \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} -1 \\ -1 \end{bmatrix} \not\in U
 \end{split}\]</div>
-<p>Therefore <span class="math notranslate nohighlight">\(U\)</span> is not a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
+<p class="sd-card-text">Therefore <span class="math notranslate nohighlight">\(U\)</span> is not a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
 </div>
+</details></div>
 </section>
 <section id="linear-independence-and-span">
 <h2>Linear Independence and Span<a class="headerlink" href="#linear-independence-and-span" title="Permalink to this heading">#</a></h2>
@@ -486,73 +494,8 @@ A = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{u_1} &amp; \cdots &amp; \boldsymb
 </ol>
 <p>The <strong>dimension</strong> of <span class="math notranslate nohighlight">\(U\)</span> is the number <span class="math notranslate nohighlight">\(m\)</span> of vectors in a basis.</p>
 </div>
-</section>
-<section id="nullspace-and-range">
-<h2>Nullspace and Range<a class="headerlink" href="#nullspace-and-range" title="Permalink to this heading">#</a></h2>
-<div class="definition docutils">
-<p>The <strong>nullspace</strong> of a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is</p>
-<div class="math notranslate nohighlight">
-\[
-N(A) = \{ \boldsymbol{x} \in \mathbb{R}^n : A\boldsymbol{x} = \boldsymbol{0} \}
-\]</div>
-</div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. The nullspace <span class="math notranslate nohighlight">\(N(A)\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
-</div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix and let <span class="math notranslate nohighlight">\(A = LU\)</span> be the LU decomposition (if it exists). Then <span class="math notranslate nohighlight">\(N(A) = N(U)\)</span>.</p>
-</div>
-<div class="definition docutils">
-<p>The <strong>range</strong> of a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is:</p>
-<div class="math notranslate nohighlight">
-\[
-R(A) = \{ A \boldsymbol{x} : \boldsymbol{x} \in \mathbb{R}^n \}
-\]</div>
-<p>The range of <span class="math notranslate nohighlight">\(A\)</span> is also called <strong>image</strong> or <strong>column space</strong> of <span class="math notranslate nohighlight">\(A\)</span>.</p>
-</div>
 <div class="note docutils">
-<p>Matrix multiplication can be written as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-A \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{a}_1 &amp; \cdots &amp; \boldsymbol{a}_n \\ &amp; &amp; \end{bmatrix} \begin{bmatrix} x_1 \\ \vdots \\ x_n \end{bmatrix} = x_1 \boldsymbol{a}_1 + \cdots + x_n \boldsymbol{a}_n
-\end{split}\]</div>
-<p>Therefore the range of <span class="math notranslate nohighlight">\(A\)</span> is the equal to the span of the columns</p>
-<div class="math notranslate nohighlight">
-\[
-R(A) = \mathrm{span} \{ \boldsymbol{a}_1 , \dots, \boldsymbol{a}_n \}
-\]</div>
-<p>and that’s why <span class="math notranslate nohighlight">\(R(A)\)</span> is sometimes called the column space.</p>
-</div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. The range <span class="math notranslate nohighlight">\(R(A)\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>.</p>
-</div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. Then</p>
-<div class="math notranslate nohighlight">
-\[
-\dim (R(A)) = \mathrm{rank}(A)
-\]</div>
-<hr class="docutils" />
-<p><em>Proof</em>. The rank of <span class="math notranslate nohighlight">\(A\)</span> is the number of nonzero rows in the row echelon form of <span class="math notranslate nohighlight">\(A\)</span>. The dimension of <span class="math notranslate nohighlight">\(R(A)\)</span> is the number of linearly independent columns in <span class="math notranslate nohighlight">\(A\)</span> which is also equal to the number of nonzero rows in <span class="math notranslate nohighlight">\(A\)</span>.</p>
-</div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A = LU\)</span> be the LU decomposition of <span class="math notranslate nohighlight">\(A\)</span> (if it exists) and let <span class="math notranslate nohighlight">\(r = \mathrm{rank}(A)\)</span>. Then</p>
-<div class="math notranslate nohighlight">
-\[
-R(A) = \mathrm{span} \{ \boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r \}
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r\)</span> are the first <span class="math notranslate nohighlight">\(r\)</span> columns of <span class="math notranslate nohighlight">\(L\)</span>. In particular, <span class="math notranslate nohighlight">\(\boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r\)</span> is a basis of <span class="math notranslate nohighlight">\(R(A)\)</span>.</p>
-<hr class="docutils" />
-<p><em>Proof</em>. If <span class="math notranslate nohighlight">\(\mathrm{rank}(A) = r\)</span> then only the first <span class="math notranslate nohighlight">\(r\)</span> entries of the vector <span class="math notranslate nohighlight">\(U \boldsymbol{x}\)</span> are nonzero</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-U \boldsymbol{x} = \begin{bmatrix} * &amp; * &amp; \cdots &amp; * \\ 0 &amp; \ddots &amp; \ddots &amp; \vdots \\ \vdots &amp; \ddots &amp; * &amp; * \\ 0 &amp; \cdots &amp; 0 &amp; 0 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix}
-\end{split}\]</div>
-<p>Therefore</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-LU \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{\ell}_1 &amp; \cdots &amp; \boldsymbol{\ell}_n \\ &amp; &amp; \end{bmatrix} \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix} = (*) \boldsymbol{\ell}_1 + \cdots + (*) \boldsymbol{\ell}_r
-\end{split}\]</div>
+<p>Note that the first condition in the preceding definition guarantees that basis are <strong>minimal</strong> i.e. contain the smallest number of vectors which span the vectorspace <span class="math notranslate nohighlight">\(U\)</span>.</p>
 </div>
 </section>
 <section id="rank-nullity-theorem">
@@ -724,7 +667,6 @@ Solution<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Subspaces</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-independence-and-span">Linear Independence and Span</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-and-dimension">Basis and Dimension</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nullspace-and-range">Nullspace and Range</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rank-nullity-theorem">Rank-Nullity Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>

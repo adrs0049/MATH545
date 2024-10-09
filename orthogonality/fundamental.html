@@ -371,7 +371,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Fundamental Subspaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Fundamental Subspaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-nullspace">The Nullspace</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range">The Range</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orthogonality-of-the-fundamental-subspaces">Orthogonality of the fundamental subspaces</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-subspaces-big-picture">Fundamental Subspaces Big Picture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
@@ -433,6 +437,76 @@ the column space of <span class="math notranslate nohighlight">\(A^T\)</span>),<
 <p>It is called the left nullspace since <span class="math notranslate nohighlight">\((A^T y)^T = 0^T \implies y^T A = 0\)</span>, note the
 multiplication from the left. In other words, it contains the weights so that
 a linear combination of the rows of <span class="math notranslate nohighlight">\(A\)</span> is zero.</p>
+</div>
+<section id="the-nullspace">
+<h3>The Nullspace<a class="headerlink" href="#the-nullspace" title="Permalink to this heading">#</a></h3>
+<div class="definition docutils">
+<p>The <strong>nullspace</strong> of a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+N(A) = \{ \boldsymbol{x} \in \mathbb{R}^n : A\boldsymbol{x} = \boldsymbol{0} \}
+\]</div>
+</div>
+<div class="theorem docutils">
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. The nullspace <span class="math notranslate nohighlight">\(N(A)\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
+</div>
+<div class="theorem docutils">
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix and let <span class="math notranslate nohighlight">\(A = LU\)</span> be the LU decomposition (if it exists). Then <span class="math notranslate nohighlight">\(N(A) = N(U)\)</span>.</p>
+</div>
+</section>
+<section id="the-range">
+<h3>The Range<a class="headerlink" href="#the-range" title="Permalink to this heading">#</a></h3>
+<div class="definition docutils">
+<p>The <strong>range</strong> of a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+R(A) = \{ A \boldsymbol{x} : \boldsymbol{x} \in \mathbb{R}^n \}
+\]</div>
+<p>The range of <span class="math notranslate nohighlight">\(A\)</span> is also called <strong>image</strong> or <strong>column space</strong> of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="note docutils">
+<p>Matrix multiplication can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{a}_1 &amp; \cdots &amp; \boldsymbol{a}_n \\ &amp; &amp; \end{bmatrix} \begin{bmatrix} x_1 \\ \vdots \\ x_n \end{bmatrix} = x_1 \boldsymbol{a}_1 + \cdots + x_n \boldsymbol{a}_n
+\end{split}\]</div>
+<p>Therefore the range of <span class="math notranslate nohighlight">\(A\)</span> is the equal to the span of the columns</p>
+<div class="math notranslate nohighlight">
+\[
+R(A) = \mathrm{span} \{ \boldsymbol{a}_1 , \dots, \boldsymbol{a}_n \}
+\]</div>
+<p>and that’s why <span class="math notranslate nohighlight">\(R(A)\)</span> is sometimes called the column space.</p>
+</div>
+<div class="theorem docutils">
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. The range <span class="math notranslate nohighlight">\(R(A)\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>.</p>
+</div>
+<div class="theorem docutils">
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. Then</p>
+<div class="math notranslate nohighlight">
+\[
+\dim (R(A)) = \mathrm{rank}(A)
+\]</div>
+<hr class="docutils" />
+<p><em>Proof</em>. The rank of <span class="math notranslate nohighlight">\(A\)</span> is the number of nonzero rows in the row echelon form of <span class="math notranslate nohighlight">\(A\)</span>. The dimension of <span class="math notranslate nohighlight">\(R(A)\)</span> is the number of linearly independent columns in <span class="math notranslate nohighlight">\(A\)</span> which is also equal to the number of nonzero rows in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="theorem docutils">
+<p>Let <span class="math notranslate nohighlight">\(A = LU\)</span> be the LU decomposition of <span class="math notranslate nohighlight">\(A\)</span> (if it exists) and let <span class="math notranslate nohighlight">\(r = \mathrm{rank}(A)\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+R(A) = \mathrm{span} \{ \boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r \}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r\)</span> are the first <span class="math notranslate nohighlight">\(r\)</span> columns of <span class="math notranslate nohighlight">\(L\)</span>. In particular, <span class="math notranslate nohighlight">\(\boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r\)</span> is a basis of <span class="math notranslate nohighlight">\(R(A)\)</span>.</p>
+<hr class="docutils" />
+<p><em>Proof</em>. If <span class="math notranslate nohighlight">\(\mathrm{rank}(A) = r\)</span> then only the first <span class="math notranslate nohighlight">\(r\)</span> entries of the vector <span class="math notranslate nohighlight">\(U \boldsymbol{x}\)</span> are nonzero</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+U \boldsymbol{x} = \begin{bmatrix} * &amp; * &amp; \cdots &amp; * \\ 0 &amp; \ddots &amp; \ddots &amp; \vdots \\ \vdots &amp; \ddots &amp; * &amp; * \\ 0 &amp; \cdots &amp; 0 &amp; 0 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+LU \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{\ell}_1 &amp; \cdots &amp; \boldsymbol{\ell}_n \\ &amp; &amp; \end{bmatrix} \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix} = (*) \boldsymbol{\ell}_1 + \cdots + (*) \boldsymbol{\ell}_r
+\end{split}\]</div>
 </div>
 <div class="example docutils">
 <p>Find the null space, column space, row space, and left null space of a matrix</p>
@@ -515,6 +589,7 @@ N[A^T] = \text{span}\left\{\begin{bmatrix} 0 \\ 0 \end{bmatrix}\right\}
 \end{split}\]</div>
 </div>
 </details></div>
+</section>
 </section>
 <section id="orthogonality-of-the-fundamental-subspaces">
 <h2>Orthogonality of the fundamental subspaces<a class="headerlink" href="#orthogonality-of-the-fundamental-subspaces" title="Permalink to this heading">#</a></h2>
@@ -719,7 +794,11 @@ Solution<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Fundamental Subspaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Fundamental Subspaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-nullspace">The Nullspace</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range">The Range</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orthogonality-of-the-fundamental-subspaces">Orthogonality of the fundamental subspaces</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-subspaces-big-picture">Fundamental Subspaces Big Picture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
