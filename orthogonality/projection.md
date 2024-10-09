@@ -59,7 +59,7 @@ $$
 Then $\{ \boldsymbol{w}_1 , \dots , \boldsymbol{w}_m \}$ is an orthonormal basis of $U$.
 ```
 
-```{div} example
+````{div} example
 Construct an orthonormal basis of the subspace $U$ spanned by
 
 $$
@@ -69,6 +69,8 @@ $$
 \hspace{5mm}
 \boldsymbol{u}_3 = \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix}
 $$
+
+```{dropdown} Solution
 
 Compute
 
@@ -100,6 +102,7 @@ $$
 \boldsymbol{w}_3 = \frac{1}{\sqrt{2}} \left[ \begin{array}{r} 1 \\ 0 \\ -1 \\ 0 \end{array} \right]
 $$
 ```
+````
 
 ## Projection onto a Subspace
 
