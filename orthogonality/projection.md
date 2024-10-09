@@ -131,7 +131,7 @@ A matrix $P$ is an **orthogonal projector** (or **orthogonal projection matrix**
 Let $P$ be the orthogonal projection onto $U$. Then $I - P$ is the orthogonal projection matrix onto $U^{\perp}$.
 ```
 
-```{div} example
+````{div} example
 Find the orthogonal projection matrix $P$ which projects onto the subspace spanned by the vectors
 
 $$
@@ -139,6 +139,8 @@ $$
 \hspace{5mm}
 \boldsymbol{u}_2 = \left[ \begin{array}{r} 1 \\ 1 \\ 1 \end{array} \right]
 $$
+
+```{dropdown} Solution
 
 Compute $\langle \boldsymbol{u}_1 , \boldsymbol{u}_2 \rangle = 0$ therefore the vectors are orthogonal. Compute
 
@@ -156,6 +158,7 @@ P &= \frac{1}{\| \boldsymbol{u}_1 \|^2} \boldsymbol{u}_1 \boldsymbol{u}_1^T +  \
 \end{align*}
 $$
 ```
+````
 
 ````{div} example
 Find the orthogonal projection matrix $P_{\perp}$ which projects onto $U^{\perp}$ where $U$ the subspace spanned by the vectors
