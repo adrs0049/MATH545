@@ -46,17 +46,17 @@ $$
 Compute
 
 $$
-A^TA \boldsymbol{q} = \frac{1}{\sqrt{\lambda}} A^T A A^T \boldsymbol{p} = \frac{1}{\sqrt{\lambda}} A^T A A^T \boldsymbol{p}
-= \sqrt{\lambda} A^T \boldsymbol{p} = \lambda \boldsymbol{q}
+A^T A \boldsymbol{q} = \frac{1}{\sqrt{\lambda}} A^T (A A^T \boldsymbol{p}) = \frac{1}{\sqrt{\lambda}} A^T (\lambda \boldsymbol{p}) = \sqrt{\lambda} A^T \boldsymbol{p} = \lambda \boldsymbol{q}
 $$
 
-Therefore $\boldsymbol{q}$ is an eigenvector for $A^TA$ with eigenvalue $\lambda$. Now let's verify it is a unit vector. Compute
+Therefore, $\boldsymbol{q}$ is an eigenvector for $A^T A$ with eigenvalue $\lambda$. Now, let's verify it is a unit vector. Compute
 
 $$
-\| \boldsymbol{q} \|^2 = \langle \boldsymbol{q} , \boldsymbol{q} \rangle = \frac{1}{\sigma^2} \langle A^T \boldsymbol{p} , A^T \boldsymbol{p} \rangle = \frac{1}{\lambda} \langle \boldsymbol{p} , AA^T \boldsymbol{p} \rangle = \langle \boldsymbol{p} , \boldsymbol{p} \rangle = 1
+\| \boldsymbol{q} \|^2 = \langle \boldsymbol{q}, \boldsymbol{q} \rangle = \frac{1}{\sigma^2} \langle A^T \boldsymbol{p}, A^T \boldsymbol{p} \rangle = \frac{1}{\lambda} \langle \boldsymbol{p}, A A^T \boldsymbol{p} \rangle = \langle \boldsymbol{p}, \boldsymbol{p} \rangle = 1
 $$
 
-Similar computations prove the second statement regarding $\boldsymbol{p} = \displaystyle \frac{1}{\sigma} A \boldsymbol{q}$.
+Similar computations prove the second statement regarding $\boldsymbol{p} = \frac{1}{\sigma} A \boldsymbol{q}$.
+
 
 ```
 ````
