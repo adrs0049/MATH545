@@ -419,6 +419,9 @@ Consider $N+1$ data points $(t_0,y_0),\dots,(t_N,y_N)$. Let $A_1 \boldsymbol{c}_
 
 ```{dropdown} Solution
 We expect $\mathrm{cond}(A_1) > \mathrm{cond}(A_2)$.
+
+\\The condition number of $A_1​ is larger than that of $A_2 because the Vandermonde matrix $A_1​ used in polynomial interpolation is known to become highly ill-conditioned as the degree of the polynomial increases, which means that small changes in data can lead to large changes in the interpolating polynomial. In contrast, the matrix $A_2​ used in cubic spline interpolation is constructed from piecewise polynomials and maintains better numerical stability, leading to a lower condition number and less sensitivity to data perturbations.
+
 ```
 
 ````
