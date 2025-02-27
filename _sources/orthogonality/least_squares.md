@@ -41,7 +41,7 @@ Note that $U = R[A]$ and so $\boldsymbol{e} \in R[A]^\perp = N[A^T]$.
 ```
 
 ```{div} note
-Is $A^T A$ invertible? Yes if $\rank(A) = n = \rank(A^T)$.
+Is $A^T A$ invertible? Yes if $\mathrm{rank}(A) = n = \mathrm{rank}(A^T)$.
 ```
 
 This means that we can determine $\boldsymbol{y}$ uniquely by solving the above linear system. In particular, this means that
