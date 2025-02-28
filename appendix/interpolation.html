@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>The nullspace and range &#8212; Applied Linear Algebra</title>
+    <title>Lagrange Basis &#8212; Applied Linear Algebra</title>
   
   
   
@@ -60,12 +60,12 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'orthogonality/kernel';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/interpolation';</script>
     <script src="../_static/main.js?v=53e03820"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="QR Decomposition" href="qr.html" />
-    <link rel="prev" title="Orthogonal Projection" href="projection.html" />
+    <link rel="next" title="Vector and Matrix Norms" href="norms.html" />
+    <link rel="prev" title="QR by Reflectors" href="qrreflectors.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,14 +191,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../systems/odes.html">Differential Equations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Orthogonality</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="subspaces.html">Subspaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="complement.html">Orthogonal Complement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="projection.html">Orthogonal Projection</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">The nullspace and range</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qr.html">QR Decomposition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fundamental.html">Fundamental Subspaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="least_squares.html">Least Squares Approximation</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../orthogonality/subspaces.html">Subspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orthogonality/complement.html">Orthogonal Complement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orthogonality/projection.html">Orthogonal Projection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orthogonality/kernel.html">The nullspace and range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orthogonality/qr.html">QR Decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orthogonality/fundamental.html">Fundamental Subspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orthogonality/least_squares.html">Least Squares Approximation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Eigenvalues</span></p>
 <ul class="nav bd-sidenav">
@@ -230,15 +230,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/GaussianElimination.html">Gaussian Elimination</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../appendix/multiplication.html">Matrix Multiplication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/solving_special_matrices.html">Solving special matrices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/gaussian_elimination_process.html">Gaussian Elimination</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/qrreflectors.html">QR by Reflectors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/interpolation.html">Lagrange Basis</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="multiplication.html">Matrix Multiplication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solving_special_matrices.html">Solving special matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gaussian_elimination_process.html">Gaussian Elimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qrreflectors.html">QR by Reflectors</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lagrange Basis</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="../appendix/norms.html">Vector and Matrix Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="norms.html">Vector and Matrix Norms</a></li>
 </ul>
 
     </div>
@@ -308,7 +308,7 @@
       
       
       
-      <li><a href="../_sources/orthogonality/kernel.md" target="_blank"
+      <li><a href="../_sources/appendix/interpolation.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -392,7 +392,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>The nullspace and range</h1>
+    <h1>Lagrange Basis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -402,11 +402,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-nullspace">The Nullspace</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range">The Range</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rank-nullity-theorem">Rank-Nullity Theorem</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lagrange Basis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-basis">Newton Basis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -417,116 +417,183 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="the-nullspace-and-range">
-<h1>The nullspace and range<a class="headerlink" href="#the-nullspace-and-range" title="Link to this heading">#</a></h1>
-<div class="bigidea docutils">
-<p>The Rank-Nullity Theorem describes the dimensions of the nullspace and range of a matrix.</p>
-</div>
-<section id="the-nullspace">
-<h2>The Nullspace<a class="headerlink" href="#the-nullspace" title="Link to this heading">#</a></h2>
+  <section id="lagrange-basis">
+<h1>Lagrange Basis<a class="headerlink" href="#lagrange-basis" title="Link to this heading">#</a></h1>
 <div class="definition docutils">
-<p>The <strong>nullspace</strong> of a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<p>Given <span class="math notranslate nohighlight">\(d+1\)</span> points <span class="math notranslate nohighlight">\((t_0,y_0),\dots,(t_d,y_d)\)</span>, the <strong>Lagrange basis</strong> of <span class="math notranslate nohighlight">\(\mathbb{P}_d\)</span> (with respect to <span class="math notranslate nohighlight">\(t_0,\dots,t_d\)</span>) is given by <span class="math notranslate nohighlight">\(\{ \ell_0(t),\dots,\ell_d(t) \}\)</span> where</p>
 <div class="math notranslate nohighlight">
 \[
-N(A) = \{ \boldsymbol{x} \in \mathbb{R}^n : A\boldsymbol{x} = \boldsymbol{0} \}
+\ell_k(t) = \frac{\prod_{j=0, j\not=k}^d (t - t_j)}{\prod_{j=0, j\not=k}^d (t_k - t_j)}
 \]</div>
+<p>The essential property of these polynomials is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\ell_k(t_j) = \left\{ \begin{array}{cc} 1 &amp; \text{ if } k = j \\ 0 &amp; \text{ if } k \not= j \end{array} \right. \ , \ \ k,j=0,\dots,d
+\end{split}\]</div>
 </div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. The nullspace <span class="math notranslate nohighlight">\(N(A)\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
-</div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix and let <span class="math notranslate nohighlight">\(A = LU\)</span> be the LU decomposition (if it exists). Then <span class="math notranslate nohighlight">\(N(A) = N(U)\)</span>.</p>
+<div class="definition docutils">
+<p>Given <span class="math notranslate nohighlight">\(d+1\)</span> points <span class="math notranslate nohighlight">\((t_0,y_0), \dots,(t_d,y_d)\)</span>, <strong>polynomial interpolation with respect to the Lagrange basis</strong> seeks a polynomial of the form</p>
+<div class="math notranslate nohighlight">
+\[
+p(t) = c_0 \ell_0(t) + c_1 \ell_1(t) + \cdots + c_d \ell_d(t)
+\]</div>
+<p>such that <span class="math notranslate nohighlight">\(p(t_k) = y_k\)</span> for each <span class="math notranslate nohighlight">\(k=0,\dots,d\)</span>. Each point defines an equation and we get a linear system <span class="math notranslate nohighlight">\(A \boldsymbol{c} = \boldsymbol{y}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+\ell_0(t_0) &amp; \ell_1(t_0) &amp; \cdots &amp; \ell_d(t_0) \\
+\ell_0(t_1) &amp; \ell_1(t_1) &amp; \cdots &amp; \ell_d(t_1) \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\ell_0(t_d) &amp; \ell_1(t_d) &amp; \cdots &amp; \ell_d(t_d)
+\end{bmatrix}
+\begin{bmatrix} c_0 \\ c_1 \\ \vdots \\ c_d \end{bmatrix}
+=
+\begin{bmatrix} y_0 \\ y_1 \\ \vdots \\ y_d \end{bmatrix}
+\end{split}\]</div>
+<p>The essential property of Lagrange polynomials implies that <span class="math notranslate nohighlight">\(A\)</span> is the identity matrix and so <span class="math notranslate nohighlight">\(\boldsymbol{c} = \boldsymbol{y}\)</span> therefore</p>
+<div class="math notranslate nohighlight">
+\[
+p(t) = y_0 \ell_0(t) + y_1 \ell_1(t) + \cdots + y_d \ell_d(t)
+\]</div>
 </div>
 </section>
-<section id="the-range">
-<h2>The Range<a class="headerlink" href="#the-range" title="Link to this heading">#</a></h2>
+<section id="newton-basis">
+<h1>Newton Basis<a class="headerlink" href="#newton-basis" title="Link to this heading">#</a></h1>
 <div class="definition docutils">
-<p>The <strong>range</strong> of a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is:</p>
+<p>Given <span class="math notranslate nohighlight">\(d+1\)</span> points <span class="math notranslate nohighlight">\((t_0,y_0),\dots,(t_d,y_d)\)</span>, the <strong>Newton basis</strong> of <span class="math notranslate nohighlight">\(\mathbb{P}_d\)</span> (with respect to <span class="math notranslate nohighlight">\(t_0,\dots,t_d\)</span>) is <span class="math notranslate nohighlight">\(\{ \pi_0(t),\dots,\pi_d(t) \}\)</span> where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\pi_0(t) &amp;= 1 \\
+\pi_1(t) &amp;= t - t_0 \\
+\pi_2(t) &amp;= (t - t_0)(t - t_1) \\
+&amp; \ \ \vdots \\
+\pi_d(t) &amp;= (t - t_0)(t - t_1)(t - t_2) \cdots (t - t_{d-1}) \\
+\end{align*}
+\end{split}\]</div>
+<p>An important property of these polynomials is</p>
 <div class="math notranslate nohighlight">
 \[
-R(A) = \{ A \boldsymbol{x} : \boldsymbol{x} \in \mathbb{R}^n \}
+\pi_k(t_j) = 0 \ , \ \ j=0,\dots,k-1
 \]</div>
-<p>The range of <span class="math notranslate nohighlight">\(A\)</span> is also called <strong>image</strong> or <strong>column space</strong> of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="definition docutils">
+<p>Given <span class="math notranslate nohighlight">\(d+1\)</span> points <span class="math notranslate nohighlight">\((t_0,y_0), \dots,(t_d,y_d)\)</span>, <strong>polynomial interpolation with respect to the Newton basis</strong> seeks a polynomial of the form</p>
+<div class="math notranslate nohighlight">
+\[
+p(t) = c_0 \pi_0(t) + c_1 \pi_1(t) + \cdots + c_d \pi_d(t)
+\]</div>
+<p>such that <span class="math notranslate nohighlight">\(p(t_k) = y_k\)</span> for each <span class="math notranslate nohighlight">\(k=0,\dots,d\)</span>. Each point defines an equation and we get a linear system <span class="math notranslate nohighlight">\(A \boldsymbol{c} = \boldsymbol{y}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+\pi_0(t_0) &amp; \pi_1(t_0) &amp; \cdots &amp; \pi_d(t_0) \\
+\pi_0(t_1) &amp; \pi_1(t_1) &amp; \cdots &amp; \pi_d(t_1) \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\pi_0(t_d) &amp; \pi_1(t_d) &amp; \cdots &amp; \pi_d(t_d)
+\end{bmatrix}
+\begin{bmatrix} c_0 \\ c_1 \\ \vdots \\ c_d \end{bmatrix}
+=
+\begin{bmatrix} y_0 \\ y_1 \\ \vdots \\ y_d \end{bmatrix}
+\end{split}\]</div>
+<p>The property of Newton polynomials implies that <span class="math notranslate nohighlight">\(A\)</span> is a lower triangular matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+\pi_0(t_0) &amp; 0 &amp; \cdots &amp; 0 \\
+\pi_0(t_1) &amp; \pi_1(t_1) &amp; \ddots &amp; \vdots \\
+\vdots &amp; \vdots &amp; \ddots &amp; 0 \\
+\pi_0(t_d) &amp; \pi_1(t_d) &amp; \cdots &amp; \pi_d(t_d)
+\end{bmatrix}
+\end{split}\]</div>
+<p>Consequently, the system <span class="math notranslate nohighlight">\(A \boldsymbol{c} = \boldsymbol{y}\)</span> is solved by forward substitution.</p>
 </div>
 <div class="note docutils">
-<p>Matrix multiplication can be written as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-A \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{a}_1 &amp; \cdots &amp; \boldsymbol{a}_n \\ &amp; &amp; \end{bmatrix} \begin{bmatrix} x_1 \\ \vdots \\ x_n \end{bmatrix} = x_1 \boldsymbol{a}_1 + \cdots + x_n \boldsymbol{a}_n
-\end{split}\]</div>
-<p>Therefore the range of <span class="math notranslate nohighlight">\(A\)</span> is the equal to the span of the columns</p>
+<p>An advantage of the Newton basis is that updating the interpolating function with additional data is simple. In particular, suppose we have data points <span class="math notranslate nohighlight">\((t_0,y_0),\dots,(t_d,y_d)\)</span> and compute the coefficients of the interpolating polynomial</p>
 <div class="math notranslate nohighlight">
 \[
-R(A) = \mathrm{span} \{ \boldsymbol{a}_1 , \dots, \boldsymbol{a}_n \}
+p_d(t)=c_0 + c_1 \pi_1(t)+\dots +c_d \pi_d(t)
 \]</div>
-<p>and that’s why <span class="math notranslate nohighlight">\(R(A)\)</span> is sometimes called the column space.</p>
-</div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. The range <span class="math notranslate nohighlight">\(R(A)\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>.</p>
-</div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. Then</p>
+<p>Now suppose we get another data point <span class="math notranslate nohighlight">\((t_{d+1},y_{d+1})\)</span>. We can find the interpolating polynomial <span class="math notranslate nohighlight">\(p_{d+1}(t)\)</span> for the full data set by</p>
 <div class="math notranslate nohighlight">
 \[
-\dim (R(A)) = \mathrm{rank}(A)
+p_{d+1}(t)=p_d(t)+c_{d+1} \pi_{d+1}(t)
 \]</div>
-<hr class="docutils" />
-<p><em>Proof</em>. The rank of <span class="math notranslate nohighlight">\(A\)</span> is the number of nonzero rows in the row echelon form of <span class="math notranslate nohighlight">\(A\)</span>. The dimension of <span class="math notranslate nohighlight">\(R(A)\)</span> is the number of linearly independent columns in <span class="math notranslate nohighlight">\(A\)</span> which is also equal to the number of nonzero rows in <span class="math notranslate nohighlight">\(A\)</span>.</p>
-</div>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A = PLUQ\)</span> be the LU decomposition of <span class="math notranslate nohighlight">\(A\)</span> computed with row-swaps (<span class="math notranslate nohighlight">\(P\)</span>) and column-swaps (<span class="math notranslate nohighlight">\(Q\)</span>) and let <span class="math notranslate nohighlight">\(r = \mathrm{rank}(A)\)</span>. Then</p>
+<p>where the only new coefficient is</p>
 <div class="math notranslate nohighlight">
 \[
-R(A) = \mathrm{span} \{ \boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r \}
+c_{d+1} = \frac{y_{d+1}-p_d(t_{d+1})}{\pi_{d+1}(t_{d+1})}.
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r\)</span> are the first <span class="math notranslate nohighlight">\(r\)</span> columns of <span class="math notranslate nohighlight">\(L\)</span>. In particular, <span class="math notranslate nohighlight">\(\boldsymbol{\ell}_1 , \dots , \boldsymbol{\ell}_r\)</span> is a basis of <span class="math notranslate nohighlight">\(R(A)\)</span>.</p>
-<hr class="docutils" />
-<p><em>Proof</em>. If <span class="math notranslate nohighlight">\(\mathrm{rank}(A) = r\)</span> then only the first <span class="math notranslate nohighlight">\(r\)</span> entries of the vector <span class="math notranslate nohighlight">\(U \boldsymbol{x}\)</span> are nonzero</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-U \boldsymbol{x} = \begin{bmatrix} * &amp; * &amp; \cdots &amp; * \\ 0 &amp; \ddots &amp; \ddots &amp; \vdots \\ \vdots &amp; \ddots &amp; * &amp; * \\ 0 &amp; \cdots &amp; 0 &amp; 0 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix}
-\end{split}\]</div>
-<p><strong>Note</strong>, that this particular form of the matrix <span class="math notranslate nohighlight">\(U\)</span> is only guaranteed when you do <strong>full pivoting</strong> i.e. both row and column swaps. Therefore</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-LU \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{\ell}_1 &amp; \cdots &amp; \boldsymbol{\ell}_n \\ &amp; &amp; \end{bmatrix} \begin{bmatrix} * \\ \vdots \\ * \\ 0 \end{bmatrix} = (*) \boldsymbol{\ell}_1 + \cdots + (*) \boldsymbol{\ell}_r
-\end{split}\]</div>
+<p>This observation also leads to an iterative algorithm to compute Newton interpolation in general: given  <span class="math notranslate nohighlight">\((t_0,y_0),\dots,(t_d,y_d)\)</span>, find <span class="math notranslate nohighlight">\(p_0(t)\)</span> using only <span class="math notranslate nohighlight">\((t_0,y_0)\)</span> and then find <span class="math notranslate nohighlight">\(p_{k+1}(t)\)</span> from <span class="math notranslate nohighlight">\(p_k(t)\)</span> for each <span class="math notranslate nohighlight">\(k\)</span> using the formula above.</p>
 </div>
 </section>
-<section id="rank-nullity-theorem">
-<h2>Rank-Nullity Theorem<a class="headerlink" href="#rank-nullity-theorem" title="Link to this heading">#</a></h2>
-<div class="theorem docutils">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. Then</p>
+<section id="example">
+<h1>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h1>
+<div class="note docutils">
+<p>Recall that there is a unique polynomial <span class="math notranslate nohighlight">\(p(t)\)</span> of degree (at most) <span class="math notranslate nohighlight">\(d\)</span> which interpolates <span class="math notranslate nohighlight">\(d+1\)</span> points <span class="math notranslate nohighlight">\((t_0,y_0), \dots , (t_d,y_d)\)</span> if the values <span class="math notranslate nohighlight">\(t_0,\dots,t_d\)</span> are different. Therefore the monomial, Lagrange and Newton bases all produce the <em>same</em> result but computed and represented differently.</p>
+</div>
+<div class="example docutils">
+<p>Find the interpolating polynomial for <span class="math notranslate nohighlight">\((-1,1),(0,0),(1,1)\)</span> using each of the monomial, Lagrange and Newton bases. We know the result is <span class="math notranslate nohighlight">\(p(t) = t^2\)</span>. Begin with monomial interpolation and setup the Vandermonde matrix and solve the linear system <span class="math notranslate nohighlight">\(A \boldsymbol{c} = \boldsymbol{y}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[ \begin{array}{rrr} 1 &amp; -1 &amp; \phantom{+}1 \\ 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 1 \end{array} \right]
+\begin{bmatrix} c_0 \\ c_1 \\ c_2 \end{bmatrix}
+=
+\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
+\ \
+\Rightarrow
+\ \
+\boldsymbol{c} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>and therefore <span class="math notranslate nohighlight">\(c_0 = c_1 = 0\)</span> and <span class="math notranslate nohighlight">\(c_2 = 1\)</span> and so <span class="math notranslate nohighlight">\(p(t) = t^2\)</span>. Now construct the Lagrange basis</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ell_0(t) &amp;= \frac{(t - 0)(t - 1)}{(-1 - 0)(-1 - 1)} = \frac{t(t-1)}{2} \\
+\ell_1(t) &amp;= \frac{(t - (-1))(t - 1)}{(0 - (-1))(0 - 1)} = 1-t^2 \\
+\ell_2(t) &amp;= \frac{(t - (-1))(t - 0)}{(1 - (-1))(1 - 0)} = \frac{t(t+1)}{2}
+\end{align*}
+\end{split}\]</div>
+<p>and the interpolating polynomial</p>
 <div class="math notranslate nohighlight">
 \[
-\dim(R(A)) + \dim(N(A)) = n
+p(t) = y_0 \ell_0(t) + y_1 \ell_1(t) + y_2 \ell_2(t) = (1)\frac{t(t-1)}{2} + (0) (1-t^2) + (1) \frac{t(t+1)}{2} = t^2
 \]</div>
-<hr class="docutils" />
-<p><em>Proof</em>. The dimension of <span class="math notranslate nohighlight">\(N(A)\)</span> is equal to the number of columns of the row echelon form of <span class="math notranslate nohighlight">\(A\)</span> <em>without</em> a leading nonzero entry, and <span class="math notranslate nohighlight">\(\mathrm{rank}(A) = \dim(R(A))\)</span> is equal to the number of columns of the row echelon form of <span class="math notranslate nohighlight">\(A\)</span> <em>with</em> a leading nonzero entry, and there are <span class="math notranslate nohighlight">\(n\)</span> total columns.</p>
+<p>Now construct the Newton basis</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+p_0(t) &amp;= 1 \\
+p_1(t) &amp;= t - (-1) = t + 1 \\
+p_2(t) &amp;= (t - (-1))(t - 0) = t^2 + t
+\end{align*}
+\end{split}\]</div>
+<p>Each point yields an equation <span class="math notranslate nohighlight">\(p(t_k) = y_k\)</span> for <span class="math notranslate nohighlight">\(k=0,1,2\)</span> and so we solve the linear system</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\left[ \begin{array}{ccc} 1 &amp; 0 &amp; 0 \\ 1 &amp; t_1 - t_0 &amp; 0 \\ 1 &amp; t_2 - t_0 &amp; (t_2-t_0)(t_2-t_1) \end{array} \right]
+\begin{bmatrix} c_0 \\ c_1 \\ c_2 \end{bmatrix}
+&amp;=
+\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
+\\
+\left[ \begin{array}{rrr} 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 0 \\ 1 &amp; 2 &amp; 2 \end{array} \right]
+\begin{bmatrix} c_0 \\ c_1 \\ c_2 \end{bmatrix}
+&amp;=
+\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
+\ \
+\Rightarrow
+\ \
+\begin{bmatrix} c_0 \\ c_1 \\ c_2 \end{bmatrix} = \left[ \begin{array}{r} 1 \\ -1 \\ 1 \end{array} \right]
+\end{align*}
+\end{split}\]</div>
+<p>The interpolating polynomial is again</p>
+<div class="math notranslate nohighlight">
+\[
+p(t) = c_0 p_0(t) + c_1 p_1(t) + c_2 p_2(t) = 1 - (t+1) + t^2 + t = t^2
+\]</div>
 </div>
-</section>
-<section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
-<div class="exercise docutils">
-<p>Let <span class="math notranslate nohighlight">\(A = LU\)</span> be the LU decomposition of <span class="math notranslate nohighlight">\(A\)</span>. Determine whether the statement is <strong>True</strong> or <strong>False</strong>.</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(N(A) = N(U)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\dim (N(A)) = \dim (N(U))\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(R(A) = R(U)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\dim (R(A)) = \dim (R(U))\)</span></p></li>
-</ul>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<ul class="simple">
-<li><p class="sd-card-text">True</p></li>
-<li><p class="sd-card-text">True</p></li>
-<li><p class="sd-card-text">False</p></li>
-<li><p class="sd-card-text">True</p></li>
-</ul>
-</div>
-</details></div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -542,7 +609,7 @@ LU \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{\ell}_1 &amp; \cd
         },
         kernelOptions: {
             name: "python3",
-            path: "./orthogonality"
+            path: "./appendix"
         },
         predefinedOutput: true
     }
@@ -560,20 +627,20 @@ LU \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{\ell}_1 &amp; \cd
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="projection.html"
+       href="qrreflectors.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Orthogonal Projection</p>
+        <p class="prev-next-title">QR by Reflectors</p>
       </div>
     </a>
     <a class="right-next"
-       href="qr.html"
+       href="norms.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">QR Decomposition</p>
+        <p class="prev-next-title">Vector and Matrix Norms</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -593,11 +660,11 @@ LU \boldsymbol{x} = \begin{bmatrix} &amp; &amp; \\ \boldsymbol{\ell}_1 &amp; \cd
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-nullspace">The Nullspace</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range">The Range</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rank-nullity-theorem">Rank-Nullity Theorem</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lagrange Basis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-basis">Newton Basis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
 </ul>
+
   </nav></div>
 
 </div></div>

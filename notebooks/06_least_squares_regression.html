@@ -234,6 +234,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../appendix/multiplication.html">Matrix Multiplication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix/solving_special_matrices.html">Solving special matrices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix/gaussian_elimination_process.html">Gaussian Elimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/qrreflectors.html">QR by Reflectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/interpolation.html">Lagrange Basis</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../appendix/norms.html">Vector and Matrix Norms</a></li>
 </ul>
 
     </div>
@@ -546,7 +551,7 @@ y = c_0 + c_1 t + \epsilon
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/59f37f592945ca485584a687570c2ff4459ff4e002816b16fcf8ab70954485e0.png" src="../_images/59f37f592945ca485584a687570c2ff4459ff4e002816b16fcf8ab70954485e0.png" />
+<img alt="../_images/4c590885b9c631592a73c8ac8b68789b1299a8743ae5227e68b7bbb8df14affb.png" src="../_images/4c590885b9c631592a73c8ac8b68789b1299a8743ae5227e68b7bbb8df14affb.png" />
 </div>
 </div>
 <p>Let’s use linear regression to retrieve the coefficients <span class="math notranslate nohighlight">\(c_0\)</span> and <span class="math notranslate nohighlight">\(c_1\)</span>. Construct the matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
@@ -571,11 +576,11 @@ y = c_0 + c_1 t + \epsilon
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.        , 0.67450019],
-       [1.        , 0.84831557],
-       [1.        , 0.06461357],
-       [1.        , 0.96285068],
-       [1.        , 0.66826688]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.        , 0.50641192],
+       [1.        , 0.56278787],
+       [1.        , 0.2178311 ],
+       [1.        , 0.76503987],
+       [1.        , 0.44123067]])
 </pre></div>
 </div>
 </div>
@@ -589,7 +594,7 @@ y = c_0 + c_1 t + \epsilon
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 6.9608002  -3.93830524]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 6.99339141 -3.96839401]
 </pre></div>
 </div>
 </div>
@@ -606,7 +611,7 @@ y = c_0 + c_1 t + \epsilon
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/78257552b6e21faa979b99f05957d9fa69d3926d26a3beb0ccbc712c08c7427a.png" src="../_images/78257552b6e21faa979b99f05957d9fa69d3926d26a3beb0ccbc712c08c7427a.png" />
+<img alt="../_images/f5783c0825344a0210c67af16db0fdd8fdab6e4ff66c7755bd804fe580f0c34c.png" src="../_images/f5783c0825344a0210c67af16db0fdd8fdab6e4ff66c7755bd804fe580f0c34c.png" />
 </div>
 </div>
 </section>
@@ -674,7 +679,7 @@ cd_d
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0cfdf80f4e303a6794e11bbe3fc885a5205361abd178b2cdd26b7f4be60695e9.png" src="../_images/0cfdf80f4e303a6794e11bbe3fc885a5205361abd178b2cdd26b7f4be60695e9.png" />
+<img alt="../_images/a036397ab72af2c57e164cbc2e75a5dc7b45312529d0d45fe92fbc810e9ad177.png" src="../_images/a036397ab72af2c57e164cbc2e75a5dc7b45312529d0d45fe92fbc810e9ad177.png" />
 </div>
 </div>
 <p>Construct the matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
@@ -705,7 +710,7 @@ cd_d
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/256ebfcf8f5d486bbcd9df47e3f223dda3acb8963d42fd8ab4bf7b214784da34.png" src="../_images/256ebfcf8f5d486bbcd9df47e3f223dda3acb8963d42fd8ab4bf7b214784da34.png" />
+<img alt="../_images/80b81eed0918af1c159b31028ec0be3137d28d1b53d08267a1157c13ababd818.png" src="../_images/80b81eed0918af1c159b31028ec0be3137d28d1b53d08267a1157c13ababd818.png" />
 </div>
 </div>
 <p>Let’s solve again but this time we use the QR decomposition:</p>
@@ -730,7 +735,7 @@ cd_d
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/256ebfcf8f5d486bbcd9df47e3f223dda3acb8963d42fd8ab4bf7b214784da34.png" src="../_images/256ebfcf8f5d486bbcd9df47e3f223dda3acb8963d42fd8ab4bf7b214784da34.png" />
+<img alt="../_images/80b81eed0918af1c159b31028ec0be3137d28d1b53d08267a1157c13ababd818.png" src="../_images/80b81eed0918af1c159b31028ec0be3137d28d1b53d08267a1157c13ababd818.png" />
 </div>
 </div>
 </section>
