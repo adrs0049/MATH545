@@ -328,18 +328,14 @@ $$
 $$
 
 Proof:
-$$
+$
 \| \boldsymbol{x} \|_{\infty} = \max \{ |x_1|, |x_2|, ..., |x_n| \} \leq \sqrt{x_1^2 + x_2^2 + ... + x_n^2} = \| \boldsymbol{x} \|_2
-$$
-
-by the Cauchy-Schwarz inequality.
+$ by the Cauchy-Schwarz inequality.
 
 Additionally,
-$$
+$
 \| \boldsymbol{x} \|_2 = \sqrt{x_1^2 + x_2^2 + ... + x_n^2} \leq |x_1| + |x_2| + ... + |x_n| = \| \boldsymbol{x} \|_1
-$$
-
-by the triangle inequality.
+$ by the triangle inequality.
 
 Therefore, $\| \boldsymbol{x} \|_{\infty} \leq \| \boldsymbol{x} \|_2 \leq \| \boldsymbol{x} \|_1$.
 ```
@@ -354,7 +350,7 @@ This is false, but the converse is true.
 
 We can give a counterexample with the following diagonal matrix with the max diagonal entry of 1:
 
-$$A = \begin{pmatrix} 0.5 & 0 \\ 0 & 1 \end{pmatrix} \Longrightarrow ||A|| = 1$$ but $$A \neq I_2$$
+$A = \begin{pmatrix} 0.5 & 0 \\ 0 & 1 \end{pmatrix} \Longrightarrow ||A|| = 1$ but $A \neq I_2$
 
 We can come up with similar diagonal matrices for the $n \times n$ case.
 
@@ -408,12 +404,14 @@ A = PD P^{-1} = \begin{pmatrix}5 & 2 \\5 & -2 \end{pmatrix}\begin{pmatrix}5\sqrt
 $$
 
 and the inverse
+
 $$
 A^{-1} = \frac{1}{20\sqrt{2}}\begin{pmatrix}7 & -3 \\ -3 & 7 \end{pmatrix}
 $$
 Then, we compute the condition number:
+
 $$
-cond(A)_1 = cond(A)_{\infty} = \|A\|_{\infty} \|A^{-1}\|_{\infty} = \left(\frac{10}{\sqrt{2}} \right)\left(\frac{10}{20\sqrt{2}} \right) = \frac{5}{2}
+\operatorname{cond}(A)_1 = \operatorname{cond}(A)_{\infty} = \|A\|_{\infty} \|A^{-1}\|_{\infty} = \left(\frac{10}{\sqrt{2}} \right)\left(\frac{10}{20\sqrt{2}} \right) = \frac{5}{2}
 $$
 ```
 
