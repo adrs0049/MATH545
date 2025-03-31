@@ -28,13 +28,13 @@ plt.grid(True); plt.show();
 ------------------
 
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mTypeError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[2], line 6[0m
-[1;32m      4[0m phi [38;5;241m=[39m np[38;5;241m.[39mpi[38;5;241m/[39m[38;5;241m4[39m
-[1;32m      5[0m x [38;5;241m=[39m np[38;5;241m.[39mcos([38;5;241m2[39m[38;5;241m*[39mnp[38;5;241m.[39mpi[38;5;241m*[39mk[38;5;241m*[39mn[38;5;241m/[39mN [38;5;241m+[39m phi)
-[0;32m----> 6[0m [43mplt[49m[38;5;241;43m.[39;49m[43mstem[49m[43m([49m[43mx[49m[43m,[49m[43muse_line_collection[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
-[1;32m      7[0m plt[38;5;241m.[39mgrid([38;5;28;01mTrue[39;00m); plt[38;5;241m.[39mshow();
+[31m---------------------------------------------------------------------------[39m
+[31mTypeError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 6[39m
+[32m      4[39m phi = np.pi/[32m4[39m
+[32m      5[39m x = np.cos([32m2[39m*np.pi*k*n/N + phi)
+[32m----> [39m[32m6[39m [43mplt[49m[43m.[49m[43mstem[49m[43m([49m[43mx[49m[43m,[49m[43muse_line_collection[49m[43m=[49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[32m      7[39m plt.grid([38;5;28;01mTrue[39;00m); plt.show();
 
-[0;31mTypeError[0m: stem() got an unexpected keyword argument 'use_line_collection'
+[31mTypeError[39m: stem() got an unexpected keyword argument 'use_line_collection'
 

@@ -31,14 +31,14 @@ plt.show()
 ------------------
 
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mTypeError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[6], line 7[0m
-[1;32m      5[0m     plt[38;5;241m.[39msubplot(N,N,i[38;5;241m+[39m[38;5;241m1[39m)
-[1;32m      6[0m     index [38;5;241m=[39m np[38;5;241m.[39mrandom[38;5;241m.[39mrandint([38;5;241m0[39m,A[38;5;241m.[39mshape[[38;5;241m0[39m])
-[0;32m----> 7[0m     proj [38;5;241m=[39m [43mA[49m[43m[[49m[43mindex[49m[43m,[49m[43m:[49m[43m][49m[38;5;241m.[39mreshape([38;5;241m82[39m,[38;5;241m82[39m)
-[1;32m      8[0m     plt[38;5;241m.[39mspy(proj)
-[1;32m     10[0m plt[38;5;241m.[39mshow()
+[31m---------------------------------------------------------------------------[39m
+[31mTypeError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[6][39m[32m, line 7[39m
+[32m      5[39m     plt.subplot(N,N,i+[32m1[39m)
+[32m      6[39m     index = np.random.randint([32m0[39m,A.shape[[32m0[39m])
+[32m----> [39m[32m7[39m     proj = [43mA[49m[43m[[49m[43mindex[49m[43m,[49m[43m:[49m[43m][49m.reshape([32m82[39m,[32m82[39m)
+[32m      8[39m     plt.spy(proj)
+[32m     10[39m plt.show()
 
-[0;31mTypeError[0m: 'coo_matrix' object is not subscriptable
+[31mTypeError[39m: 'coo_matrix' object is not subscriptable
 
