@@ -1,5 +1,9 @@
 # MATH 545 Applied Linear Algebra
 
+## Instructor
+
+This is a course given by [Andreas Buttenschoen](www.buttenschoen.ca) at the University of Massachusetts Amherst.
+
 ## Description
 
 Math 545 is an advanced linear algebra course that builds on the concepts and
