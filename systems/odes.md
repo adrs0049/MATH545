@@ -416,6 +416,131 @@ $$
 
 using step size $h=0.25$. Use the forward difference formula and the boundary condition $y'(0)=1$ to approximate the boundary value $y_0$.
 
+```{dropdown} **Solution**
+
+The given boundary value problem is
+
+$$
+y'' = 2^t \ \ , \ \ y'(0) = 1 \ , \ \ y(1) = 0
+$$
+
+We start by discretizing the domain. The step size is given as \( h = 0.25 \). The interval \([0, 1]\) is divided into \( N = 4 \) subintervals, resulting in the points \( t_k \) as follows:
+
+$$
+t_0 = 0, \ t_1 = 0.25, \ t_2 = 0.5, \ t_3 = 0.75, \ t_4 = 1
+$$
+
+Let \( y_k \approx y(t_k) \) denote the approximation of the solution at \( t_k \). The boundary conditions give us \( y(1) = 0 \), thus \( y_4 = 0 \).
+
+Next, we use the central difference formula for the second derivative:
+
+$$
+y''(t_k) \approx \frac{y_{k+1} - 2y_k + y_{k-1}}{h^2}
+$$
+
+For the given differential equation \( y'' = 2^t \), we approximate \( 2^{t_k} \) by \( 2^{t_k} \):
+
+$$
+\frac{y_{k+1} - 2y_k + y_{k-1}}{h^2} = 2^{t_k}
+$$
+
+Rewriting this, we get
+
+$$
+y_{k+1} - 2y_k + y_{k-1} = h^2 2^{t_k}
+$$
+
+Using \( h = 0.25 \), we have \( h^2 = 0.0625 \), so the equations become
+
+$$
+y_{k+1} - 2y_k + y_{k-1} = 0.0625 \cdot 2^{t_k}
+$$
+
+For \( k = 1, 2, 3 \), we write the equations as:
+
+$$
+\begin{array}{rcl}
+y_2 - 2y_1 + y_0 &=& 0.0625 \cdot 2^{0.25} \\
+y_3 - 2y_2 + y_1 &=& 0.0625 \cdot 2^{0.5} \\
+y_4 - 2y_3 + y_2 &=& 0.0625 \cdot 2^{0.75} \\
+\end{array}
+$$
+
+Using the boundary condition \( y(1) = 0 \), we get \( y_4 = 0 \):
+
+$$
+0 - 2y_3 + y_2 = 0.0625 \cdot 2^{0.75}
+$$
+
+This simplifies to:
+
+$$
+-2y_3 + y_2 = 0.0625 \cdot 2^{0.75}
+$$
+
+Using the forward difference formula to approximate \( y_0 \):
+
+$$
+y'(0) \approx \frac{y_1 - y_0}{h} = 1 \implies y_0 = y_1 - 0.25
+$$
+
+Now we can set up the system of equations:
+
+$$
+\begin{array}{rcl}
+y_2 - 2y_1 + (y_1 - 0.25) &=& 0.0625 \cdot 2^{0.25} \\
+y_3 - 2y_2 + y_1 &=& 0.0625 \cdot 2^{0.5} \\
+-2y_3 + y_2 &=& 0.0625 \cdot 2^{0.75} \\
+\end{array}
+$$
+
+Simplify and write in matrix form \( A \boldsymbol{y} = \boldsymbol{b} \):
+
+$$
+\begin{array}{rcl}
+y_2 - y_1 &=& 0.0625 \cdot 2^{0.25} + 0.25 \\
+y_3 - 2y_2 + y_1 &=& 0.0625 \cdot 2^{0.5} \\
+-2y_3 + y_2 &=& 0.0625 \cdot 2^{0.75} \\
+\end{array}
+$$
+
+So the system of equations is:
+
+$$
+\left[ \begin{array}{rrr}
+-1 & 1 & 0 \\
+1 & -2 & 1 \\
+0 & 1 & -2 \\
+\end{array} \right]
+\begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+=
+\begin{bmatrix}
+0.0625 \cdot 2^{0.25} + 0.25 \\
+0.0625 \cdot 2^{0.5} \\
+0.0625 \cdot 2^{0.75} \\
+\end{bmatrix}
+$$
+
+Therefore, we have:
+
+$$
+A =
+\left[ \begin{array}{rrr}
+-1 & 1 & 0 \\
+1 & -2 & 1 \\
+0 & 1 & -2 \\
+\end{array} \right]
+\hspace{10mm}
+\boldsymbol{b} =
+\begin{bmatrix}
+0.0625 \cdot 2^{0.25} + 0.25 \\
+0.0625 \cdot 2^{0.5} \\
+0.0625 \cdot 2^{0.75} \\
+\end{bmatrix}
+$$
+
+```
+
 **Exercise 4.** Derive the general form of the linear system $A \boldsymbol{y} = \boldsymbol{b}$ for an equation with boundary conditions
 
 $$
