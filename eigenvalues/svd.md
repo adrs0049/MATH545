@@ -274,6 +274,26 @@ $$
 ```
 ````
 
+````
+## Singular Value Decomposition With Fundamental Subspaces
+
+```div{Theorem}
+SVD Finds the Following Bases:
+
+if $AV = U\Sigma$ then:
+1. $v_1, ..., v_r$ is the basis for the row space $C(A^T)$
+2. $v_{r+1}, ...,v_n$ is the basis for the nullspace $N(A)$
+3. $u_1,...,u_r$ is the basis for the column space $C(A)$
+4. $u_{r+1},...,u_m$ is the basis for the left nullspace $N(A^T)$
+
+```
+
+```{image} /img/fundamental_subspace_svd.png
+:width: 100%
+:align: center
+```
+Image Source: ML Wiki
+
 ## Principal Component Analysis
 
 ```{div} definition
